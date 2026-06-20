@@ -1,0 +1,126 @@
+<svg viewBox="0 0 1200 580" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif">
+<rect width="1200" height="580" fill="#FAFAF8"/>
+<!-- App bar -->
+<rect width="1200" height="44" fill="#1A1916"/>
+<text x="24" y="27" fill="#C4552A" font-size="12" font-weight="800">CF</text>
+<text x="46" y="27" fill="rgba(255,255,255,0.25)" font-size="12">|</text>
+<text x="58" y="27" fill="rgba(255,255,255,0.75)" font-size="12" font-weight="600">Crossfire Dashboard</text>
+<text x="172" y="27" fill="rgba(255,255,255,0.25)" font-size="12">|</text>
+<text x="184" y="27" fill="rgba(255,255,255,0.4)" font-size="12">Kumar HVAC &amp; Plumbing — Audit Report</text>
+<text x="1040" y="27" fill="rgba(255,255,255,0.3)" font-size="10">Last updated: Nov 2024</text>
+<!-- Sidebar -->
+<rect x="0" y="44" width="180" height="536" fill="#F5F4F0"/>
+<line x1="180" y1="44" x2="180" y2="580" stroke="#E5E3DC"/>
+<rect x="0" y="72" width="180" height="34" fill="#FBF2EE"/>
+<rect x="0" y="72" width="3" height="34" fill="#C4552A"/>
+<text x="18" y="94" fill="#C4552A" font-size="11" font-weight="700">Overview</text>
+<text x="18" y="128" fill="#9C9790" font-size="11">GBP Audit</text>
+<text x="18" y="162" fill="#9C9790" font-size="11">Rankings</text>
+<text x="18" y="196" fill="#9C9790" font-size="11">Citations</text>
+<text x="18" y="230" fill="#9C9790" font-size="11">Reviews</text>
+<text x="18" y="264" fill="#9C9790" font-size="11">Competitors</text>
+<line x1="12" y1="290" x2="168" y2="290" stroke="#E5E3DC"/>
+<text x="18" y="316" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.08em">CLIENT</text>
+<text x="18" y="334" fill="#1A1916" font-size="11" font-weight="600">Kumar HVAC</text>
+<text x="18" y="350" fill="#9C9790" font-size="10">South Delhi</text>
+<text x="18" y="366" fill="#9C9790" font-size="10">HVAC &amp; Plumbing</text>
+<text x="18" y="396" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.08em">PERIOD</text>
+<text x="18" y="414" fill="#1A1916" font-size="11" font-weight="600">Sep 2024 – Jan 2025</text>
+<!-- Page heading -->
+<text x="204" y="78" fill="#1A1916" font-size="17" font-weight="800">Audit Overview</text>
+<text x="204" y="96" fill="#9C9790" font-size="11">Sep – Jan 2025 · 5 months active</text>
+<!-- Stat card 1 -->
+<rect x="204" y="110" width="220" height="104" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="222" y="132" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.08em">MAPS RANK</text>
+<text x="222" y="174" fill="#C4552A" font-size="44" font-weight="900">#2</text>
+<text x="222" y="200" fill="#9C9790" font-size="10">Was #8 · +6 positions in 8 weeks</text>
+<!-- Stat card 2 -->
+<rect x="438" y="110" width="220" height="104" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="456" y="132" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.08em">MONTHLY LEADS</text>
+<text x="456" y="174" fill="#C4552A" font-size="44" font-weight="900">22</text>
+<text x="456" y="200" fill="#9C9790" font-size="10">Was 5/mo · +340% increase</text>
+<!-- Stat card 3 -->
+<rect x="672" y="110" width="220" height="104" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="690" y="132" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.08em">GOOGLE REVIEWS</text>
+<text x="690" y="174" fill="#1A1916" font-size="44" font-weight="900">58</text>
+<text x="690" y="192" fill="#B45309" font-size="16">★★★★★</text>
+<text x="690" y="208" fill="#9C9790" font-size="10">Was 11 · 4.9★ avg · +47 new</text>
+<!-- Stat card 4 -->
+<rect x="906" y="110" width="268" height="104" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="924" y="132" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.08em">GBP COMPLETENESS</text>
+<text x="924" y="174" fill="#15803D" font-size="44" font-weight="900">97%</text>
+<text x="924" y="200" fill="#9C9790" font-size="10">Was 38% · 14 fields fixed</text>
+<rect x="924" y="208" width="222" height="4" rx="2" fill="#E5E3DC"/>
+<rect x="924" y="208" width="215" height="4" rx="2" fill="#15803D"/>
+<!-- Ranking chart -->
+<rect x="204" y="230" width="644" height="194" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="222" y="254" fill="#1A1916" font-size="12" font-weight="700">Maps Position — 8-Week Progression</text>
+<text x="222" y="270" fill="#9C9790" font-size="10">Lower = better</text>
+<!-- Y-axis -->
+<text x="242" y="306" fill="#9C9790" font-size="9" text-anchor="end">#2</text>
+<text x="242" y="334" fill="#9C9790" font-size="9" text-anchor="end">#4</text>
+<text x="242" y="362" fill="#9C9790" font-size="9" text-anchor="end">#6</text>
+<text x="242" y="390" fill="#9C9790" font-size="9" text-anchor="end">#8</text>
+<!-- Grid -->
+<line x1="248" y1="302" x2="820" y2="302" stroke="#F5F4F0"/>
+<line x1="248" y1="330" x2="820" y2="330" stroke="#F5F4F0"/>
+<line x1="248" y1="358" x2="820" y2="358" stroke="#F5F4F0"/>
+<line x1="248" y1="386" x2="820" y2="386" stroke="#F5F4F0"/>
+<!-- Area fill -->
+<path d="M260,386 330,384 400,380 470,372 540,360 610,346 680,330 750,312 820,304 820,400 260,400 Z" fill="#C4552A" fill-opacity="0.07"/>
+<!-- Line -->
+<polyline points="260,386 330,384 400,380 470,372 540,360 610,346 680,330 750,312 820,304" stroke="#C4552A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- Points -->
+<circle cx="260" cy="386" r="3" fill="#9C9790"/>
+<circle cx="820" cy="304" r="4" fill="#C4552A"/>
+<!-- Dashed milestone -->
+<line x1="540" y1="290" x2="540" y2="400" stroke="#E5E3DC" stroke-dasharray="3,2"/>
+<text x="543" y="298" fill="#9C9790" font-size="8">Wk 4 — first Δ</text>
+<!-- Week labels -->
+<text x="260" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 0</text>
+<text x="330" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 1</text>
+<text x="400" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 2</text>
+<text x="470" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 3</text>
+<text x="540" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 4</text>
+<text x="610" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 5</text>
+<text x="680" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 6</text>
+<text x="750" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 7</text>
+<text x="820" y="414" fill="#9C9790" font-size="9" text-anchor="middle">Wk 8</text>
+<!-- Citation health panel -->
+<rect x="862" y="230" width="312" height="194" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="880" y="254" fill="#1A1916" font-size="12" font-weight="700">Citation Health</text>
+<rect x="880" y="264" width="272" height="34" rx="4" fill="#F0FDF4" stroke="#86EFAC"/>
+<text x="900" y="286" fill="#15803D" font-size="11" font-weight="700">✓  0 Active Inconsistencies</text>
+<text x="880" y="318" fill="#9C9790" font-size="10">23 fixed · 38 directories · 2 duplicates removed</text>
+<text x="880" y="344" fill="#5C5852" font-size="10" font-weight="600">Name accuracy</text>
+<rect x="880" y="350" width="252" height="3" rx="1" fill="#E5E3DC"/>
+<rect x="880" y="350" width="252" height="3" rx="1" fill="#15803D"/>
+<text x="880" y="374" fill="#5C5852" font-size="10" font-weight="600">Address accuracy</text>
+<rect x="880" y="380" width="252" height="3" rx="1" fill="#E5E3DC"/>
+<rect x="880" y="380" width="244" height="3" rx="1" fill="#15803D"/>
+<text x="880" y="404" fill="#5C5852" font-size="10" font-weight="600">Phone accuracy</text>
+<rect x="880" y="410" width="252" height="3" rx="1" fill="#E5E3DC"/>
+<rect x="880" y="410" width="252" height="3" rx="1" fill="#15803D"/>
+<!-- Revenue + competitors row -->
+<rect x="204" y="438" width="312" height="126" rx="6" fill="#1A1916"/>
+<text x="222" y="460" fill="rgba(255,255,255,0.4)" font-size="9" font-weight="700" letter-spacing="0.08em">MONTHLY REVENUE IMPACT</text>
+<text x="222" y="504" fill="#fff" font-size="42" font-weight="900">+₹3.2L</text>
+<text x="222" y="522" fill="rgba(255,255,255,0.4)" font-size="10">per month from Google Maps</text>
+<text x="222" y="552" fill="#C4552A" font-size="10" font-weight="600">ROI: 8.4× on retainer cost</text>
+<!-- Competitors table -->
+<rect x="530" y="438" width="644" height="126" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="548" y="460" fill="#1A1916" font-size="12" font-weight="700">Competitor Snapshot</text>
+<text x="548" y="480" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.06em">BUSINESS</text>
+<text x="880" y="480" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.06em">RANK</text>
+<text x="1010" y="480" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.06em">REVIEWS</text>
+<rect x="548" y="487" width="596" height="26" rx="3" fill="#FBF2EE"/>
+<text x="558" y="504" fill="#C4552A" font-size="11" font-weight="700">Kumar HVAC (us)</text>
+<text x="880" y="504" fill="#C4552A" font-size="11" font-weight="700">#2</text>
+<text x="1010" y="504" fill="#C4552A" font-size="11" font-weight="700">58 ★4.9</text>
+<text x="558" y="528" fill="#5C5852" font-size="11">Delhi Climate Solutions</text>
+<text x="880" y="528" fill="#5C5852" font-size="11">#4</text>
+<text x="1010" y="528" fill="#5C5852" font-size="11">31 ★4.2</text>
+<text x="558" y="550" fill="#9C9790" font-size="11">CoolAir Delhi</text>
+<text x="880" y="550" fill="#9C9790" font-size="11">#6</text>
+<text x="1010" y="550" fill="#9C9790" font-size="11">18 ★3.8</text>
+</svg>

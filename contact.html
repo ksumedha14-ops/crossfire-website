@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact — Crossfire Marketing · Local SEO & Google Maps Ranking, Delhi</title>
+<meta name="description" content="Talk to Sumedha about your local visibility. A 15-minute conversation can show you exactly what's holding your business back from ranking on Google Maps."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+/* HERO */
+.contact-hero{padding:96px 0 80px;background:var(--bg);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.contact-hero::before{content:'';position:absolute;top:-40px;right:-60px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--accent-dim) 0%,transparent 68%);pointer-events:none}
+.contact-hero__inner{display:grid;grid-template-columns:1fr 380px;gap:80px;align-items:center;position:relative;z-index:1}
+.ch-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:26px}
+.ch-eyebrow-line{width:22px;height:1px;background:var(--accent)}
+.contact-hero h1{font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;letter-spacing:-.035em;color:var(--ink);margin-bottom:20px;line-height:1.05}
+.contact-hero h1 em{font-style:normal;color:var(--accent)}
+.contact-hero__sub{font-size:1rem;color:var(--body);line-height:1.8;margin-bottom:32px;max-width:440px}
+.contact-hero__ctas{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.contact-hero__proof{display:flex;gap:28px;padding-top:28px;border-top:1px solid var(--border)}
+.chp{font-size:.76rem;color:var(--muted)}.chp strong{display:block;font-size:1.05rem;font-weight:800;color:var(--ink);letter-spacing:-.03em;margin-bottom:2px}
+.chp strong span{color:var(--accent)}
+
+/* VISUAL CARD */
+.contact-hero__visual{display:flex;flex-direction:column;gap:12px}
+.vis-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow-sm)}
+.vis-card__head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.vis-card__title{font-size:.78rem;font-weight:700;color:var(--ink)}
+.vis-card__badge{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:3px 8px;border-radius:100px}
+.vis-card__badge--live{background:var(--green-dim);border:1px solid var(--green-border);color:var(--green)}
+.vis-card__badge--new{background:var(--accent-dim);border:1px solid var(--accent-mid);color:var(--accent)}
+.vis-card__metric{display:flex;justify-content:space-between;align-items:center}
+.vcm__num{font-size:1.2rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}.vcm__num.pos{color:var(--green)}
+.vcm__lbl{font-size:.68rem;color:var(--muted)}
+.vis-card__bar{height:3px;background:var(--surface-2);border-radius:2px;overflow:hidden;margin-top:10px}
+.vis-card__bar-fill{height:100%;border-radius:2px;background:var(--accent)}
+.vis-card__bar-fill.g{background:var(--green)}
+
+/* OPTIONS */
+.options{padding:80px 0;background:var(--surface);border-bottom:1px solid var(--border)}
+.options__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.opt{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 20px;display:flex;flex-direction:column;cursor:pointer;transition:border-color .18s,box-shadow .18s,transform .18s;position:relative}
+.opt::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .22s;border-radius:var(--r) var(--r) 0 0}
+.opt:hover{border-color:var(--border-2);box-shadow:var(--shadow);transform:translateY(-2px)}
+.opt:hover::before{transform:scaleX(1)}
+.opt__icon{width:38px;height:38px;border-radius:9px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;margin-bottom:14px;transition:background .18s,border-color .18s}
+.opt:hover .opt__icon{background:var(--accent-dim);border-color:var(--accent-mid)}
+.opt h3{font-size:.88rem;font-weight:700;margin-bottom:6px}
+.opt p{font-size:.78rem;color:var(--body);line-height:1.65;flex:1}
+.opt__link{margin-top:14px;font-size:.74rem;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:5px;transition:gap .15s}
+.opt:hover .opt__link{gap:8px}
+.opt__badge{position:absolute;top:12px;right:12px;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:var(--green-dim);border:1px solid var(--green-border);padding:2px 7px;border-radius:100px}
+
+/* WHO */
+.who{padding:96px 0;background:var(--bg)}
+.who__inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.who-profile{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.wp-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);transition:border-color .15s}
+.wp-item:hover{border-color:var(--border-2)}
+.wp-icon{width:32px;height:32px;border-radius:8px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.88rem;flex-shrink:0}
+.wp-text strong{display:block;font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.wp-text span{font-size:.78rem;color:var(--body);line-height:1.5}
+.who-not{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px;margin-bottom:14px}
+.who-not h3{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.who-not ul{display:flex;flex-direction:column;gap:7px}
+.who-not ul li{font-size:.82rem;color:var(--body);padding-left:16px;position:relative;border-bottom:1px solid var(--border);padding-bottom:7px;line-height:1.4}
+.who-not ul li:last-child{border-bottom:none;padding-bottom:0}
+.who-not ul li::before{content:'✗';position:absolute;left:0;color:var(--muted)}
+.who-honest{background:var(--dark);border-radius:var(--r);padding:24px}
+.who-honest h3{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:8px}
+.who-honest p{font-size:.82rem;color:rgba(255,255,255,.42);line-height:1.75}
+.who-honest p strong{color:rgba(255,255,255,.85)}
+
+/* PROCESS */
+.next{padding:96px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+/* FORM SECTION */
+.form-section{padding:96px 0;background:var(--bg)}
+.form-section__inner{display:grid;grid-template-columns:340px 1fr;gap:80px;align-items:start}
+.form-sidebar h2{font-size:clamp(1.5rem,2.4vw,1.9rem);margin-bottom:13px}
+.form-sidebar p{font-size:.92rem;color:var(--body);line-height:1.8;margin-bottom:24px}
+.form-sidebar__items{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.fsi{display:flex;align-items:center;gap:11px;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm)}
+.fsi__icon{font-size:.95rem;width:20px;text-align:center;flex-shrink:0}
+.fsi__label{font-size:.78rem;font-weight:600;color:var(--ink)}
+.fsi__val{font-size:.75rem;color:var(--muted)}
+.form-sidebar__direct a{font-size:.82rem;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:6px;transition:gap .14s}
+.form-sidebar__direct a:hover{gap:10px}
+.form-sidebar__note{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-top:22px}
+.form-sidebar__note p{font-size:.79rem;color:var(--body);line-height:1.7}
+.form-sidebar__note p strong{color:var(--ink)}
+.form-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:40px 36px}
+.form-wrap h3{font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:5px}
+.form-wrap .sub{font-size:.83rem;color:var(--muted);margin-bottom:22px;line-height:1.6}
+.form-wrap .scarcity-bar{margin-bottom:20px}
+
+/* FAQ */
+.faq-section{padding:96px 0;background:var(--surface);border-top:1px solid var(--border)}
+.faq-section__inner{display:grid;grid-template-columns:260px 1fr;gap:60px}
+
+@media(max-width:1024px){
+  .contact-hero__inner{grid-template-columns:1fr;gap:48px}
+  .contact-hero__visual{max-width:360px}
+  .options__grid{grid-template-columns:repeat(2,1fr)}
+  .who__inner{grid-template-columns:1fr;gap:40px}
+  .form-section__inner{grid-template-columns:1fr;gap:40px}
+  .faq-section__inner{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:768px){
+  .options__grid{grid-template-columns:1fr}
+  .form-wrap{padding:24px 20px}
+}
+@media(max-width:600px){
+  .contact-hero{padding:72px 0 56px}
+  .contact-hero__proof{flex-wrap:wrap;gap:14px}
+  .contact-hero__ctas{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap"><div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="public/crossfire-logo.png" class="nav__logo-img" alt="Crossfire Marketing"></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Results</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <div class="nav__spot"><span class="nav__spot-dot"></span>Accepting clients</div>
+      <a href="audit.html" class="btn btn--primary btn--sm">Free Audit →</a>
+      <div class="hamburger" id="hamburger" aria-expanded="false" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </div></div>
+</nav>
+
+<!-- HERO -->
+<section class="contact-hero" aria-labelledby="ch-h1">
+  <div class="wrap"><div class="contact-hero__inner">
+    <div>
+      <div class="ch-eyebrow fade-up"><div class="ch-eyebrow-line"></div><span class="eyebrow">Contact Crossfire</span></div>
+      <h1 id="ch-h1" class="fade-up d1">Let's find out what's<br>holding you back<br>on <em>Google Maps</em>.</h1>
+      <p class="contact-hero__sub fade-up d2">One conversation is enough to show you exactly where your local visibility is breaking down — and what to fix first. No jargon. No pitch. Just clarity from someone who's done this for 30+ businesses.</p>
+      <div class="contact-hero__ctas fade-up d3">
+        <a href="#form" class="btn btn--primary btn--lg">Start the Conversation →</a>
+        <a href="audit.html" class="btn btn--soft btn--lg">Claim Free Audit</a>
+      </div>
+      <div class="contact-hero__proof fade-up d4">
+        <div class="chp"><strong>30<span>+</span></strong>Businesses helped<br>in Delhi NCR</div>
+        <div class="chp"><strong>15<span>min</span></strong>To find your<br>#1 growth lever</div>
+        <div class="chp"><strong>24<span>hr</span></strong>Response time<br>guaranteed</div>
+      </div>
+    </div>
+    <div class="contact-hero__visual fade-up d2">
+      <div class="vis-card">
+        <div class="vis-card__head"><div class="vis-card__title">Kumar HVAC · South Delhi</div><span class="vis-card__badge vis-card__badge--live">Live result</span></div>
+        <div class="vis-card__metric">
+          <div><div class="vcm__num pos">#2</div><div class="vcm__lbl">Maps rank (was #8)</div></div>
+          <div style="text-align:right"><div class="vcm__num pos">22/mo</div><div class="vcm__lbl">Leads (was 5)</div></div>
+        </div>
+        <div class="vis-card__bar"><div class="vis-card__bar-fill g" style="width:76%"></div></div>
+      </div>
+      <div class="vis-card">
+        <div class="vis-card__head"><div class="vis-card__title">Delhi Dental Care · Noida</div><span class="vis-card__badge vis-card__badge--live">Live result</span></div>
+        <div class="vis-card__metric">
+          <div><div class="vcm__num pos">#1</div><div class="vcm__lbl">Maps rank (was not visible)</div></div>
+          <div style="text-align:right"><div class="vcm__num pos">18/mo</div><div class="vcm__lbl">New patients</div></div>
+        </div>
+        <div class="vis-card__bar"><div class="vis-card__bar-fill g" style="width:90%"></div></div>
+      </div>
+      <div class="vis-card">
+        <div class="vis-card__head"><div class="vis-card__title">Your Business</div><span class="vis-card__badge vis-card__badge--new">Could be next</span></div>
+        <div class="vis-card__metric">
+          <div><div class="vcm__num" style="color:var(--muted)">?</div><div class="vcm__lbl">Your current rank</div></div>
+          <div style="text-align:right"><div class="vcm__num" style="color:var(--muted)">?/mo</div><div class="vcm__lbl">Your leads from Google</div></div>
+        </div>
+        <div style="margin-top:12px;font-size:.75rem;color:var(--muted)">Start with a free audit to find out →</div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- OPTIONS -->
+<section class="options" aria-labelledby="opt-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">Ways to Connect</span>
+      <h2 id="opt-h2">Choose how you'd like to start</h2>
+      <p>Not sure which fits? The audit is the best starting point for almost every business — it gives us the data to have a real conversation.</p>
+    </div>
+    <div class="options__grid">
+      <div class="opt fade-up">
+        <div class="opt__badge">Most popular</div>
+        <div class="vi-icon vi-icon--surface vi-icon--lg" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Free Growth Audit</h3>
+        <p>15-minute founder-led diagnostic. We research your rankings, GBP, and competitors before the call. Written findings within 24 hours.</p>
+        <a href="audit.html" class="opt__link">Book audit <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="opt fade-up d1">
+        <div class="vi-icon vi-icon--surface vi-icon--lg" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h3>Project Inquiry</h3>
+        <p>Already know what you need? Tell us about your project, timeline, and goals. We'll respond within 24 hours with initial thoughts.</p>
+        <a href="#form" class="opt__link">Submit inquiry <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="opt fade-up d2">
+        <div class="vi-icon vi-icon--surface vi-icon--lg" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Partnership</h3>
+        <p>Agency, consultant, or professional with clients who need local SEO? We have a referral arrangement that works well for partners.</p>
+        <a href="mailto:sumedha@crossfiremarketing.in" class="opt__link">Email directly <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="opt fade-up d3">
+        <div class="vi-icon vi-icon--surface vi-icon--lg" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>General Question</h3>
+        <p>Have a specific question about local SEO or how we work? Ask — no obligation, no follow-up pressure.</p>
+        <a href="mailto:sumedha@crossfiremarketing.in" class="opt__link">Send a question <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE WORK WITH -->
+<section class="who" aria-labelledby="who-h2">
+  <div class="wrap"><div class="who__inner">
+    <div class="fade-up">
+      <span class="eyebrow">Ideal Clients</span>
+      <h2 id="who-h2" style="font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:14px">Who we work best with</h2>
+      <p style="font-size:.93rem;color:var(--body);line-height:1.8;margin-bottom:26px">We're not the right fit for everyone — and we say so when we're not. Here's who consistently gets the best results from working with Crossfire.</p>
+      <div class="who-profile">
+        <div class="wp-item"><div class="wp-icon">🔧</div><div class="wp-text"><strong>Local service businesses (5–50 staff)</strong><span>Plumbing, electrical, HVAC, salons, clinics, legal — any business that needs to be found when someone searches nearby.</span></div></div>
+        <div class="wp-item"><div class="wp-icon">📍</div><div class="wp-text"><strong>Established (2+ years operating)</strong><span>You have a real business, happy customers, and word-of-mouth. You're ready to systematise online growth.</span></div></div>
+        <div class="wp-item"><div class="wp-icon">💡</div><div class="wp-text"><strong>Already tried SEO and got nothing</strong><span>An agency promised rankings. Nothing moved. We audit what went wrong — often fixable faster than you think.</span></div></div>
+        <div class="wp-item"><div class="wp-icon">📈</div><div class="wp-text"><strong>Ready to invest ₹15K–60K/month</strong><span>Not looking for cheap hacks. Willing to invest in a system that produces consistent, high-quality leads.</span></div></div>
+      </div>
+    </div>
+    <div class="fade-up d2">
+      <div class="who-not">
+        <h3>Not the right fit</h3>
+        <ul>
+          <li>E-commerce or national brands with no local footprint</li>
+          <li>Businesses in first 6 months — validate your offer first</li>
+          <li>Businesses expecting leads within the next 2 weeks</li>
+          <li>Anyone expecting guaranteed rankings overnight</li>
+          <li>Businesses unwilling to invest in implementation</li>
+        </ul>
+      </div>
+      <div class="who-honest">
+        <h3>We'll tell you if we're not the right fit</h3>
+        <p>If the call makes it clear we're not a match — wrong stage, wrong budget, wrong market — <strong>we say so directly</strong> and point you toward what would actually help. We'd rather lose a prospective client than take on work that won't deliver results.</p>
+        <a href="audit.html" class="btn btn--ghost btn--sm" style="margin-top:16px">Start with free audit →</a>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next" aria-labelledby="next-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">The Process</span>
+      <h2 id="next-h2">What happens after you reach out</h2>
+      <p>No mystery. Here's exactly what to expect from the moment you submit to the moment you have a clear path forward.</p>
+    </div>
+    <div class="process-steps fade-up d1">
+      <div class="process-step">
+        <div class="process-step__dot">📝</div>
+        <div class="process-step__n">Step 01</div>
+        <h3>You Submit</h3>
+        <p>Fill in the form — 2 minutes. The more detail you give, the more prepared we'll be for the conversation.</p>
+        <span class="process-step__time">Today</span>
+      </div>
+      <div class="process-step process-step--accent">
+        <div class="process-step__dot" style="color:#fff;font-size:1rem">🔍</div>
+        <div class="process-step__n">Step 02</div>
+        <h3>We Research</h3>
+        <p>Before responding, we look at your GBP, rankings, website, and top competitors. We come prepared — not empty-handed.</p>
+        <span class="process-step__time">Within 24 hours</span>
+      </div>
+      <div class="process-step">
+        <div class="process-step__dot">📞</div>
+        <div class="process-step__n">Step 03</div>
+        <h3>Discovery Call</h3>
+        <p>15–30 minutes with Sumedha. We share what we found, ask about your goals, and determine if there's a clear fit. No sales script.</p>
+        <span class="process-step__time">Agreed together</span>
+      </div>
+      <div class="process-step">
+        <div class="process-step__dot">🗺️</div>
+        <div class="process-step__n">Step 04</div>
+        <h3>Next Steps</h3>
+        <p>If it's a fit: a specific proposal for your situation. If it's not: honest direction on what would help and who might deliver it.</p>
+        <span class="process-step__time">Within 5 days</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="form" aria-labelledby="form-h2">
+  <div class="wrap"><div class="form-section__inner">
+    <div class="form-sidebar fade-up">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 id="form-h2">Tell us about your business</h2>
+      <p>The form takes 2 minutes. We read every submission personally and respond within 24 hours — usually the same day.</p>
+      <div class="form-sidebar__items">
+        <div class="fsi"><div class="fsi__icon">📧</div><div><div class="fsi__label">Email</div><div class="fsi__val">sumedha@crossfiremarketing.in</div></div></div>
+        <div class="fsi"><div class="fsi__icon">⏱️</div><div><div class="fsi__label">Response time</div><div class="fsi__val">Within 24 hours, weekdays</div></div></div>
+        <div class="fsi"><div class="fsi__icon">📍</div><div><div class="fsi__label">Based in</div><div class="fsi__val">Delhi, India · All cities served</div></div></div>
+      </div>
+      <div class="form-sidebar__direct">
+        <a href="mailto:sumedha@crossfiremarketing.in">Or email Sumedha directly <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="form-sidebar__note">
+        <p><strong>Your information is confidential.</strong> We never share business details with third parties. What you tell us stays with us.</p>
+      </div>
+    </div>
+    <div class="form-wrap fade-up d2">
+      <div class="scarcity-bar" role="status" aria-live="polite"><span class="scarcity-bar__dot"></span><span>Limited spots available this month</span></div>
+      <h3>Project & Contact Details</h3>
+      <p class="sub">Fields marked <span style="color:var(--accent)">*</span> are required. More context = better prepared we'll be.</p>
+      <div data-form-wrap>
+        <form id="contactForm" novalidate onsubmit="handleFormSubmit(event,{btn:document.getElementById('cfBtn'),resetLabel:'Send My Inquiry'})" aria-label="Contact form">
+          <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form-section-lbl">About you</div>
+          <div class="form-row">
+            <div class="field"><label for="cf-name">Full name <span class="req">*</span></label><input type="text" id="cf-name" name="name" placeholder="Rajesh Kumar" required autocomplete="name"/><div class="err-msg">Please enter your name.</div></div>
+            <div class="field"><label for="cf-biz">Business name <span class="req">*</span></label><input type="text" id="cf-biz" name="company" placeholder="Kumar Plumbing" required autocomplete="organization"/><div class="err-msg">Please enter your business name.</div></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="cf-email">Email address <span class="req">*</span></label><input type="email" id="cf-email" name="email" placeholder="rajesh@example.com" required autocomplete="email"/><div class="err-msg">Please enter a valid email.</div></div>
+            <div class="field"><label for="cf-phone">WhatsApp / Phone</label><input type="tel" id="cf-phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel"/></div>
+          </div>
+          <div class="field"><label for="cf-city">City / Market <span class="req">*</span></label><input type="text" id="cf-city" name="city" placeholder="Delhi, Noida, Gurgaon…" required/><div class="err-msg">Please enter your city.</div></div>
+          <div class="form-divider"></div>
+          <div class="form-section-lbl">About your project</div>
+          <div class="form-row">
+            <div class="field"><label for="cf-industry">Your industry <span class="req">*</span></label>
+              <select id="cf-industry" name="industry" required>
+                <option value="" disabled selected>Select industry</option>
+                <option>Plumbing / Electrical / HVAC</option>
+                <option>Construction / Contracting</option>
+                <option>Salon / Beauty / Wellness</option>
+                <option>Medical / Dental / Clinic</option>
+                <option>Legal / Consulting</option>
+                <option>Home Services</option>
+                <option>Restaurant / Food</option>
+                <option>Other local service</option>
+              </select>
+              <div class="err-msg">Please select your industry.</div>
+            </div>
+            <div class="field"><label for="cf-service">Service interested in <span class="req">*</span></label>
+              <select id="cf-service" name="service" required>
+                <option value="" disabled selected>Select service</option>
+                <option>Free Growth Audit (start here)</option>
+                <option>Local SEO & Maps Ranking</option>
+                <option>Complete Acquisition System</option>
+                <option>Meta Ads Management</option>
+                <option>Not sure — need advice</option>
+              </select>
+              <div class="err-msg">Please select a service.</div>
+            </div>
+          </div>
+          <div class="field"><label for="cf-goal">Primary goal</label>
+            <select id="cf-goal" name="goal">
+              <option value="" disabled selected>What matters most? (optional)</option>
+              <option>Rank higher on Google Maps</option>
+              <option>Get more qualified leads</option>
+              <option>Understand why SEO hasn't worked</option>
+              <option>Build a consistent lead system</option>
+              <option>Outrank specific competitors</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cf-msg">Anything else we should know?</label>
+            <textarea id="cf-msg" name="message" placeholder="Tell us about your situation, what you've tried, timeline, or anything that would help us come better prepared…" maxlength="800" data-count="cfCharCount"></textarea>
+            <div class="char-count"><span id="cfCharCount">0</span>/800</div>
+          </div>
+          <button type="submit" id="cfBtn" class="form-submit">Send My Inquiry <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <p class="form-footer">No spam, no obligation. Or email: <a href="mailto:sumedha@crossfiremarketing.in">sumedha@crossfiremarketing.in</a></p>
+        </form>
+        <div class="form-success" data-form-success>
+          <div class="form-success__icon">✅</div>
+          <h3>Inquiry Received</h3>
+          <p>We'll review your details and respond within 24 hours. Sumedha will reach out personally.</p>
+          <p style="margin-top:10px;font-size:.8rem;color:var(--muted)">While you wait: <a href="case-studies.html" style="color:var(--accent)">read what other clients achieved →</a></p>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="cfaq-h2">
+  <div class="wrap"><div class="faq-section__inner">
+    <div class="fade-up">
+      <span class="eyebrow">FAQ</span>
+      <h2 id="cfaq-h2" style="font-size:clamp(1.4rem,2.2vw,1.85rem);margin-bottom:12px">Common questions</h2>
+      <p style="font-size:.88rem;color:var(--body);line-height:1.75;margin-bottom:20px">Everything you'd want to know before reaching out.</p>
+      <a href="mailto:sumedha@crossfiremarketing.in" style="font-size:.84rem;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:5px">Ask something else →</a>
+    </div>
+    <div class="faq-list fade-up d1">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How quickly will you respond?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Within 24 hours on weekdays, usually same day. We read every inquiry personally — not triaged by a VA or auto-responder. Weekend inquiries get a Monday morning response.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do I need to do the audit before working together?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Not required, but strongly recommended. The audit gives us real data — your actual rankings, your GBP gaps, your specific competitors. Without it, any proposal is guesswork. If you already know exactly what you need, the inquiry form works fine.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What does the discovery call involve?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>15–30 minutes. We share what we found in pre-call research, ask about your goals and what you've tried, and discuss whether there's a clear fit. There's no structured sales process — it's a real conversation. If it's a fit, we'll outline next steps. If not, we'll say that too.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do you take on competitors in the same market?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No. We have a one-per-category-per-market rule for active clients. We won't take a second plumber in the same suburb — it creates a conflict and we won't do it. This also means spots are genuinely limited.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What's the minimum engagement?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>3 months. Local SEO compounds — month 1 builds the foundation, months 2–3 produce movement. Anyone promising significant results under 60 days is being dishonest about timelines. We'd rather lose the engagement than set expectations we can't meet.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What are your prices?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Full pricing is on our <a href="services.html" style="color:var(--accent)">Services page</a>. Local SEO from ₹18,000/month, Complete System from ₹30,000/month, Meta Ads from ₹15,000/month + ad spend. The audit will clarify which service fits your situation.</p></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="ccta-h2">
+  <div class="wrap"><div class="final-cta__inner">
+    <div class="badge badge--dark fade-up" style="margin-bottom:22px"><span class="badge__dot"></span>Limited availability this month</div>
+    <h2 id="ccta-h2" class="fade-up d1">The right time to fix this<br>was last year. The next best<br>time is <em>now</em>.</h2>
+    <p class="fade-up d2">Every month you're not in the top 3 on Google Maps is a month of leads going to your competitors. One conversation tells you exactly what to change.</p>
+    <div class="final-cta__ctas fade-up d3">
+      <a href="audit.html" class="btn btn--primary btn--xl">Claim Free Audit →</a>
+      <a href="#form" class="btn btn--ghost btn--xl">Send an Inquiry</a>
+    </div>
+    <div class="final-cta__trust fade-up d4">
+      <span class="final-cta__trust-item">Completely free audit</span>
+      <span class="final-cta__trust-item">No obligation</span>
+      <span class="final-cta__trust-item">Founder-led, every time</span>
+      <span class="final-cta__trust-item">Written findings in 24hrs</span>
+      <span class="final-cta__trust-item">60-day progress guarantee</span>
+    </div>
+  </div></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="site-footer__inner">
+    <div class="site-footer__logo"><div class="site-footer__mark">CF</div><span class="site-footer__name">Crossfire Marketing</span></div>
+    <nav class="site-footer__links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="case-studies.html">Results</a><a href="audit.html">Free Audit</a><a href="contact.html">Contact</a></nav>
+    <span class="site-footer__copy">© 2024 Crossfire Marketing · Delhi, India</span>
+  </div></div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>

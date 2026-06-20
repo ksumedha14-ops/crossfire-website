@@ -1,0 +1,129 @@
+<svg viewBox="0 0 1200 540" xmlns="http://www.w3.org/2000/svg" font-family="Inter,system-ui,sans-serif">
+<rect width="1200" height="540" fill="#FAFAF8"/>
+<rect width="1200" height="4" fill="#C4552A"/>
+<!-- Header -->
+<rect x="0" y="4" width="1200" height="76" fill="#fff" stroke="#E5E3DC" stroke-width="1"/>
+<text x="40" y="30" fill="#C4552A" font-size="9" font-weight="700" letter-spacing="0.1em">CASE STUDY · MEDICAL / DENTAL · NOIDA SECTOR 18</text>
+<text x="40" y="58" fill="#1A1916" font-size="20" font-weight="800">Delhi Dental Care — Invisible to #1 in a Dominated Market</text>
+<text x="40" y="72" fill="#9C9790" font-size="10">New clinic · Beat 8-year established competitor · 2024</text>
+<rect x="950" y="20" width="212" height="44" rx="4" fill="#FEF9EE" stroke="#B45309"/>
+<text x="1056" y="38" fill="#B45309" font-size="9" font-weight="700" letter-spacing="0.07em" text-anchor="middle">THE CHALLENGE</text>
+<text x="1056" y="54" fill="#B45309" font-size="10" font-weight="700" text-anchor="middle">Competitor: 200+ reviews, 8 yrs</text>
+<!-- Metrics strip -->
+<rect x="0" y="80" width="1200" height="108" fill="#F5F4F0" stroke="#E5E3DC" stroke-width="1"/>
+<text x="40" y="104" fill="#9C9790" font-size="9" font-weight="700" letter-spacing="0.09em">KEY RESULTS</text>
+<!-- M1 -->
+<text x="40" y="138" fill="#9C9790" font-size="10">Maps Rank</text>
+<text x="40" y="165" fill="#9C9790" font-size="14" font-weight="700">Not visible</text>
+<text x="140" y="165" fill="#9C9790" font-size="18">→</text>
+<text x="168" y="170" fill="#C4552A" font-size="28" font-weight="900">#1</text>
+<line x1="230" y1="98" x2="230" y2="180" stroke="#E5E3DC"/>
+<!-- M2 -->
+<text x="248" y="138" fill="#9C9790" font-size="10">New Patients/Month</text>
+<text x="248" y="165" fill="#1A1916" font-size="14" font-weight="700">0</text>
+<text x="264" y="165" fill="#9C9790" font-size="18">→</text>
+<text x="290" y="170" fill="#C4552A" font-size="28" font-weight="900">18/mo</text>
+<line x1="438" y1="98" x2="438" y2="180" stroke="#E5E3DC"/>
+<!-- M3 -->
+<text x="456" y="138" fill="#9C9790" font-size="10">Reviews in 90 Days</text>
+<text x="456" y="165" fill="#1A1916" font-size="14" font-weight="700">0</text>
+<text x="472" y="165" fill="#9C9790" font-size="18">→</text>
+<text x="498" y="170" fill="#C4552A" font-size="28" font-weight="900">47</text>
+<line x1="600" y1="98" x2="600" y2="180" stroke="#E5E3DC"/>
+<!-- M4 -->
+<text x="618" y="138" fill="#9C9790" font-size="10">Google Rating</text>
+<text x="618" y="170" fill="#15803D" font-size="28" font-weight="900">4.9★</text>
+<line x1="740" y1="98" x2="740" y2="180" stroke="#E5E3DC"/>
+<!-- M5 -->
+<text x="758" y="138" fill="#9C9790" font-size="10">Weeks to Top 3</text>
+<text x="758" y="170" fill="#1A1916" font-size="28" font-weight="900">11 wks</text>
+<line x1="930" y1="98" x2="930" y2="180" stroke="#E5E3DC"/>
+<!-- M6 -->
+<text x="948" y="138" fill="#9C9790" font-size="10">Competitor had</text>
+<text x="948" y="165" fill="#9C9790" font-size="13" font-weight="600">200+ reviews</text>
+<text x="948" y="178" fill="#9C9790" font-size="10">We outranked them in 5 months</text>
+<!-- Ranking by keyword chart -->
+<rect x="40" y="206" width="480" height="220" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="60" y="232" fill="#1A1916" font-size="13" font-weight="700">Maps Rankings by Keyword</text>
+<text x="60" y="248" fill="#9C9790" font-size="10">Current position (full bar = #1)</text>
+<text x="60" y="284" fill="#5C5852" font-size="11" font-weight="600">dentist near me Noida</text>
+<rect x="60" y="290" width="400" height="14" rx="3" fill="#F5F4F0"/>
+<rect x="60" y="290" width="400" height="14" rx="3" fill="#C4552A"/>
+<text x="468" y="301" fill="#fff" font-size="9" font-weight="700" text-anchor="end">#1</text>
+<text x="475" y="301" fill="#C4552A" font-size="9">← from invisible</text>
+<text x="60" y="326" fill="#5C5852" font-size="11" font-weight="600">dental clinic Sector 18</text>
+<rect x="60" y="332" width="400" height="14" rx="3" fill="#F5F4F0"/>
+<rect x="60" y="332" width="370" height="14" rx="3" fill="#C4552A"/>
+<text x="438" y="343" fill="#fff" font-size="9" font-weight="700" text-anchor="end">#2</text>
+<text x="475" y="343" fill="#9C9790" font-size="9">from #12+</text>
+<text x="60" y="368" fill="#5C5852" font-size="11" font-weight="600">teeth whitening Noida</text>
+<rect x="60" y="374" width="400" height="14" rx="3" fill="#F5F4F0"/>
+<rect x="60" y="374" width="330" height="14" rx="3" fill="#C4552A" fill-opacity="0.7"/>
+<text x="398" y="385" fill="#fff" font-size="9" font-weight="700" text-anchor="end">#3</text>
+<text x="475" y="385" fill="#9C9790" font-size="9">from invisible</text>
+<text x="60" y="410" fill="#5C5852" font-size="11" font-weight="600">best dentist Sector 18</text>
+<rect x="60" y="416" width="400" height="14" rx="3" fill="#F5F4F0"/>
+<rect x="60" y="416" width="290" height="14" rx="3" fill="#C4552A" fill-opacity="0.5"/>
+<text x="358" y="427" fill="#fff" font-size="9" font-weight="700" text-anchor="end">#4</text>
+<text x="475" y="427" fill="#9C9790" font-size="9">from invisible</text>
+<!-- Review growth bars -->
+<rect x="540" y="206" width="360" height="220" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="558" y="232" fill="#1A1916" font-size="13" font-weight="700">Review Growth — 90 Days</text>
+<line x1="566" y1="390" x2="870" y2="390" stroke="#E5E3DC"/>
+<!-- 13 bars: cumulative 0,2,5,9,14,19,24,29,33,38,41,44,47 -->
+<!-- height scale: max 47, range 130px, y_base=390 -->
+<!-- bar widths: 20px, gap 4px, start x=574 -->
+<rect x="574" y="387" width="18" height="3" rx="1" fill="#E5E3DC"/>
+<rect x="596" y="382" width="18" height="8" rx="1" fill="#D4D1C9"/>
+<rect x="618" y="375" width="18" height="15" rx="1" fill="#D4D1C9"/>
+<rect x="640" y="366" width="18" height="24" rx="1" fill="#C4552A" fill-opacity="0.3"/>
+<rect x="662" y="355" width="18" height="35" rx="1" fill="#C4552A" fill-opacity="0.4"/>
+<rect x="684" y="344" width="18" height="46" rx="1" fill="#C4552A" fill-opacity="0.5"/>
+<rect x="706" y="335" width="18" height="55" rx="1" fill="#C4552A" fill-opacity="0.6"/>
+<rect x="728" y="325" width="18" height="65" rx="1" fill="#C4552A" fill-opacity="0.7"/>
+<rect x="750" y="316" width="18" height="74" rx="1" fill="#C4552A" fill-opacity="0.8"/>
+<rect x="772" y="307" width="18" height="83" rx="1" fill="#C4552A" fill-opacity="0.9"/>
+<rect x="794" y="300" width="18" height="90" rx="1" fill="#C4552A"/>
+<rect x="816" y="293" width="18" height="97" rx="1" fill="#C4552A"/>
+<rect x="838" y="285" width="18" height="105" rx="1" fill="#C4552A"/>
+<text x="847" y="278" fill="#C4552A" font-size="13" font-weight="900" text-anchor="middle">47</text>
+<text x="847" y="292" fill="#C4552A" font-size="8" text-anchor="middle">reviews</text>
+<text x="574" y="406" fill="#9C9790" font-size="8" text-anchor="middle">Wk1</text>
+<text x="706" y="406" fill="#9C9790" font-size="8" text-anchor="middle">Mo 2</text>
+<text x="847" y="406" fill="#9C9790" font-size="8" text-anchor="middle">Day 90</text>
+<text x="558" y="426" fill="#B45309" font-size="20">★★★★★</text>
+<text x="692" y="426" fill="#1A1916" font-size="18" font-weight="800">4.9</text>
+<text x="726" y="426" fill="#9C9790" font-size="10">avg rating</text>
+<!-- Timeline panel -->
+<rect x="920" y="206" width="240" height="220" rx="6" fill="#1A1916"/>
+<text x="940" y="232" fill="rgba(255,255,255,0.4)" font-size="9" font-weight="700" letter-spacing="0.08em">RANKING TIMELINE</text>
+<circle cx="940" cy="262" r="4" fill="#C4552A"/>
+<line x1="940" y1="266" x2="940" y2="298" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+<text x="953" y="261" fill="rgba(255,255,255,0.5)" font-size="9">Day 1</text>
+<text x="953" y="273" fill="#fff" font-size="11" font-weight="600">GBP built from scratch</text>
+<circle cx="940" cy="302" r="4" fill="rgba(196,85,42,0.4)"/>
+<line x1="940" y1="306" x2="940" y2="338" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+<text x="953" y="301" fill="rgba(255,255,255,0.5)" font-size="9">Week 6</text>
+<text x="953" y="313" fill="#fff" font-size="11" font-weight="600">Entered top 10</text>
+<circle cx="940" cy="342" r="4" fill="#C4552A"/>
+<line x1="940" y1="346" x2="940" y2="378" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+<text x="953" y="341" fill="rgba(255,255,255,0.5)" font-size="9">Week 11</text>
+<text x="953" y="353" fill="#fff" font-size="11" font-weight="600">Top 3 achieved</text>
+<circle cx="940" cy="382" r="5" fill="#C4552A"/>
+<text x="953" y="381" fill="rgba(255,255,255,0.5)" font-size="9">Month 5</text>
+<text x="953" y="395" fill="#C4552A" font-size="14" font-weight="900">#1 Position</text>
+<text x="953" y="410" fill="rgba(255,255,255,0.35)" font-size="9">18 new patients/mo</text>
+<!-- Bottom row -->
+<rect x="40" y="440" width="840" height="84" rx="6" fill="#fff" stroke="#E5E3DC"/>
+<text x="60" y="464" fill="#1A1916" font-size="11" font-weight="700">What Crossfire Did</text>
+<text x="60" y="484" fill="#5C5852" font-size="10">→  Built GBP from scratch with correct category targeting (competitor's weakness)</text>
+<text x="60" y="500" fill="#5C5852" font-size="10">→  47 reviews in 90 days via automated patient follow-up sequence</text>
+<text x="60" y="516" fill="#5C5852" font-size="10">→  Identified 4 niche keywords competitor wasn't targeting · 28 clinic photos uploaded</text>
+<!-- Quote -->
+<rect x="900" y="440" width="260" height="84" rx="6" fill="#FBF2EE" stroke="#C4552A"/>
+<rect x="900" y="440" width="3" height="84" fill="#C4552A"/>
+<text x="916" y="464" fill="#1A1916" font-size="11" font-style="italic">"Another agency said 12 months.</text>
+<text x="916" y="480" fill="#1A1916" font-size="11" font-style="italic">Sumedha got us to #1 in 5.</text>
+<text x="916" y="496" fill="#1A1916" font-size="11" font-style="italic">New clinic — fully booked."</text>
+<text x="916" y="514" fill="#C4552A" font-size="10" font-weight="700">— Dr. Priya A., Delhi Dental</text>
+</svg>

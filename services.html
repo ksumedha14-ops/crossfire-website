@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Services — Crossfire Marketing · Local SEO, Maps Ranking & Lead Generation</title>
+<meta name="description" content="Three services built around one goal: more customers. Local SEO, Complete Lead Generation System, and Meta Ads. Transparent pricing. Measurable results."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+.page-hero{padding:80px 0 72px;background:var(--dark);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 80% 50%,rgba(196,85,42,.07) 0%,transparent 60%);pointer-events:none}
+.page-hero__inner{position:relative;z-index:1;max-width:640px}
+.page-hero__bread{display:flex;align-items:center;gap:8px;font-size:.72rem;color:rgba(255,255,255,.28);margin-bottom:24px}
+.page-hero__bread a{color:rgba(255,255,255,.28);transition:color .14s}.page-hero__bread a:hover{color:rgba(255,255,255,.7)}
+.page-hero__bread span{color:rgba(255,255,255,.18)}
+.page-hero h1{font-size:clamp(2rem,3.8vw,3rem);color:#fff;margin-bottom:16px;font-weight:800}
+.page-hero h1 em{font-style:normal;color:var(--accent)}
+.page-hero p{font-size:1rem;color:rgba(255,255,255,.52);line-height:1.8;margin-bottom:32px;max-width:520px}
+.page-hero__ctas{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.page-hero__quick{margin-top:40px;display:flex;gap:28px;padding-top:32px;border-top:1px solid rgba(255,255,255,.08)}
+.pq-item{font-size:.8rem;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:7px}
+.pq-item strong{color:rgba(255,255,255,.78);font-weight:600}
+
+/* COMPARISON TABLE */
+.compare{padding:96px 0;background:var(--bg);border-bottom:1px solid var(--border)}
+.compare__table-wrap{overflow-x:auto;margin-top:48px}
+.compare-table{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.compare-table th,.compare-table td{padding:13px 18px;text-align:left;border-bottom:1px solid var(--border);font-size:.84rem}
+.compare-table th{background:var(--surface);font-weight:700;font-size:.76rem;letter-spacing:.02em;color:var(--body)}
+.compare-table th:first-child{width:38%}
+.compare-table td:first-child{color:var(--body);font-size:.83rem}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table .col-h{text-align:center;font-weight:700;color:var(--ink)}
+.compare-table .col-h span{display:block;font-size:.68rem;font-weight:500;color:var(--muted);margin-top:2px}
+.compare-table td.check{text-align:center;font-size:.9rem}
+.compare-table td.check.yes{color:var(--green)}
+.compare-table td.check.no{color:var(--border-2)}
+.compare-table .featured-col{background:rgba(196,85,42,.03)}
+.compare-table .featured-head{background:var(--accent-dim);border-bottom:2px solid var(--accent)}
+.compare-table .featured-head .col-h{color:var(--accent)}
+
+/* SERVICE DETAILS */
+.svc{padding:96px 0;border-bottom:1px solid var(--border)}
+.svc:nth-child(odd){background:var(--bg)}
+.svc:nth-child(even){background:var(--surface)}
+.svc__inner{display:grid;grid-template-columns:1fr 380px;gap:72px;align-items:start}
+.svc--rev .svc__inner{grid-template-columns:380px 1fr}
+.svc--rev .svc__content{order:2}
+.svc--rev .svc__card{order:1}
+.svc__eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:22px}
+.svc__eyebrow-num{width:28px;height:28px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--muted)}
+.svc__content h2{font-size:clamp(1.7rem,2.8vw,2.2rem);margin-bottom:14px}
+.svc__content .lead{font-size:1rem;color:var(--body);line-height:1.8;margin-bottom:28px}
+.svc__includes h3{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:14px}
+.svc__list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.svc__list li{display:flex;align-items:flex-start;gap:10px;font-size:.86rem;color:var(--body);line-height:1.5}
+.svc__list li::before{content:'✓';color:var(--green);font-weight:700;font-size:.82rem;margin-top:1px;flex-shrink:0}
+.svc__card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;box-shadow:var(--shadow);position:sticky;top:80px}
+.svc__card--accent{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent-mid),var(--shadow)}
+.svc__card-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:6px}
+.svc__card-name{font-size:1.1rem;font-weight:800;color:var(--ink);margin-bottom:4px}
+.svc__card-price{font-size:1.6rem;font-weight:800;letter-spacing:-.04em;color:var(--ink);margin-bottom:4px}
+.svc__card-price span{font-size:.85rem;font-weight:500;color:var(--muted);letter-spacing:0}
+.svc__card-note{font-size:.75rem;color:var(--muted);margin-bottom:20px}
+.svc__card-divider{height:1px;background:var(--border);margin-bottom:18px}
+.svc__card-outcomes h4{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
+.svc__card-outcomes ul{display:flex;flex-direction:column;gap:8px}
+.svc__card-outcomes li{font-size:.82rem;color:var(--body);padding-left:14px;position:relative}
+.svc__card-outcomes li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.74rem}
+.svc__card-badge{display:inline-flex;align-items:center;gap:6px;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;padding:4px 10px;border-radius:100px;background:rgba(196,85,42,.08);border:1px solid var(--accent-mid);color:var(--accent);margin-bottom:14px}
+
+/* PRICING */
+.pricing{padding:96px 0;background:var(--dark)}
+.pricing h2,.pricing .section-head p{color:#fff}
+.pricing .section-head--center p{color:rgba(255,255,255,.42)}
+.pricing__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.price-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:28px;display:flex;flex-direction:column}
+.price-card--featured{background:rgba(255,255,255,.07);border-color:rgba(196,85,42,.4);box-shadow:0 0 0 1px rgba(196,85,42,.2)}
+.price-card__name{font-size:.85rem;font-weight:700;color:rgba(255,255,255,.75);margin-bottom:16px}
+.price-card__amount{font-size:1.8rem;font-weight:800;letter-spacing:-.04em;color:#fff;line-height:1;margin-bottom:4px}
+.price-card__amount span{font-size:.9rem;font-weight:500;color:rgba(255,255,255,.35);letter-spacing:0}
+.price-card__note{font-size:.74rem;color:rgba(255,255,255,.28);margin-bottom:20px}
+.price-card__divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:18px}
+.price-card ul{display:flex;flex-direction:column;gap:8px;flex:1;margin-bottom:24px}
+.price-card ul li{font-size:.82rem;color:rgba(255,255,255,.5);padding-left:14px;position:relative}
+.price-card ul li::before{content:'✓';position:absolute;left:0;color:var(--green);font-size:.76rem}
+.pricing__note{margin-top:36px;text-align:center;font-size:.84rem;color:rgba(255,255,255,.28);line-height:1.7}
+.pricing__note a{color:var(--accent)}
+
+/* SERVICES FAQ */
+.svc-faq{padding:96px 0;background:var(--bg)}
+.svc-faq__inner{display:grid;grid-template-columns:260px 1fr;gap:60px}
+
+@media(max-width:1024px){
+  .svc__inner,.svc--rev .svc__inner{grid-template-columns:1fr;gap:40px}
+  .svc--rev .svc__content,.svc--rev .svc__card{order:unset}
+  .svc__card{position:static}
+  .pricing__grid{grid-template-columns:1fr}
+  .svc-faq__inner{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:768px){
+  .page-hero__quick{flex-wrap:wrap;gap:14px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap"><div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="public/crossfire-logo.png" class="nav__logo-img" alt="Crossfire Marketing"></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Results</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <div class="nav__spot"><span class="nav__spot-dot"></span>Accepting clients</div>
+      <a href="audit.html" class="btn btn--primary btn--sm">Free Audit →</a>
+      <div class="hamburger" id="hamburger" aria-expanded="false" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </div></div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero" aria-labelledby="svc-h1">
+  <div class="wrap">
+    <div class="page-hero__inner">
+      <div class="page-hero__bread fade-up">
+        <a href="index.html">Home</a><span>/</span><span style="color:rgba(255,255,255,.55)">Services</span>
+      </div>
+      <h1 id="svc-h1" class="fade-up d1">Three services.<br>One goal: <em>more customers</em>.</h1>
+      <p class="fade-up d2">We don't sell deliverable lists. We sell outcomes — rankings, leads, and growth that you can measure. Every service is built around what actually moves the needle for local businesses.</p>
+      <div class="page-hero__ctas fade-up d3">
+        <a href="audit.html" class="btn btn--primary btn--lg">Start with Free Audit →</a>
+        <a href="contact.html" class="btn btn--ghost btn--lg">Ask a Question</a>
+      </div>
+      <div class="page-hero__quick fade-up d4">
+        <div class="pq-item"><strong>₹18K</strong> starting price</div>
+        <div class="pq-item"><strong>3-month</strong> minimum</div>
+        <div class="pq-item"><strong>60-day</strong> progress guarantee</div>
+        <div class="pq-item"><strong>1 client</strong> per market per category</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE TABLE -->
+<section class="compare" aria-labelledby="cmp-h2">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">At a Glance</span>
+      <h2 id="cmp-h2">Compare all services</h2>
+      <p>Choose based on where you are now and how aggressively you want to grow.</p>
+    </div>
+    <div class="compare__table-wrap fade-up d1">
+      <table class="compare-table" role="table" aria-label="Service comparison">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="col-h">Local SEO<span>₹18K/mo</span></th>
+            <th class="col-h featured-head">Complete System<span>₹30K/mo — Most popular</span></th>
+            <th class="col-h">Meta Ads<span>₹15K/mo + spend</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Google Business Profile optimisation</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check no">—</td></tr>
+          <tr><td>Google Maps ranking strategy</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check no">—</td></tr>
+          <tr><td>Citation building & cleanup</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check no">—</td></tr>
+          <tr><td>Review generation system</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check no">—</td></tr>
+          <tr><td>Competitor keyword mapping</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check no">—</td></tr>
+          <tr><td>Facebook & Instagram ads</td><td class="check no">—</td><td class="check yes featured-col">✓</td><td class="check yes">✓</td></tr>
+          <tr><td>Retargeting campaigns</td><td class="check no">—</td><td class="check yes featured-col">✓</td><td class="check yes">✓</td></tr>
+          <tr><td>Ad creative & copywriting</td><td class="check no">—</td><td class="check yes featured-col">✓</td><td class="check yes">✓</td></tr>
+          <tr><td>Landing page conversion review</td><td class="check no">—</td><td class="check yes featured-col">✓</td><td class="check no">—</td></tr>
+          <tr><td>Lead tracking & attribution</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check yes">✓</td></tr>
+          <tr><td>Monthly strategy call</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check yes">✓</td></tr>
+          <tr><td>Founder-led (Sumedha direct)</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check yes">✓</td></tr>
+          <tr><td>60-day progress guarantee</td><td class="check yes">✓</td><td class="check yes featured-col">✓</td><td class="check no">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 1: LOCAL SEO -->
+<section class="svc" id="local-seo" aria-labelledby="svc1-h2">
+  <div class="wrap"><div class="svc__inner">
+    <div class="svc__content fade-up">
+      <div class="svc__eyebrow">
+        <div class="svc__eyebrow-num">01</div>
+        <span class="eyebrow">Local SEO & Maps Ranking</span>
+      </div>
+      <h2 id="svc1-h2">Get found when buyers<br>search near them.</h2>
+      <p class="lead">The majority of local purchasing decisions start with a Google Maps search. We make sure your business is one of the first three results — where 80% of clicks go.</p>
+      <div class="svc__includes">
+        <h3>What's included</h3>
+        <ul class="svc__list">
+          <li>Complete Google Business Profile audit and optimisation</li>
+          <li>Keyword research for your specific market and service area</li>
+          <li>Citation building across 40+ directories, consistency fixed</li>
+          <li>Review generation system with follow-up sequences</li>
+          <li>Monthly competitor tracking and position monitoring</li>
+          <li>Local content strategy for Maps relevance signals</li>
+          <li>Written monthly report with ranking changes and next actions</li>
+        </ul>
+      </div>
+      <a href="audit.html" class="btn btn--primary btn--lg">Start with Free Audit →</a>
+    </div>
+    <div class="svc__card fade-up d2">
+      <div class="maps-mockup" style="margin-bottom:18px" aria-hidden="true">
+        <div class="maps-mockup__chrome">
+          <div class="maps-mockup__chrome-dot"></div><div class="maps-mockup__chrome-dot"></div><div class="maps-mockup__chrome-dot"></div>
+          <div class="maps-mockup__url">Google Maps · HVAC near me</div>
+        </div>
+        <div class="maps-mockup__body">
+          <div class="mmap-result mmap-result--top">
+            <div class="mmap-pin mmap-pin--1">1</div>
+            <div><div class="mmap-name">Kumar HVAC Services</div><div class="mmap-meta"><span class="mmap-stars">★★★★★</span> 4.9 · Open now</div></div>
+          </div>
+          <div class="mmap-result">
+            <div class="mmap-pin mmap-pin--2">2</div>
+            <div><div class="mmap-name">Delhi Climate Solutions</div><div class="mmap-meta">★★★★☆ 4.1</div></div>
+          </div>
+          <div class="mmap-result">
+            <div class="mmap-pin mmap-pin--3">3</div>
+            <div><div class="mmap-name">CoolAir Delhi</div><div class="mmap-meta">★★★☆☆ 3.8</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="svc__card-label">Service 01</div>
+      <div class="svc__card-name">Local SEO & Maps Ranking</div>
+      <div class="svc__card-price">₹18,000<span>/month</span></div>
+      <div class="svc__card-note">3-month minimum · One market per category</div>
+      <div class="svc__card-divider"></div>
+      <div class="svc__card-outcomes">
+        <h4>Typical outcomes</h4>
+        <ul>
+          <li>Top 3 Maps ranking within 6–12 weeks</li>
+          <li>2–4× increase in calls from Google</li>
+          <li>40–60 new reviews in first 90 days</li>
+          <li>94%+ GBP completion score</li>
+        </ul>
+      </div>
+      <div style="margin-top:20px">
+        <a href="audit.html" class="btn btn--primary" style="width:100%;justify-content:center">Claim Free Audit →</a>
+        <p style="text-align:center;font-size:.72rem;color:var(--muted);margin-top:10px">No obligation · Written findings in 24hrs</p>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- SERVICE 2: COMPLETE SYSTEM -->
+<section class="svc svc--rev" id="complete-system" aria-labelledby="svc2-h2">
+  <div class="wrap"><div class="svc__inner">
+    <div class="svc__card fade-up">
+      <div class="dash-mockup" style="margin-bottom:18px" aria-hidden="true">
+        <div class="dash-mockup__chrome">
+          <div class="dash-mockup__chrome-dot"></div><div class="dash-mockup__chrome-dot"></div><div class="dash-mockup__chrome-dot"></div>
+        </div>
+        <div class="dash-mockup__body">
+          <div class="dash-row dash-row-3">
+            <div class="dash-cell"><div class="dash-n dash-n--up">#1</div><div class="dash-l">Maps rank</div></div>
+            <div class="dash-cell"><div class="dash-n dash-n--up">22/mo</div><div class="dash-l">Leads</div></div>
+            <div class="dash-cell"><div class="dash-n">4.9★</div><div class="dash-l">Rating</div></div>
+          </div>
+          <div class="dash-bars">
+            <div class="dash-b dash-b--dim" style="height:35%"></div>
+            <div class="dash-b dash-b--lo" style="height:45%"></div>
+            <div class="dash-b dash-b--mid" style="height:55%"></div>
+            <div class="dash-b dash-b--mid" style="height:65%"></div>
+            <div class="dash-b dash-b--hi" style="height:80%"></div>
+            <div class="dash-b dash-b--hi" style="height:90%"></div>
+            <div class="dash-b dash-b--hi" style="height:100%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="svc__card-badge"><span>★</span> Most popular</div>
+      <div class="svc__card--accent" style="background:var(--accent-dim);border:1px solid var(--accent-mid);border-radius:var(--r);padding:18px;margin-bottom:16px">
+        <div class="svc__card-label">Service 02 — Recommended</div>
+        <div class="svc__card-name" style="font-size:1rem">Complete Acquisition System</div>
+        <div class="svc__card-price">₹30,000<span>/month</span></div>
+        <div class="svc__card-note">Includes Local SEO + Meta Ads</div>
+      </div>
+      <div class="svc__card-outcomes">
+        <h4>Typical outcomes</h4>
+        <ul>
+          <li>Top 3 Maps + Facebook presence within 8 weeks</li>
+          <li>3–5× increase in total lead volume</li>
+          <li>Both organic and paid channels tracked</li>
+          <li>Full attribution — know exactly what's working</li>
+        </ul>
+      </div>
+      <div style="margin-top:20px">
+        <a href="audit.html" class="btn btn--primary" style="width:100%;justify-content:center">Claim Free Audit →</a>
+      </div>
+    </div>
+    <div class="svc__content fade-up d2">
+      <div class="svc__eyebrow">
+        <div class="svc__eyebrow-num">02</div>
+        <span class="eyebrow">Complete Acquisition System</span>
+      </div>
+      <h2 id="svc2-h2">Organic rankings plus<br>paid demand. One system.</h2>
+      <p class="lead">For businesses serious about growth, combining local SEO with Meta Ads creates a compounding effect — organic visibility builds trust while paid ads generate immediate demand. Together, they outperform either channel alone.</p>
+      <div class="svc__includes">
+        <h3>Everything in Local SEO, plus</h3>
+        <ul class="svc__list">
+          <li>Facebook & Instagram campaign strategy and setup</li>
+          <li>Hyper-local audience targeting for your exact service area</li>
+          <li>Ad creative (copy, imagery direction, A/B testing)</li>
+          <li>Retargeting for website visitors and engagers</li>
+          <li>Landing page conversion review and recommendations</li>
+          <li>Unified lead tracking across organic and paid channels</li>
+          <li>Bi-weekly check-ins during the first 60 days</li>
+        </ul>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="audit.html" class="btn btn--primary btn--lg">Claim Free Audit →</a>
+        <a href="contact.html" class="btn btn--soft btn--lg">Ask a Question</a>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- SERVICE 3: META ADS -->
+<section class="svc" id="meta-ads" aria-labelledby="svc3-h2">
+  <div class="wrap"><div class="svc__inner">
+    <div class="svc__content fade-up">
+      <div class="svc__eyebrow">
+        <div class="svc__eyebrow-num">03</div>
+        <span class="eyebrow">Meta Ads Management</span>
+      </div>
+      <h2 id="svc3-h2">Turn scrollers into<br>enquiries with local ads.</h2>
+      <p class="lead">Meta Ads let you reach potential customers in your exact service area before they even search. Ideal for businesses that want faster results alongside their organic SEO, or those in competitive markets needing immediate lead volume.</p>
+      <div class="svc__includes">
+        <h3>What's included</h3>
+        <ul class="svc__list">
+          <li>Campaign strategy and audience research for your market</li>
+          <li>Ad creative direction — copy, imagery, video concepts</li>
+          <li>Facebook and Instagram ad setup and management</li>
+          <li>Hyper-local radius targeting and demographic optimisation</li>
+          <li>A/B testing of creatives, audiences, and offers</li>
+          <li>Retargeting sequences for warm audiences</li>
+          <li>Weekly performance reporting with spend breakdown</li>
+        </ul>
+      </div>
+      <a href="audit.html" class="btn btn--primary btn--lg">Start with Free Audit →</a>
+    </div>
+    <div class="svc__card fade-up d2">
+      <div class="dash-mockup" style="margin-bottom:18px" aria-hidden="true">
+        <div class="dash-mockup__chrome">
+          <div class="dash-mockup__chrome-dot"></div><div class="dash-mockup__chrome-dot"></div><div class="dash-mockup__chrome-dot"></div>
+        </div>
+        <div class="dash-mockup__body">
+          <div class="dash-row dash-row-2">
+            <div class="dash-cell"><div class="dash-n dash-n--up">₹280</div><div class="dash-l">Cost / lead</div></div>
+            <div class="dash-cell"><div class="dash-n dash-n--up">34</div><div class="dash-l">Leads / mo</div></div>
+          </div>
+          <div class="dash-bars">
+            <div class="dash-b dash-b--dim" style="height:30%"></div>
+            <div class="dash-b dash-b--lo" style="height:42%"></div>
+            <div class="dash-b dash-b--lo" style="height:52%"></div>
+            <div class="dash-b dash-b--mid" style="height:63%"></div>
+            <div class="dash-b dash-b--mid" style="height:74%"></div>
+            <div class="dash-b dash-b--hi" style="height:88%"></div>
+            <div class="dash-b dash-b--hi" style="height:100%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="svc__card-label">Service 03</div>
+      <div class="svc__card-name">Meta Ads Management</div>
+      <div class="svc__card-price">₹15,000<span>/month</span></div>
+      <div class="svc__card-note">+ your ad spend budget (recommended ₹10–25K/mo)</div>
+      <div class="svc__card-divider"></div>
+      <div class="svc__card-outcomes">
+        <h4>Typical outcomes</h4>
+        <ul>
+          <li>First qualified leads within 10–14 days</li>
+          <li>Cost per lead ₹150–400 depending on industry</li>
+          <li>Consistent weekly lead flow once optimised</li>
+          <li>Full creative and strategic ownership</li>
+        </ul>
+      </div>
+      <div style="margin-top:20px">
+        <a href="audit.html" class="btn btn--primary" style="width:100%;justify-content:center">Claim Free Audit →</a>
+        <p style="text-align:center;font-size:.72rem;color:var(--muted);margin-top:10px">No obligation · Written findings in 24hrs</p>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" aria-labelledby="price-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow eyebrow--white">Transparent Pricing</span>
+      <h2 id="price-h2">No surprises. No hidden fees.</h2>
+      <p>All prices listed in INR. Monthly retainer, cancel after minimum term with 30 days notice.</p>
+    </div>
+    <div class="pricing__grid">
+      <div class="price-card fade-up">
+        <div class="price-card__name">Local SEO & Maps Ranking</div>
+        <div class="price-card__amount">₹18,000<span>/month</span></div>
+        <div class="price-card__note">3-month minimum engagement</div>
+        <div class="price-card__divider"></div>
+        <ul>
+          <li>GBP optimisation (complete)</li>
+          <li>Citation building & cleanup</li>
+          <li>Review generation system</li>
+          <li>Monthly rank tracking report</li>
+          <li>Monthly strategy call</li>
+          <li>Direct WhatsApp access to Sumedha</li>
+        </ul>
+        <a href="audit.html" class="btn btn--ghost" style="justify-content:center">Start with Free Audit</a>
+      </div>
+      <div class="price-card price-card--featured fade-up d1">
+        <div class="badge badge--accent" style="margin-bottom:12px"><span class="badge__dot"></span>Most popular</div>
+        <div class="price-card__name">Complete Acquisition System</div>
+        <div class="price-card__amount">₹30,000<span>/month</span></div>
+        <div class="price-card__note">3-month minimum · Includes SEO + Ads</div>
+        <div class="price-card__divider"></div>
+        <ul>
+          <li>Everything in Local SEO</li>
+          <li>Meta Ads campaign management</li>
+          <li>Hyper-local audience targeting</li>
+          <li>Ad creative & A/B testing</li>
+          <li>Retargeting sequences</li>
+          <li>Bi-weekly check-ins (first 60 days)</li>
+        </ul>
+        <a href="audit.html" class="btn btn--primary" style="justify-content:center">Start with Free Audit →</a>
+      </div>
+      <div class="price-card fade-up d2">
+        <div class="price-card__name">Meta Ads Management</div>
+        <div class="price-card__amount">₹15,000<span>/month</span></div>
+        <div class="price-card__note">+ ad spend (recommend ₹10–25K/mo)</div>
+        <div class="price-card__divider"></div>
+        <ul>
+          <li>Campaign strategy & setup</li>
+          <li>Facebook & Instagram management</li>
+          <li>Local audience targeting</li>
+          <li>Creative direction & copywriting</li>
+          <li>Weekly performance reporting</li>
+          <li>Monthly strategy call</li>
+        </ul>
+        <a href="audit.html" class="btn btn--ghost" style="justify-content:center">Start with Free Audit</a>
+      </div>
+    </div>
+    <p class="pricing__note fade-up d3">Prices exclude GST. Ad spend for Meta campaigns is billed separately and paid directly to Meta. <br>Custom arrangements available for multi-location businesses — <a href="contact.html">contact us</a>.</p>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<div style="padding:48px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="guarantee-block fade-up">
+      <div class="guarantee-block__icon">🛡️</div>
+      <div>
+        <h3>60-Day Progress Guarantee</h3>
+        <p>If we don't show measurable ranking movement within 60 days of implementation, you pay nothing for the following month. We put our work on the line — not just our words.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="svc-faq" aria-labelledby="sfaq-h2">
+  <div class="wrap"><div class="svc-faq__inner">
+    <div class="fade-up">
+      <span class="eyebrow">Questions</span>
+      <h2 id="sfaq-h2" style="font-size:clamp(1.4rem,2.2vw,1.85rem);margin-bottom:12px">Service questions answered</h2>
+      <p style="font-size:.88rem;color:var(--body);line-height:1.75;margin-bottom:20px">Still unsure which service fits? The audit will make it clear — and it's free.</p>
+      <a href="audit.html" class="btn btn--primary">Claim Free Audit →</a>
+    </div>
+    <div class="faq-list fade-up d1">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Which service should I start with?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>If you have no Google Maps presence or are below position 5, start with Local SEO. If you want faster results and can invest in ad spend, the Complete System is more effective. The free audit will tell you which fits your situation specifically.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I switch services after the minimum term?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes. After the 3-month minimum, you can upgrade, downgrade, or pause with 30 days notice. Most clients upgrade as they see results — the Complete System becomes an obvious choice once rankings start moving.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What industries do you work with?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Any local service business: plumbers, electricians, HVAC, contractors, salons, clinics, dental, legal, home services, restaurants. If your business needs to be found by people searching nearby, we can help.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do I need to provide anything to get started?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Access to your Google Business Profile, basic business information, and a short onboarding call. We handle the rest — research, implementation, reporting. Most clients spend under 2 hours per month after the first week.</p></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="svc-cta-h2">
+  <div class="wrap"><div class="final-cta__inner">
+    <div class="badge badge--dark fade-up" style="margin-bottom:22px"><span class="badge__dot"></span>Limited availability this month</div>
+    <h2 id="svc-cta-h2" class="fade-up d1">Not sure which service fits?<br>The audit tells you <em>exactly</em>.</h2>
+    <p class="fade-up d2">15 minutes. We research your situation before the call. You leave knowing which service fits — and whether we're the right team to deliver it.</p>
+    <div class="final-cta__ctas fade-up d3">
+      <a href="audit.html" class="btn btn--primary btn--xl">Claim Free Audit →</a>
+      <a href="contact.html" class="btn btn--ghost btn--xl">Ask a Question</a>
+    </div>
+    <div class="final-cta__trust fade-up d4">
+      <span class="final-cta__trust-item">Free, no obligation</span>
+      <span class="final-cta__trust-item">Written findings in 24hrs</span>
+      <span class="final-cta__trust-item">Founder-led</span>
+      <span class="final-cta__trust-item">60-day guarantee</span>
+    </div>
+  </div></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="site-footer__inner">
+    <div class="site-footer__logo"><div class="site-footer__mark">CF</div><span class="site-footer__name">Crossfire Marketing</span></div>
+    <nav class="site-footer__links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="case-studies.html">Results</a><a href="audit.html">Free Audit</a><a href="contact.html">Contact</a></nav>
+    <span class="site-footer__copy">© 2024 Crossfire Marketing · Delhi, India</span>
+  </div></div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>

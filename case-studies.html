@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Client Results — Crossfire Marketing · Local SEO Case Studies Delhi NCR</title>
+<meta name="description" content="Real results from real local businesses. See how Crossfire Marketing helped businesses in Delhi NCR rank in the top 3 on Google Maps and multiply their leads."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+.page-hero{padding:80px 0 72px;background:var(--dark);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 500px 360px at 75% 60%,rgba(196,85,42,.07) 0%,transparent 60%);pointer-events:none}
+.page-hero__inner{position:relative;z-index:1;max-width:620px}
+.page-hero h1{font-size:clamp(2rem,3.8vw,3rem);color:#fff;margin-bottom:16px;font-weight:800}
+.page-hero h1 em{font-style:normal;color:var(--accent)}
+.page-hero p{font-size:1rem;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:32px;max-width:500px}
+
+/* RESULTS BAR */
+.results-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:28px 0}
+.results-bar__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+.rb-cell{background:var(--bg);padding:20px 22px}
+.rb-cell__num{font-size:1.4rem;font-weight:800;letter-spacing:-.04em;color:var(--ink)}
+.rb-cell__num span{color:var(--accent)}
+.rb-cell__lbl{font-size:.74rem;color:var(--muted);margin-top:4px;line-height:1.4}
+
+/* FEATURED CASE STUDY */
+.cs-featured{padding:96px 0;background:var(--bg);border-bottom:1px solid var(--border)}
+.cs-featured__inner{display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:start}
+.cs-label{display:flex;align-items:center;gap:8px;margin-bottom:22px}
+.cs-label__badge{font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;padding:4px 10px;border-radius:100px;background:var(--accent-dim);border:1px solid var(--accent-mid);color:var(--accent)}
+.cs-label__cat{font-size:.78rem;color:var(--muted)}
+.cs-featured h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:16px}
+.cs-featured .challenge-lbl{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:10px;margin-top:24px}
+.cs-featured p{font-size:.93rem;color:var(--body);line-height:1.8}
+.cs-work{margin-top:24px}
+.cs-work h3{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:12px}
+.cs-work ul{display:flex;flex-direction:column;gap:8px}
+.cs-work ul li{font-size:.86rem;color:var(--body);padding-left:16px;position:relative;line-height:1.5}
+.cs-work ul li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;font-size:.8rem}
+
+/* RESULTS CARD */
+.cs-results-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);position:sticky;top:80px}
+.cs-results-card__head{background:var(--dark);padding:22px 24px}
+.cs-results-card__head h3{font-size:.88rem;font-weight:700;color:#fff;margin-bottom:2px}
+.cs-results-card__head p{font-size:.74rem;color:rgba(255,255,255,.35)}
+.cs-results-card__body{padding:24px}
+.cs-metric{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)}
+.cs-metric:last-child{border-bottom:none}
+.cs-metric__label{font-size:.8rem;color:var(--body)}
+.cs-metric__vals{display:flex;align-items:center;gap:8px}
+.cs-metric__before{font-size:.82rem;color:var(--muted);text-decoration:line-through}
+.cs-metric__after{font-size:.88rem;font-weight:700;color:var(--green)}
+.cs-metric__arrow{font-size:.7rem;color:var(--muted)}
+.cs-timeline{margin-top:16px;padding:14px 16px;background:var(--surface);border-radius:var(--r-sm);font-size:.78rem;color:var(--body)}
+.cs-timeline strong{color:var(--ink)}
+
+/* CASE STUDIES GRID */
+.cs-grid-section{padding:96px 0;background:var(--surface);border-bottom:1px solid var(--border)}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cs-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;transition:box-shadow .18s,border-color .18s,transform .18s}
+.cs-card:hover{box-shadow:var(--shadow);border-color:var(--border-2);transform:translateY(-2px)}
+.cs-card__header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
+.cs-card__icon{width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem}
+.cs-card__cat{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:3px 9px;border-radius:100px;background:var(--surface-2);border:1px solid var(--border)}
+.cs-card h3{font-size:.97rem;font-weight:700;margin-bottom:6px}
+.cs-card__loc{font-size:.76rem;color:var(--muted);margin-bottom:14px}
+.cs-card__challenge{font-size:.82rem;color:var(--body);line-height:1.7;flex:1;margin-bottom:18px}
+.cs-card__metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px;background:var(--surface);border-radius:var(--r-sm);margin-bottom:16px}
+.cs-card__metric-val{font-size:1rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.cs-card__metric-val.pos{color:var(--green)}
+.cs-card__metric-lbl{font-size:.65rem;color:var(--muted);margin-top:2px}
+.cs-card__timeline{font-size:.74rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+.cs-card__timeline::before{content:'⏱';font-size:.8rem}
+
+/* INDUSTRY BREAKDOWN */
+.industries{padding:96px 0;background:var(--bg)}
+.industries__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ind-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:22px 18px;transition:border-color .16s,background .16s}
+.ind-card:hover{border-color:var(--border-2);background:var(--bg)}
+.ind-card__icon{font-size:1.3rem;margin-bottom:10px}
+.ind-card__name{font-size:.86rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.ind-card__stat{font-size:.76rem;color:var(--accent);font-weight:600}
+.ind-card__note{font-size:.74rem;color:var(--muted);margin-top:3px;line-height:1.4}
+
+@media(max-width:1024px){
+  .cs-featured__inner{grid-template-columns:1fr;gap:40px}
+  .cs-results-card{position:static}
+  .cs-grid{grid-template-columns:1fr 1fr}
+  .industries__grid{grid-template-columns:repeat(2,1fr)}
+  .results-bar__grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .cs-grid{grid-template-columns:1fr}
+  .industries__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .industries__grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap"><div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="public/crossfire-logo.png" class="nav__logo-img" alt="Crossfire Marketing"></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Results</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <div class="nav__spot"><span class="nav__spot-dot"></span>Accepting clients</div>
+      <a href="audit.html" class="btn btn--primary btn--sm">Free Audit →</a>
+      <div class="hamburger" id="hamburger" aria-expanded="false" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </div></div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero" aria-labelledby="cs-h1">
+  <div class="wrap"><div class="page-hero__inner">
+    <div class="page-hero__bread fade-up" style="display:flex;align-items:center;gap:8px;font-size:.72rem;color:rgba(255,255,255,.28);margin-bottom:22px">
+      <a href="index.html" style="color:rgba(255,255,255,.28);transition:color .14s">Home</a>
+      <span style="color:rgba(255,255,255,.18)">/</span>
+      <span style="color:rgba(255,255,255,.55)">Results</span>
+    </div>
+    <h1 id="cs-h1" class="fade-up d1">Real results from<br>real local businesses<br>in <em>Delhi NCR</em>.</h1>
+    <p class="fade-up d2">Every case study here is a real business we worked with. Real numbers. Real timelines. We don't manufacture success stories — we document them.</p>
+    <div class="fade-up d3" style="display:flex;gap:10px;flex-wrap:wrap">
+      <a href="audit.html" class="btn btn--primary btn--lg">Get Similar Results →</a>
+      <a href="contact.html" class="btn btn--ghost btn--lg">Talk to Sumedha</a>
+    </div>
+  </div></div>
+</section>
+
+<!-- RESULTS BAR -->
+<div class="results-bar">
+  <div class="wrap">
+    <div class="results-bar__grid fade-up">
+      <div class="rb-cell"><div class="rb-cell__num">30<span>+</span></div><div class="rb-cell__lbl">Businesses helped<br>across Delhi NCR</div></div>
+      <div class="rb-cell"><div class="rb-cell__num">85<span>%</span></div><div class="rb-cell__lbl">Achieved top 3<br>within 90 days</div></div>
+      <div class="rb-cell"><div class="rb-cell__num">4<span>×</span></div><div class="rb-cell__lbl">Average increase<br>in monthly leads</div></div>
+      <div class="rb-cell"><div class="rb-cell__num">6<span>wks</span></div><div class="rb-cell__lbl">Average time to<br>first ranking movement</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED CASE STUDY -->
+<section class="cs-featured" aria-labelledby="feat-h2">
+  <div class="wrap"><div class="cs-featured__inner">
+    <div class="fade-up">
+      <div class="cs-label">
+        <span class="cs-label__badge">Featured</span>
+        <span class="cs-label__cat">HVAC / Home Services · South Delhi</span>
+      </div>
+      <h2 id="feat-h2">From #8 on Google Maps to<br>#2 — in eight weeks.</h2>
+      <div class="challenge-lbl">The Situation</div>
+      <p>Kumar HVAC & Plumbing had been operating in South Delhi for 6 years. Word-of-mouth kept them busy, but their online presence was nearly invisible. They ranked #8 for their primary keyword, had 11 reviews, and their Google Business Profile was only 38% complete. Meanwhile, three competitors were ranking above them — two of which had launched within the last 18 months.</p>
+      <div class="cs-work">
+        <h3>What We Did</h3>
+        <ul>
+          <li>Complete GBP audit — found 14 critical missing fields, wrong service categories, and outdated hours</li>
+          <li>Citation cleanup — fixed 23 inconsistencies across 38 directories, removed 2 duplicate listings</li>
+          <li>Review generation system — automated follow-up sequence generating 4–6 new reviews per week</li>
+          <li>Keyword repositioning — identified 6 high-intent terms competitors weren't targeting</li>
+          <li>Photo strategy — 28 professional-quality photos uploaded with optimised file names and alt text</li>
+          <li>Monthly competitor monitoring to detect ranking threats early</li>
+        </ul>
+      </div>
+      <div style="margin-top:24px;padding:16px 18px;background:var(--accent-dim);border:1px solid var(--accent-mid);border-radius:var(--r-sm)">
+        <div style="font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:6px">Client Quote</div>
+        <p style="font-style:italic;font-size:.9rem;color:var(--ink);line-height:1.75">"I honestly didn't think we'd see results this fast. Sumedha found problems I didn't even know existed and fixed them in a few weeks. Our phone hasn't stopped ringing."</p>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:8px;font-weight:600">— Manoj J., Owner, Kumar HVAC</p>
+      </div>
+    </div>
+    <div class="cs-results-card fade-up d2">
+      <div class="cs-results-card__head">
+        <h3>Kumar HVAC & Plumbing</h3>
+        <p>South Delhi · HVAC & Plumbing Services</p>
+      </div>
+      <div class="cs-results-card__body">
+        <div class="cs-metric"><span class="cs-metric__label">Google Maps rank</span><div class="cs-metric__vals"><span class="cs-metric__before">#8</span><span class="cs-metric__arrow">→</span><span class="cs-metric__after">#2</span></div></div>
+        <div class="cs-metric"><span class="cs-metric__label">Monthly leads from Google</span><div class="cs-metric__vals"><span class="cs-metric__before">5/mo</span><span class="cs-metric__arrow">→</span><span class="cs-metric__after">22/mo</span></div></div>
+        <div class="cs-metric"><span class="cs-metric__label">Google reviews</span><div class="cs-metric__vals"><span class="cs-metric__before">11</span><span class="cs-metric__arrow">→</span><span class="cs-metric__after">58</span></div></div>
+        <div class="cs-metric"><span class="cs-metric__label">GBP completeness</span><div class="cs-metric__vals"><span class="cs-metric__before">38%</span><span class="cs-metric__arrow">→</span><span class="cs-metric__after">97%</span></div></div>
+        <div class="cs-metric"><span class="cs-metric__label">Citation inconsistencies</span><div class="cs-metric__vals"><span class="cs-metric__before">23</span><span class="cs-metric__arrow">→</span><span class="cs-metric__after">0</span></div></div>
+        <div class="cs-metric"><span class="cs-metric__label">Monthly revenue impact</span><div class="cs-metric__vals"><span class="cs-metric__after">+₹3.2L/month</span></div></div>
+        <div class="sparkline-wrap" aria-hidden="true">
+          <div style="font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px">Lead volume · weeks 0–8</div>
+          <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:40px">
+            <defs><linearGradient id="sg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C4552A" stop-opacity=".18"/><stop offset="100%" stop-color="#C4552A" stop-opacity="0"/></linearGradient></defs>
+            <path d="M0,38 L50,38 L100,32 L150,21 L200,3 L200,40 L0,40 Z" fill="url(#sg1)"/>
+            <polyline points="0,38 50,38 100,32 150,21 200,3" stroke="#C4552A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="0" cy="38" r="2.5" fill="#9C9790"/>
+            <circle cx="200" cy="3" r="3" fill="#C4552A"/>
+          </svg>
+          <div style="display:flex;justify-content:space-between;font-size:.58rem;color:var(--muted);margin-top:4px"><span>5 leads/mo</span><span style="color:var(--accent);font-weight:700">22 leads/mo</span></div>
+        </div>
+        <div class="cs-timeline"><strong>Timeline:</strong> First ranking movement at week 4. Top 3 at week 8. #1 for primary keyword at month 4.</div>
+      </div>
+    </div>
+  </div></div>
+  <!-- Case Study Dashboard Visual -->
+  <div class="wrap" style="padding-bottom:64px">
+    <div class="fade-up" style="border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)">
+      <div style="padding:12px 20px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px">
+        <span style="font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Results Dashboard</span>
+        <span style="font-size:.62rem;color:var(--accent);font-weight:600">Kumar HVAC &amp; Plumbing · 8-week data</span>
+      </div>
+      <img src="public/case-study-1.svg" alt="Kumar HVAC case study results dashboard — lead growth from 5 to 22 per month, Maps rank from #8 to #2 in 8 weeks" style="display:block;width:100%;height:auto">
+    </div>
+  </div>
+</section>
+
+<!-- MORE CASE STUDIES -->
+<section class="cs-grid-section" aria-labelledby="more-h2">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">More Results</span>
+      <h2 id="more-h2">Across industries and markets</h2>
+      <p>Different businesses, same methodology, consistently strong outcomes.</p>
+    </div>
+    <div class="cs-grid">
+
+      <div class="cs-card fade-up">
+        <div class="cs-card__header">
+          <div class="cs-card__icon" style="color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="cs-card__cat">Medical / Dental</span>
+        </div>
+        <h3>Delhi Dental Care</h3>
+        <div class="cs-card__loc">Noida, Sector 18</div>
+        <p class="cs-card__challenge">New clinic with zero online presence. Dominant competitor had 200+ reviews and had been established for 8 years. Dr. Priya A. had been told by another agency it would take 12 months minimum to see any results.</p>
+        <div class="cs-card__metrics">
+          <div><div class="cs-card__metric-val pos">#1</div><div class="cs-card__metric-lbl">Maps rank (from not visible)</div></div>
+          <div><div class="cs-card__metric-val pos">18/mo</div><div class="cs-card__metric-lbl">New patients from Google</div></div>
+          <div><div class="cs-card__metric-val pos">47</div><div class="cs-card__metric-lbl">Reviews in first 90 days</div></div>
+          <div><div class="cs-card__metric-val pos">11wk</div><div class="cs-card__metric-lbl">To reach top 3</div></div>
+        </div>
+        <div class="cs-card__timeline">Top 3 in 11 weeks, #1 in 5 months</div>
+      </div>
+
+      <div class="cs-card fade-up d1">
+        <div class="cs-card__header">
+          <div class="cs-card__icon" style="color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M2 12h2m16 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <span class="cs-card__cat">Electrical / Trades</span>
+        </div>
+        <h3>Sharma & Sons Electricals</h3>
+        <div class="cs-card__loc">Gurgaon, DLF Phase</div>
+        <p class="cs-card__challenge">Had paid another SEO agency for 6 months with zero visible results and wasted ₹1.2 lakh. Citations were a disaster — 31 inconsistencies across directories. The previous agency had created 2 duplicate GBP listings.</p>
+        <div class="cs-card__metrics">
+          <div><div class="cs-card__metric-val pos">#1</div><div class="cs-card__metric-lbl">For 3 primary keywords</div></div>
+          <div><div class="cs-card__metric-val pos">3×</div><div class="cs-card__metric-lbl">Monthly enquiry volume</div></div>
+          <div><div class="cs-card__metric-val pos">31→0</div><div class="cs-card__metric-lbl">Citation errors fixed</div></div>
+          <div><div class="cs-card__metric-val pos">9wk</div><div class="cs-card__metric-lbl">To reach top 3</div></div>
+        </div>
+        <div class="cs-card__timeline">Visible movement at 5 weeks, top 3 at 9 weeks</div>
+      </div>
+
+      <div class="cs-card fade-up d2">
+        <div class="cs-card__header">
+          <div class="cs-card__icon" style="color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="currentColor" stroke-width="2"/></svg></div>
+          <span class="cs-card__cat">Legal / Professional</span>
+        </div>
+        <h3>Arora Law Associates</h3>
+        <div class="cs-card__loc">Connaught Place, Delhi</div>
+        <p class="cs-card__challenge">Relied entirely on referrals. No Google visibility at all. Highly competitive market (legal services in central Delhi). Had never attempted local SEO and was sceptical it would work for a professional services firm.</p>
+        <div class="cs-card__metrics">
+          <div><div class="cs-card__metric-val pos">Top 3</div><div class="cs-card__metric-lbl">For practice area keywords</div></div>
+          <div><div class="cs-card__metric-val pos">10/mo</div><div class="cs-card__metric-lbl">Qualified enquiries from Google</div></div>
+          <div><div class="cs-card__metric-val pos">4.8★</div><div class="cs-card__metric-lbl">Rating with 38 reviews</div></div>
+          <div><div class="cs-card__metric-val pos">14wk</div><div class="cs-card__metric-lbl">To reach top 3</div></div>
+        </div>
+        <div class="cs-card__timeline">Competitive market — longer timeline, strong results</div>
+      </div>
+
+      <div class="cs-card fade-up">
+        <div class="cs-card__header">
+          <div class="cs-card__icon" style="color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <span class="cs-card__cat">Beauty / Wellness</span>
+        </div>
+        <h3>Glamour Studio</h3>
+        <div class="cs-card__loc">Lajpat Nagar, Delhi</div>
+        <p class="cs-card__challenge">Ranked #5 for "salon near me" but had 14 reviews with a 3.8 rating — well below competitors. Online bookings were minimal. Owner wanted to attract premium clients, not just walk-ins.</p>
+        <div class="cs-card__metrics">
+          <div><div class="cs-card__metric-val pos">#1</div><div class="cs-card__metric-lbl">Maps rank for primary term</div></div>
+          <div><div class="cs-card__metric-val pos">2.5×</div><div class="cs-card__metric-lbl">Monthly booking volume</div></div>
+          <div><div class="cs-card__metric-val pos">4.9★</div><div class="cs-card__metric-lbl">Rating with 76 reviews</div></div>
+          <div><div class="cs-card__metric-val pos">7wk</div><div class="cs-card__metric-lbl">To reach top 3</div></div>
+        </div>
+        <div class="cs-card__timeline">Fastest ranking improvement in our portfolio</div>
+      </div>
+
+      <div class="cs-card fade-up d1">
+        <div class="cs-card__header">
+          <div class="cs-card__icon" style="color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg></div>
+          <span class="cs-card__cat">Construction / Contracting</span>
+        </div>
+        <h3>Verma Build & Renovate</h3>
+        <div class="cs-card__loc">Faridabad</div>
+        <p class="cs-card__challenge">Serving a smaller market (Faridabad) with lower competition, but still invisible online. Had no GBP setup at all. Getting leads from Facebook only — inconsistent and expensive.</p>
+        <div class="cs-card__metrics">
+          <div><div class="cs-card__metric-val pos">#2</div><div class="cs-card__metric-lbl">Maps rank in local market</div></div>
+          <div><div class="cs-card__metric-val pos">8/mo</div><div class="cs-card__metric-lbl">Qualified leads from Google</div></div>
+          <div><div class="cs-card__metric-val pos">₹2.1L</div><div class="cs-card__metric-lbl">Additional monthly revenue</div></div>
+          <div><div class="cs-card__metric-val pos">6wk</div><div class="cs-card__metric-lbl">To first ranking movement</div></div>
+        </div>
+        <div class="cs-card__timeline">GBP built from scratch, top 3 in 6 weeks</div>
+      </div>
+
+      <div class="cs-card fade-up d2">
+        <div class="cs-card__header">
+          <div class="cs-card__icon" style="color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10" y1="10" x2="14" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <span class="cs-card__cat">Healthcare / Clinic</span>
+        </div>
+        <h3>NovaCare Physiotherapy</h3>
+        <div class="cs-card__loc">Greater Noida</div>
+        <p class="cs-card__challenge">New physiotherapy clinic entering a market with 4 established competitors. Limited budget. Needed to generate patient bookings quickly without large ad spend.</p>
+        <div class="cs-card__metrics">
+          <div><div class="cs-card__metric-val pos">Top 3</div><div class="cs-card__metric-lbl">For 5 target keywords</div></div>
+          <div><div class="cs-card__metric-val pos">12/mo</div><div class="cs-card__metric-lbl">New patients from Google</div></div>
+          <div><div class="cs-card__metric-val pos">4.7★</div><div class="cs-card__metric-lbl">Rating with 44 reviews</div></div>
+          <div><div class="cs-card__metric-val pos">10wk</div><div class="cs-card__metric-lbl">To reach top 3</div></div>
+        </div>
+        <div class="cs-card__timeline">Fully booked within 3 months of engagement</div>
+      </div>
+
+    </div>
+    <!-- Delhi Dental Care Dashboard Visual -->
+    <div class="fade-up" style="margin-top:48px;border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)">
+      <div style="padding:12px 20px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px">
+        <span style="font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Results Dashboard</span>
+        <span style="font-size:.62rem;color:var(--accent);font-weight:600">Delhi Dental Care · Noida — invisible to #1</span>
+      </div>
+      <img src="public/case-study-2.svg" alt="Delhi Dental Care case study — from not visible to #1 on Google Maps, 18 new patients per month, 47 reviews in 90 days" style="display:block;width:100%;height:auto">
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" aria-labelledby="ind-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">Industries Served</span>
+      <h2 id="ind-h2">We've ranked businesses<br>across these categories</h2>
+    </div>
+    <div class="industries__grid">
+      <div class="ind-card fade-up"><div class="ind-card__icon">🔧</div><div class="ind-card__name">Plumbing & HVAC</div><div class="ind-card__stat">Avg 4× leads in 90 days</div><div class="ind-card__note">Our most consistent results category</div></div>
+      <div class="ind-card fade-up d1"><div class="ind-card__icon">⚡</div><div class="ind-card__name">Electrical</div><div class="ind-card__stat">Avg 3× enquiries</div><div class="ind-card__note">High competition, high reward</div></div>
+      <div class="ind-card fade-up d2"><div class="ind-card__icon">🦷</div><div class="ind-card__name">Dental & Medical</div><div class="ind-card__stat">Avg 15 new patients/mo</div><div class="ind-card__note">High-value leads from Maps</div></div>
+      <div class="ind-card fade-up d3"><div class="ind-card__icon">💅</div><div class="ind-card__name">Salon & Beauty</div><div class="ind-card__stat">Avg 2.5× booking volume</div><div class="ind-card__note">Fast results due to review velocity</div></div>
+      <div class="ind-card fade-up"><div class="ind-card__icon">⚖️</div><div class="ind-card__name">Legal Services</div><div class="ind-card__stat">8–12 qualified leads/mo</div><div class="ind-card__note">Longer timeline, premium clients</div></div>
+      <div class="ind-card fade-up d1"><div class="ind-card__icon">🏗️</div><div class="ind-card__name">Construction</div><div class="ind-card__stat">Avg ₹2L+ revenue increase</div><div class="ind-card__note">High average job value compounds well</div></div>
+      <div class="ind-card fade-up d2"><div class="ind-card__icon">🏥</div><div class="ind-card__name">Physiotherapy</div><div class="ind-card__stat">Avg 12 new patients/mo</div><div class="ind-card__note">Repeat clients = strong LTV</div></div>
+      <div class="ind-card fade-up d3"><div class="ind-card__icon">🏠</div><div class="ind-card__name">Home Services</div><div class="ind-card__stat">Avg 3.5× lead volume</div><div class="ind-card__note">Pest control, cleaning, security</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="padding:96px 0;background:var(--surface);border-top:1px solid var(--border)" aria-labelledby="ct-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up" style="margin-bottom:44px">
+      <span class="eyebrow">In Their Words</span>
+      <h2 id="ct-h2">What clients say about the results</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi fade-up">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">"Before Crossfire, we were getting maybe 4–5 calls a month from Google. Now we're getting 20+. The difference was shocking — and it happened faster than I expected. I've recommended Sumedha to every business owner I know."</div>
+        <div class="testi__meta">
+          <div class="testi__avatar">MJ</div>
+          <div><div class="testi__name">Manoj J.</div><div class="testi__biz">Kumar HVAC · South Delhi</div></div>
+          <span class="testi__result">4× leads</span>
+        </div>
+      </div>
+      <div class="testi fade-up d1">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">"I was sceptical that local SEO would work for a law firm. Sumedha was honest that it would take longer than a salon or plumber — but it worked. I now get 10 qualified enquiries per month from Google alone. That's completely changed our business."</div>
+        <div class="testi__meta">
+          <div class="testi__avatar">AA</div>
+          <div><div class="testi__name">Anil A.</div><div class="testi__biz">Arora Law · Connaught Place</div></div>
+          <span class="testi__result">10 leads/mo</span>
+        </div>
+      </div>
+      <div class="testi fade-up d2">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">"We wasted ₹1.2 lakh on an SEO company that gave us reports and no results. Crossfire fixed the actual problem in the first month. 9 weeks later, we're ranking for everything that matters. Wish I'd found this sooner."</div>
+        <div class="testi__meta">
+          <div class="testi__avatar">MS</div>
+          <div><div class="testi__name">Mohan S.</div><div class="testi__biz">Sharma Electricals · Gurgaon</div></div>
+          <span class="testi__result">3× enquiries</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="cs-cta-h2">
+  <div class="wrap"><div class="final-cta__inner">
+    <div class="badge badge--dark fade-up" style="margin-bottom:22px"><span class="badge__dot"></span>Limited availability this month</div>
+    <h2 id="cs-cta-h2" class="fade-up d1">Want results like these<br>for <em>your business</em>?</h2>
+    <p class="fade-up d2">The free audit tells you exactly what's holding you back — and whether the same approach would work for your specific market.</p>
+    <div class="final-cta__ctas fade-up d3">
+      <a href="audit.html" class="btn btn--primary btn--xl">Claim Free Audit →</a>
+      <a href="contact.html" class="btn btn--ghost btn--xl">Talk to Sumedha</a>
+    </div>
+    <div class="final-cta__trust fade-up d4">
+      <span class="final-cta__trust-item">Completely free</span>
+      <span class="final-cta__trust-item">No obligation</span>
+      <span class="final-cta__trust-item">Founder-led</span>
+      <span class="final-cta__trust-item">Written findings in 24hrs</span>
+      <span class="final-cta__trust-item">60-day guarantee</span>
+    </div>
+  </div></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="site-footer__inner">
+    <div class="site-footer__logo"><div class="site-footer__mark">CF</div><span class="site-footer__name">Crossfire Marketing</span></div>
+    <nav class="site-footer__links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="case-studies.html">Results</a><a href="audit.html">Free Audit</a><a href="contact.html">Contact</a></nav>
+    <span class="site-footer__copy">© 2024 Crossfire Marketing · Delhi, India</span>
+  </div></div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>

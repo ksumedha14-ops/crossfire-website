@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Free Growth Audit — Crossfire Marketing · Local Business Visibility Analysis</title>
+<meta name="description" content="A 15-minute diagnostic that shows exactly why your business isn't ranking — and what to fix first. Founder-led. Written findings within 24 hours. Zero obligation."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+/* HERO SPLIT */
+.audit-hero{display:grid;grid-template-columns:1fr 440px;min-height:calc(100vh - 62px);border-bottom:1px solid var(--border)}
+.audit-hero__left{padding:80px 60px 80px 0;display:flex;flex-direction:column;justify-content:center;background:var(--bg)}
+.audit-hero__right{background:var(--dark);padding:56px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.audit-hero__right::before{content:'';position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(196,85,42,.1) 0%,transparent 70%);pointer-events:none}
+
+.ah-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.ah-eyebrow-line{width:22px;height:1px;background:var(--accent)}
+.audit-hero__left h1{font-size:clamp(2rem,3.8vw,3rem);font-weight:800;letter-spacing:-.035em;color:var(--ink);margin-bottom:20px;line-height:1.05}
+.audit-hero__left h1 em{font-style:normal;color:var(--accent)}
+.audit-hero__sub{font-size:.97rem;color:var(--body);line-height:1.8;margin-bottom:28px;max-width:480px}
+.audit-hero__includes{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+.ahi{display:flex;align-items:flex-start;gap:10px;font-size:.85rem;color:var(--body)}
+.ahi::before{content:'✓';color:var(--green);font-weight:700;font-size:.8rem;margin-top:2px;flex-shrink:0}
+.audit-hero__proof{display:flex;gap:24px;padding-top:28px;border-top:1px solid var(--border)}
+.ahp{font-size:.78rem;color:var(--muted)}
+.ahp strong{display:block;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-.03em;margin-bottom:2px}
+.ahp strong span{color:var(--accent)}
+
+/* FORM PANEL */
+.audit-form-panel{position:relative;z-index:1}
+.afp__head{margin-bottom:24px}
+.afp__head h2{font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:6px}
+.afp__head p{font-size:.8rem;color:rgba(255,255,255,.38);line-height:1.6}
+.afp .scarcity-bar{background:rgba(196,85,42,.12);border-color:rgba(196,85,42,.24);margin-bottom:18px}
+.afp .scarcity-bar{color:rgba(255,255,255,.6)}
+.afp .scarcity-bar strong{color:var(--accent)}
+.afp .form-submit{margin-top:6px}
+.afp .form-footer{color:rgba(255,255,255,.24)}
+.afp .form-footer a{color:rgba(255,255,255,.45)}
+
+/* WHAT'S INSIDE */
+.inside{padding:96px 0;background:var(--surface);border-bottom:1px solid var(--border)}
+.inside__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+.inside-col{background:var(--bg);padding:36px 28px}
+.inside-col:hover{background:var(--surface)}
+.inside-col__num{width:36px;height:36px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:16px}
+.inside-col h3{font-size:.95rem;font-weight:700;margin-bottom:10px}
+.inside-col p{font-size:.84rem;color:var(--body);line-height:1.75;margin-bottom:16px}
+.inside-col ul{display:flex;flex-direction:column;gap:7px}
+.inside-col ul li{font-size:.8rem;color:var(--body);padding-left:14px;position:relative}
+.inside-col ul li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.72rem}
+
+/* FRAMEWORK */
+.framework-section{padding:96px 0;background:var(--bg)}
+.framework-section h2{color:var(--ink)}
+.audit-points{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px}
+.audit-point{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:28px;transition:box-shadow .18s,border-color .18s}
+.audit-point:hover{box-shadow:var(--shadow);border-color:var(--border-2)}
+.audit-point.wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.ap__num{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
+.ap__title{font-size:1rem;font-weight:700;margin-bottom:10px}
+.ap__desc{font-size:.84rem;color:var(--body);line-height:1.7;margin-bottom:14px}
+.ap__checks{display:flex;flex-direction:column;gap:6px}
+.ap__checks li{font-size:.8rem;color:var(--body);padding-left:14px;position:relative}
+.ap__checks li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;font-size:.76rem}
+.ap__why{font-size:.8rem;color:var(--accent);font-weight:600;font-style:italic;margin-top:12px;padding:10px 14px;background:var(--accent-dim);border-radius:var(--r-sm);border-left:2px solid var(--accent)}
+
+/* AFTER AUDIT TIMELINE */
+.after{padding:96px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+/* WHO IT'S FOR */
+.who{padding:96px 0;background:var(--bg)}
+.who__inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.who-list{display:flex;flex-direction:column;gap:12px}
+.who-item{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);transition:border-color .15s}
+.who-item:hover{border-color:var(--border-2)}
+.who-item__icon{width:34px;height:34px;border-radius:8px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.who-item__text strong{display:block;font-size:.86rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.who-item__text span{font-size:.79rem;color:var(--body);line-height:1.5}
+.who-not{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px;margin-bottom:16px}
+.who-not h3{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+.who-not ul{display:flex;flex-direction:column;gap:8px}
+.who-not ul li{font-size:.83rem;color:var(--body);padding-left:18px;position:relative;line-height:1.45;border-bottom:1px solid var(--border);padding-bottom:8px}
+.who-not ul li:last-child{border-bottom:none;padding-bottom:0}
+.who-not ul li::before{content:'✗';position:absolute;left:0;color:var(--muted)}
+.who-honest{background:var(--dark);border-radius:var(--r);padding:26px}
+.who-honest h3{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:9px}
+.who-honest p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.75}
+.who-honest p strong{color:#fff}
+
+/* BOOKING CTA */
+.audit-booking{padding:96px 0;background:var(--bg)}
+.audit-booking__inner{display:grid;grid-template-columns:1fr 440px;gap:72px;align-items:start}
+.ab__trust{display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.ab__trust-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--body)}
+.ab__trust-item::before{content:'✓';color:var(--green);font-weight:700}
+.ab__stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.ab__stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:16px 18px}
+.ab__stat-n{font-size:1.2rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.ab__stat-n span{color:var(--accent)}
+.ab__stat-l{font-size:.7rem;color:var(--muted);margin-top:3px}
+.ab__form{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:36px 32px}
+.ab__form .scarcity-bar{margin-bottom:18px}
+.ab__form h3{font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:5px}
+.ab__form .sub{font-size:.83rem;color:var(--muted);margin-bottom:22px;line-height:1.6}
+
+@media(max-width:1024px){
+  .audit-hero{grid-template-columns:1fr;min-height:auto}
+  .audit-hero__left{padding:72px 0 48px}
+  .audit-hero__right{padding:48px 28px}
+  .audit-points{grid-template-columns:1fr}
+  .audit-point.wide{grid-column:auto;grid-template-columns:1fr}
+  .who__inner{grid-template-columns:1fr;gap:40px}
+  .audit-booking__inner{grid-template-columns:1fr;gap:48px}
+  .inside__grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .audit-hero__left{padding:60px 0 40px}
+  .audit-hero__proof{flex-wrap:wrap;gap:16px}
+  .ab__form{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap"><div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="public/crossfire-logo.png" class="nav__logo-img" alt="Crossfire Marketing"></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Results</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <div class="nav__spot"><span class="nav__spot-dot"></span>Accepting clients</div>
+      <a href="audit.html" class="btn btn--primary btn--sm">Free Audit →</a>
+      <div class="hamburger" id="hamburger" aria-expanded="false" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </div></div>
+</nav>
+
+<!-- HERO -->
+<div class="audit-hero">
+  <div class="wrap" style="display:contents">
+    <div class="audit-hero__left">
+      <div style="max-width:520px;padding:0 0 0 max(24px, calc((100vw - 1160px)/2 + 28px))">
+        <div class="ah-eyebrow fade-up"><div class="ah-eyebrow-line"></div><span class="eyebrow">Free Growth Audit</span></div>
+        <h1 class="fade-up d1">Find out exactly<br>why you're not<br><em>ranking on Maps.</em></h1>
+        <p class="audit-hero__sub fade-up d2">A 15-minute founder-led diagnostic. We research your rankings, GBP, competitors, and citation health before the call — then walk you through what's breaking your visibility and what to fix first.</p>
+        <div class="audit-hero__includes fade-up d3">
+          <div class="ahi">Complete GBP analysis — every gap that's costing you rankings</div>
+          <div class="ahi">Competitor comparison — why they're above you and how to close the gap</div>
+          <div class="ahi">Written PDF report within 24 hours — yours to keep regardless of what you decide</div>
+          <div class="ahi">Zero pressure — if we're not the right fit, we'll say so directly</div>
+        </div>
+        <div class="audit-hero__proof fade-up d4">
+          <div class="ahp"><strong>30<span>+</span></strong>Audits completed<br>in 2024</div>
+          <div class="ahp"><strong>85<span>%</span></strong>Top 3 ranking<br>within 90 days</div>
+          <div class="ahp"><strong>100<span>%</span></strong>Free. No card.<br>No obligation.</div>
+        </div>
+      </div>
+    </div>
+    <div class="audit-hero__right">
+      <div class="audit-form-panel afp">
+        <div class="afp__head">
+          <h2>Book Your Free Audit</h2>
+          <p>2 minutes to fill in. We do the research. You get clarity.</p>
+        </div>
+        <div class="scarcity-bar" role="status" aria-live="polite">
+          <span class="scarcity-bar__dot"></span><span>Limited spots available this month</span>
+        </div>
+        <div data-form-wrap>
+          <form id="auditForm" novalidate onsubmit="handleFormSubmit(event,{btn:document.getElementById('auditBtn'),resetLabel:'Submit'})" aria-label="Audit booking form">
+            <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="field field--dark">
+              <label for="a-name">Full name <span class="req">*</span></label>
+              <input type="text" id="a-name" name="name" placeholder="Rajesh Kumar" required autocomplete="name"/>
+              <div class="err-msg">Please enter your name.</div>
+            </div>
+            <div class="field field--dark">
+              <label for="a-biz">Business name <span class="req">*</span></label>
+              <input type="text" id="a-biz" name="business" placeholder="Kumar Plumbing Services" required autocomplete="organization"/>
+              <div class="err-msg">Please enter your business name.</div>
+            </div>
+            <div class="field field--dark">
+              <label for="a-phone">WhatsApp / Phone <span class="req">*</span></label>
+              <input type="tel" id="a-phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel"/>
+              <div class="err-msg">Please enter your phone number.</div>
+            </div>
+            <div class="field field--dark">
+              <label for="a-email">Email <span style="color:rgba(255,255,255,.35);font-weight:400;font-size:.8em">(we send your written report here)</span></label>
+              <input type="email" id="a-email" name="email" placeholder="you@example.com" autocomplete="email"/>
+            </div>
+            <div class="field field--dark">
+              <label for="a-city">City / Area <span class="req">*</span></label>
+              <input type="text" id="a-city" name="city" placeholder="South Delhi, Noida, Gurgaon…" required/>
+              <div class="err-msg">Please enter your city.</div>
+            </div>
+            <div class="field field--dark">
+              <label for="a-industry">Industry <span class="req">*</span></label>
+              <select id="a-industry" name="industry" required>
+                <option value="" disabled selected>Select your industry</option>
+                <option>Plumbing / Electrical / HVAC</option>
+                <option>Construction / Contracting</option>
+                <option>Salon / Beauty / Wellness</option>
+                <option>Medical / Dental / Clinic</option>
+                <option>Legal / Consulting</option>
+                <option>Home Services</option>
+                <option>Restaurant / Food</option>
+                <option>Other local service</option>
+              </select>
+              <div class="err-msg">Please select your industry.</div>
+            </div>
+            <div class="field field--dark">
+              <label for="a-maps">Current Google Maps ranking (if known)</label>
+              <input type="text" id="a-maps" name="ranking" placeholder="e.g. #7, or 'not visible'"/>
+            </div>
+            <button type="submit" id="auditBtn" class="form-submit">
+              Book My Free Audit →
+            </button>
+            <p class="form-footer">Free · No credit card · Written findings in 24hrs</p>
+            <p style="margin-top:8px;font-size:.72rem;text-align:center;color:rgba(255,255,255,.28)">Joined by 30+ Delhi NCR businesses in 2024</p>
+          </form>
+          <div class="form-success" data-form-success>
+            <div class="form-success__icon">✅</div>
+            <h3 style="color:#fff">Audit Booked</h3>
+            <p style="color:rgba(255,255,255,.5)">Sumedha will reach out on WhatsApp within 24 hours to schedule the call. Your written findings will arrive by email — check both.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside" aria-labelledby="inside-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">What You Get</span>
+      <h2 id="inside-h2">Three things. All valuable.<br>Regardless of what you decide.</h2>
+    </div>
+    <div class="inside__grid">
+      <div class="inside-col">
+        <div class="vi-icon vi-icon--surface" style="margin-bottom:16px"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Pre-Call Research</h3>
+        <p>We do the work before you show up. You get an expert who's already looked at your situation — not questions you could have Googled yourself.</p>
+        <ul>
+          <li>Google Maps rank for your top keywords</li>
+          <li>GBP completeness score</li>
+          <li>Top 3 competitors analysed</li>
+          <li>Citation inconsistencies found</li>
+          <li>Review profile benchmarked</li>
+        </ul>
+      </div>
+      <div class="inside-col">
+        <div class="vi-icon vi-icon--surface" style="margin-bottom:16px"><svg viewBox="0 0 24 24" fill="none"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" stroke="currentColor" stroke-width="2"/><rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="2"/><line x1="9" y1="12" x2="15" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="16" x2="13" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Personalised Findings</h3>
+        <p>Not a generic SEO checklist. A specific diagnosis of your business — your market, your competitors, your gaps, in priority order.</p>
+        <ul>
+          <li>Your 3–5 biggest visibility problems</li>
+          <li>What to fix first for fastest impact</li>
+          <li>Honest timeline: "fixable in 30 days" or "takes 3 months"</li>
+          <li>Estimated investment range for your situation</li>
+          <li>Quick wins you can act on immediately</li>
+        </ul>
+      </div>
+      <div class="inside-col">
+        <div class="vi-icon vi-icon--surface" style="margin-bottom:16px"><svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="9" y1="13" x2="15" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="17" x2="15" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Written Report</h3>
+        <p>A PDF summary of everything discussed, delivered within 24 hours. Yours to keep — to implement yourself, share with a team, or use however you like.</p>
+        <ul>
+          <li>Ranking snapshot with competitor comparison</li>
+          <li>GBP audit findings and fixes</li>
+          <li>Prioritised action list</li>
+          <li>Whether Crossfire is the right fit for you</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fade-up" style="margin-top:56px;border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)">
+      <div style="padding:14px 20px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px">
+        <span style="font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)">Sample Audit Report</span>
+        <span style="font-size:.63rem;color:var(--accent);font-weight:600">— delivered within 24 hours of your call</span>
+      </div>
+      <img src="public/audit-dashboard.svg" alt="Sample Crossfire audit report showing Google Maps rankings, competitor analysis, and GBP completeness score" style="display:block;width:100%;height:auto">
+    </div>
+  </div>
+</section>
+
+<!-- 7-POINT FRAMEWORK -->
+<section class="framework-section" aria-labelledby="fw-h2">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">The Methodology</span>
+      <h2 id="fw-h2">7 things we investigate<br>in every audit</h2>
+      <p style="max-width:520px">Each point represents a specific visibility lever. Most businesses are losing ground on 3–4 of these simultaneously — and don't know it.</p>
+    </div>
+    <div class="audit-points">
+      <div class="audit-point fade-up">
+        <div class="ap__num">01</div>
+        <div class="ap__title">Google Business Profile Status</div>
+        <div class="ap__desc">Your GBP is the single most important ranking factor for Maps. An incomplete, inconsistent, or unoptimised profile is the fastest way to invisibility.</div>
+        <ul class="ap__checks">
+          <li>Completeness score and missing fields</li>
+          <li>Category selection vs. competitors</li>
+          <li>Photo quality, count, and recency</li>
+          <li>Service area configuration</li>
+        </ul>
+        <div class="ap__why">Most common finding: critical categories missing or wrong.</div>
+      </div>
+      <div class="audit-point fade-up d1">
+        <div class="ap__num">02</div>
+        <div class="ap__title">Google Maps Ranking Position</div>
+        <div class="ap__desc">Where you rank for each relevant search term — and how far the gap is between you and the top 3.</div>
+        <ul class="ap__checks">
+          <li>Current position for 8–12 target keywords</li>
+          <li>Local pack inclusion rate</li>
+          <li>Geographic ranking variation</li>
+          <li>Ranking trend (improving or declining)</li>
+        </ul>
+        <div class="ap__why">Most common finding: ranking for wrong keywords, missing high-intent terms.</div>
+      </div>
+      <div class="audit-point fade-up d2">
+        <div class="ap__num">03</div>
+        <div class="ap__title">Website Visibility</div>
+        <div class="ap__desc">How your website supports (or undermines) your Maps rankings. NAP consistency, local signals, mobile experience.</div>
+        <ul class="ap__checks">
+          <li>NAP consistency between site and GBP</li>
+          <li>Local schema markup</li>
+          <li>Mobile page speed (Core Web Vitals)</li>
+          <li>Location page quality</li>
+        </ul>
+        <div class="ap__why">Most common finding: NAP mismatch causing ranking confusion.</div>
+      </div>
+      <div class="audit-point fade-up d3">
+        <div class="ap__num">04</div>
+        <div class="ap__title">Competitor Positioning</div>
+        <div class="ap__desc">Why the businesses above you are there — and exactly what they're doing that you're not.</div>
+        <ul class="ap__checks">
+          <li>Top 3 competitor GBP analysis</li>
+          <li>Review volume and velocity comparison</li>
+          <li>Category and keyword gap analysis</li>
+          <li>Citation profile comparison</li>
+        </ul>
+        <div class="ap__why">Most common finding: competitors aren't untouchable — they just optimised more systematically.</div>
+      </div>
+      <div class="audit-point fade-up">
+        <div class="ap__num">05</div>
+        <div class="ap__title">Citation Health</div>
+        <div class="ap__desc">Your business information across directories — inconsistencies confuse Google and suppress rankings.</div>
+        <ul class="ap__checks">
+          <li>NAP consistency across 40+ directories</li>
+          <li>Duplicate listing detection</li>
+          <li>Missing directory coverage</li>
+          <li>Spam signals in citations</li>
+        </ul>
+        <div class="ap__why">Most common finding: 15–30 citation inconsistencies suppressing local rankings.</div>
+      </div>
+      <div class="audit-point fade-up d1">
+        <div class="ap__num">06</div>
+        <div class="ap__title">Review Profile</div>
+        <div class="ap__desc">Your reviews as a trust and ranking signal — volume, recency, sentiment, and response quality.</div>
+        <ul class="ap__checks">
+          <li>Review volume vs. top competitors</li>
+          <li>Review recency and velocity</li>
+          <li>Rating distribution analysis</li>
+          <li>Owner response rate and quality</li>
+        </ul>
+        <div class="ap__why">Most common finding: no system for collecting reviews — relying on word-of-mouth.</div>
+      </div>
+      <div class="audit-point wide fade-up d2">
+        <div>
+          <div class="ap__num">07</div>
+          <div class="ap__title">Growth Opportunity</div>
+          <div class="ap__desc">Based on everything above: your specific opportunity — the gap between where you are and top 3, and what it would realistically take to close it.</div>
+        </div>
+        <div>
+          <ul class="ap__checks">
+            <li>Realistic timeline to top 3 in your specific market</li>
+            <li>Which 2–3 actions would move the needle fastest</li>
+            <li>Estimated monthly lead increase from top 3 ranking</li>
+            <li>Whether our services are the right fit — and if not, what would be</li>
+            <li>Investment range for your specific situation</li>
+          </ul>
+          <div class="ap__why">This is the section most clients tell us was worth the call alone.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID-PAGE CTA -->
+<div style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:44px 0;text-align:center">
+  <div class="wrap">
+    <p style="font-size:.92rem;color:var(--muted);margin-bottom:18px">Seen enough? Sumedha researches your rankings before the call — you just show up.</p>
+    <a href="#book" class="btn btn--primary btn--lg">Book My Free Audit →</a>
+  </div>
+</div>
+
+<!-- AFTER THE AUDIT -->
+<section class="after" aria-labelledby="after-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">What Happens After</span>
+      <h2 id="after-h2">No mystery about next steps</h2>
+      <p>Here's exactly what follows the call — whether you work with us or not.</p>
+    </div>
+    <div class="process-steps fade-up d1">
+      <div class="process-step">
+        <div class="process-step__dot">📋</div>
+        <div class="process-step__n">Before the call</div>
+        <h3>We Research</h3>
+        <p>We pull your rankings, analyse your GBP, map your top competitors. You don't need to prepare anything.</p>
+        <span class="process-step__time">24hrs before</span>
+      </div>
+      <div class="process-step process-step--accent">
+        <div class="process-step__dot" style="color:#fff;font-size:1rem">📞</div>
+        <div class="process-step__n">The call</div>
+        <h3>15 Minutes</h3>
+        <p>We walk through findings, answer your questions, and tell you exactly what we'd recommend — and whether we're the right fit.</p>
+        <span class="process-step__time">Scheduled together</span>
+      </div>
+      <div class="process-step">
+        <div class="process-step__dot">📄</div>
+        <div class="process-step__n">Within 24 hours</div>
+        <h3>Written Report</h3>
+        <p>Full PDF summary emailed to you — rankings, gaps, priorities, and recommendations. Yours to keep.</p>
+        <span class="process-step__time">Next day</span>
+      </div>
+      <div class="process-step">
+        <div class="process-step__dot">🗺️</div>
+        <div class="process-step__n">Your decision</div>
+        <h3>No Pressure</h3>
+        <p>If we're a fit, we'll outline a specific proposal. If we're not, we'll say so — and point you toward what would help.</p>
+        <span class="process-step__time">Your timeline</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who" aria-labelledby="who-h2">
+  <div class="wrap">
+    <div class="who__inner">
+      <div class="fade-up">
+        <span class="eyebrow">Ideal Candidates</span>
+        <h2 id="who-h2" style="font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:14px">Who gets the most from this</h2>
+        <p style="font-size:.93rem;color:var(--body);line-height:1.8;margin-bottom:28px">The audit works best for businesses that are ready to grow and willing to invest — not for those looking for quick hacks.</p>
+        <div class="who-list">
+          <div class="who-item">
+            <div class="who-item__icon">🔧</div>
+            <div class="who-item__text"><strong>Local service businesses (5–50 staff)</strong><span>Plumbing, electrical, HVAC, salons, clinics, legal — any business that needs to be found when someone searches nearby.</span></div>
+          </div>
+          <div class="who-item">
+            <div class="who-item__icon">📍</div>
+            <div class="who-item__text"><strong>Established (2+ years operating)</strong><span>You have a real business and happy customers, but online visibility is inconsistent or zero. You're ready to systematise growth.</span></div>
+          </div>
+          <div class="who-item">
+            <div class="who-item__icon">💡</div>
+            <div class="who-item__text"><strong>Already tried SEO and got nothing</strong><span>An agency promised rankings, nothing moved, you stopped. We audit what went wrong — often it's fixable faster than you think.</span></div>
+          </div>
+          <div class="who-item">
+            <div class="who-item__icon">📈</div>
+            <div class="who-item__text"><strong>Ready to invest ₹15K–60K/month</strong><span>Not looking for cheap hacks. Willing to invest in a system that produces consistent, high-quality leads over time.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up d2">
+        <div class="who-not">
+          <h3>Not the right fit</h3>
+          <ul>
+            <li>E-commerce or national brands with no local footprint</li>
+            <li>Businesses in their first 6 months — validate your offer first</li>
+            <li>Businesses expecting leads within the next 2 weeks</li>
+            <li>Anyone expecting guaranteed rankings overnight</li>
+            <li>Businesses unwilling to invest in implementation</li>
+          </ul>
+        </div>
+        <div class="who-honest">
+          <h3>We'll tell you if we're not the right fit</h3>
+          <p>If the call makes it clear we're not a match — wrong stage, wrong budget, wrong market — <strong>we'll say so directly</strong> and point you toward what would actually help.</p>
+          <p style="margin-top:10px">We'd rather lose a prospective client than take on work that won't deliver results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="padding:96px 0;background:var(--surface);border-top:1px solid var(--border)" aria-labelledby="atesti-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up" style="margin-bottom:44px">
+      <span class="eyebrow">What Audit Clients Say</span>
+      <h2 id="atesti-h2">The call alone changed how<br>we think about our visibility</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi fade-up">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">"I booked the audit expecting a sales pitch. What I got was 20 minutes of Sumedha telling me exactly where my business was losing to competitors — and 3 things I could fix myself immediately. I ended up hiring her, but I would have left happy either way."</div>
+        <div class="testi__meta">
+          <div class="testi__avatar">SK</div>
+          <div><div class="testi__name">Sunita K.</div><div class="testi__biz">Wellness Clinic · Noida</div></div>
+          <span class="testi__result">Now ranked #1</span>
+        </div>
+      </div>
+      <div class="testi fade-up d1">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">"We had 11 reviews and ranked #9. The audit showed us our GBP was only 38% complete and we had 23 citation inconsistencies. Sumedha fixed all of it in 3 weeks. We're now at #2 and getting 4× the calls."</div>
+        <div class="testi__meta">
+          <div class="testi__avatar">MJ</div>
+          <div><div class="testi__name">Manoj J.</div><div class="testi__biz">Kumar HVAC · South Delhi</div></div>
+          <span class="testi__result">4× leads in 8 wks</span>
+        </div>
+      </div>
+      <div class="testi fade-up d2">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text">"I'd been told by two other agencies that I needed to wait 12 months. Sumedha showed me in the audit that my top competitor only had 34 reviews and an incomplete profile. We surpassed them in 11 weeks."</div>
+        <div class="testi__meta">
+          <div class="testi__avatar">PA</div>
+          <div><div class="testi__name">Dr. Priya A.</div><div class="testi__biz">Delhi Dental Care · Noida</div></div>
+          <span class="testi__result">#1 in 11 weeks</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section class="audit-booking" id="book" aria-labelledby="book-h2">
+  <div class="wrap"><div class="audit-booking__inner">
+    <div class="fade-up">
+      <span class="eyebrow">Book Your Audit</span>
+      <h2 id="book-h2" style="font-size:clamp(1.65rem,2.8vw,2.2rem);margin-bottom:16px">15 minutes that show you<br>exactly what to fix.</h2>
+      <p style="font-size:.97rem;color:var(--body);line-height:1.8;margin-bottom:28px">No pitch. No pressure. Just clarity from someone who's done this analysis for 30+ local businesses.</p>
+      <div class="ab__trust">
+        <div class="ab__trust-item">Free — no credit card, no hidden cost</div>
+        <div class="ab__trust-item">We research your situation before the call</div>
+        <div class="ab__trust-item">Written PDF findings emailed within 24 hours</div>
+        <div class="ab__trust-item">If we're not the right fit, we'll say so directly</div>
+        <div class="ab__trust-item">Founder-led — Sumedha conducts every audit personally</div>
+      </div>
+      <div class="ab__stats">
+        <div class="ab__stat"><div class="ab__stat-n">30<span>+</span></div><div class="ab__stat-l">Audits completed</div></div>
+        <div class="ab__stat"><div class="ab__stat-n">85<span>%</span></div><div class="ab__stat-l">Reach top 3 in 90 days</div></div>
+        <div class="ab__stat"><div class="ab__stat-n">24<span>hr</span></div><div class="ab__stat-l">Written report turnaround</div></div>
+        <div class="ab__stat"><div class="ab__stat-n">0</div><div class="ab__stat-l">Pressure to buy anything</div></div>
+      </div>
+    </div>
+    <div class="ab__form fade-up d2">
+      <div class="scarcity-bar" role="status">
+        <span class="scarcity-bar__dot"></span><span>Limited spots available this month</span>
+      </div>
+      <h3>Book Your Free Audit</h3>
+      <p class="sub">Takes 2 minutes. We handle everything else.</p>
+      <div data-form-wrap>
+        <form id="bookForm" novalidate onsubmit="handleFormSubmit(event,{btn:document.getElementById('bookBtn'),resetLabel:'Submit'})" aria-label="Audit booking form">
+          <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form-row">
+            <div class="field"><label for="b-name">Name <span class="req">*</span></label><input type="text" id="b-name" name="name" placeholder="Your name" required autocomplete="name"/><div class="err-msg">Required.</div></div>
+            <div class="field"><label for="b-biz">Business <span class="req">*</span></label><input type="text" id="b-biz" name="business" placeholder="Business name" required/><div class="err-msg">Required.</div></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="b-phone">WhatsApp <span class="req">*</span></label><input type="tel" id="b-phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel"/><div class="err-msg">Required.</div></div>
+            <div class="field"><label for="b-city">City <span class="req">*</span></label><input type="text" id="b-city" name="city" placeholder="Delhi, Noida…" required/><div class="err-msg">Required.</div></div>
+          </div>
+          <div class="field"><label for="b-email">Email <span style="color:var(--muted);font-weight:400;font-size:.82em">(for your written report)</span></label><input type="email" id="b-email" name="email" placeholder="you@example.com" autocomplete="email"/></div>
+          <div class="field">
+            <label for="b-industry">Industry <span class="req">*</span></label>
+            <select id="b-industry" name="industry" required>
+              <option value="" disabled selected>Your industry</option>
+              <option>Plumbing / Electrical / HVAC</option>
+              <option>Construction / Contracting</option>
+              <option>Salon / Beauty / Wellness</option>
+              <option>Medical / Dental / Clinic</option>
+              <option>Legal / Consulting</option>
+              <option>Home Services</option>
+              <option>Other local service</option>
+            </select>
+            <div class="err-msg">Please select your industry.</div>
+          </div>
+          <div class="field"><label for="b-rank">Current Maps ranking (optional)</label><input type="text" id="b-rank" name="ranking" placeholder="e.g. #7, 'not visible', 'don't know'"/></div>
+          <button type="submit" id="bookBtn" class="form-submit">Book My Free Audit →</button>
+          <p class="form-footer">No obligation. Or email: <a href="mailto:sumedha@crossfiremarketing.in">sumedha@crossfiremarketing.in</a></p>
+        </form>
+        <div class="form-success" data-form-success>
+          <div class="form-success__icon">✅</div>
+          <h3>Audit Booked</h3>
+          <p>Sumedha will reach out within 24 hours to schedule the call. Check your WhatsApp.</p>
+          <p style="margin-top:10px;font-size:.8rem;color:var(--muted)">While you wait: <a href="case-studies.html" style="color:var(--accent)">see what other businesses achieved →</a></p>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:96px 0;background:var(--surface);border-top:1px solid var(--border)" aria-labelledby="afaq-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up" style="margin-bottom:44px">
+      <span class="eyebrow">Questions About the Audit</span>
+      <h2 id="afaq-h2">Everything you'd want to know<br>before booking</h2>
+    </div>
+    <div style="max-width:680px;margin:0 auto">
+      <div class="faq-list fade-up d1">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is it really free? What's the catch?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Genuinely free. No credit card. No obligation. We offer it because a well-prepared audit demonstrates how we work — and because 85% of businesses we audit become clients anyway, because the findings are compelling enough on their own.</p></div>
+        </div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How long does the audit call actually take?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>15–30 minutes. We come prepared with findings — so there's no time wasted on information gathering. We present what we found, you ask questions, we give honest answers. That's it.</p></div>
+        </div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What do I need to prepare for the call?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Nothing. We research everything before the call. If you happen to have access to your Google Business Profile analytics, it can be useful — but it's not required. Just show up ready to have an honest conversation about your business goals.</p></div>
+        </div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What if I don't like the results or don't want to proceed?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>No problem. There's no sales script and no follow-up pressure. If you decide after the audit that you're not ready to invest or that we're not the right fit, you leave with the written report and can act on the findings yourself — or not at all.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="acta-h2">
+  <div class="wrap"><div class="final-cta__inner">
+    <div class="badge badge--dark fade-up" style="margin-bottom:22px"><span class="badge__dot"></span>Limited availability this month</div>
+    <h2 id="acta-h2" class="fade-up d1">The right time to fix this<br>was last year. The next best<br>time is <em>now</em>.</h2>
+    <p class="fade-up d2">Every month unranked is a month of leads going to your competitors. One 15-minute call tells you exactly what to change.</p>
+    <div class="final-cta__ctas fade-up d3">
+      <a href="#book" class="btn btn--primary btn--xl">Book My Free Audit →</a>
+      <a href="contact.html" class="btn btn--ghost btn--xl">Ask a Question First</a>
+    </div>
+    <div class="final-cta__trust fade-up d4">
+      <span class="final-cta__trust-item">Completely free</span>
+      <span class="final-cta__trust-item">No obligation</span>
+      <span class="final-cta__trust-item">Founder-led</span>
+      <span class="final-cta__trust-item">Written findings in 24hrs</span>
+    </div>
+  </div></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="site-footer__inner">
+    <div class="site-footer__logo"><div class="site-footer__mark">CF</div><span class="site-footer__name">Crossfire Marketing</span></div>
+    <nav class="site-footer__links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="case-studies.html">Results</a><a href="audit.html">Free Audit</a><a href="contact.html">Contact</a></nav>
+    <span class="site-footer__copy">© 2024 Crossfire Marketing · Delhi, India</span>
+  </div></div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>

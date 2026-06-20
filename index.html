@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Crossfire Marketing — Local SEO & Google Maps Rankings for Delhi Businesses</title>
+<meta name="description" content="We get local service businesses into the top 3 on Google Maps — then convert that visibility into predictable leads. 30+ clients. Founder-led. Delhi NCR."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+.hero{padding:96px 0 80px;background:var(--bg);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,var(--accent-dim) 0%,transparent 68%);pointer-events:none}
+.hero__inner{display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:center;position:relative;z-index:1}
+.hero__eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:26px}
+.hero__eyebrow-line{width:24px;height:1px;background:var(--accent);flex-shrink:0}
+.hero h1{font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:800;letter-spacing:-.035em;color:var(--ink);line-height:1.05;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero__sub{font-size:1rem;color:var(--body);line-height:1.8;margin-bottom:36px;max-width:460px}
+.hero__sub strong{color:var(--ink);font-weight:600}
+.hero__ctas{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:44px}
+.hero__proof{display:flex;align-items:center;padding-top:32px;border-top:1px solid var(--border)}
+.hero__stat{padding-right:32px;border-right:1px solid var(--border)}
+.hero__stat:last-child{border-right:none;padding-left:32px;padding-right:0}
+.hero__stat-n{font-size:1.4rem;font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1}
+.hero__stat-n span{color:var(--accent)}
+.hero__stat-l{font-size:.72rem;color:var(--muted);margin-top:4px;line-height:1.4}
+.hero__card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg)}
+.hero__card-tag{display:inline-flex;align-items:center;gap:7px;padding:4px 11px;border-radius:100px;background:var(--green-dim);border:1px solid var(--green-border);font-size:.64rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.hero__card-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:cf-pulse 2s ease-in-out infinite}
+.hero__card-biz{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.hero__card-loc{font-size:.73rem;color:var(--muted);margin-bottom:16px}
+.hero__card-divider{height:1px;background:var(--border);margin-bottom:16px}
+.hero__metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.hm__val{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}.hm__val.pos{color:var(--green)}
+.hm__lbl{font-size:.65rem;color:var(--muted);margin-top:3px}
+.hero__bar-row{margin-bottom:8px}
+.hero__bar-lbl{display:flex;justify-content:space-between;font-size:.64rem;color:var(--muted);margin-bottom:4px}
+.hero__bar-lbl span{font-weight:700;color:var(--accent)}
+.hero__bar{height:4px;background:var(--surface-2);border-radius:2px;overflow:hidden}
+.hero__bar-fill{height:100%;border-radius:2px;background:var(--accent)}
+.hero__bar-fill.g{background:var(--green)}
+
+.proof-bar{padding:18px 0;background:var(--surface);border-bottom:1px solid var(--border)}
+.proof-bar__inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.proof-bar__label{font-size:.72rem;color:var(--muted);font-weight:500;white-space:nowrap}
+.proof-bar__divider{width:1px;height:14px;background:var(--border);flex-shrink:0}
+.proof-bar__items{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.proof-bar__item{font-size:.78rem;color:var(--body);font-weight:500}
+.proof-bar__item::before{content:'✓ ';color:var(--green);font-size:.7rem}
+
+.founder{padding:96px 0;background:var(--bg)}
+.founder__inner{display:grid;grid-template-columns:400px 1fr;gap:72px;align-items:start}
+.founder__photo-wrap{position:relative}
+.founder__photo{width:100%;display:block;border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-lg)}
+.fw-col__icon{margin-bottom:14px}
+.founder__photo-card{margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 20px;display:flex;align-items:center;gap:20px}
+.founder__photo-card-stat{text-align:center}
+.founder__photo-card-n{font-size:1.3rem;font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1}
+.founder__photo-card-n span{color:var(--accent)}
+.founder__photo-card-l{font-size:.68rem;color:var(--muted);margin-top:3px}
+.founder__photo-card-div{width:1px;height:32px;background:var(--border)}
+.founder__content h2{font-size:clamp(1.7rem,2.8vw,2.2rem);margin-bottom:16px}
+.founder__content p{font-size:.97rem;color:var(--body);line-height:1.85;margin-bottom:14px}
+.founder__quote{margin:26px 0;padding:20px 22px;border-left:2px solid var(--accent);background:var(--surface);border-radius:0 var(--r-sm) var(--r-sm) 0}
+.founder__quote p{font-size:.93rem;font-style:italic;color:var(--ink);margin:0;line-height:1.75}
+.founder__sig{font-size:.84rem;font-weight:700;color:var(--ink);margin-top:10px}
+.founder__sig span{color:var(--muted);font-weight:400;margin-left:6px}
+.founder__stats{display:flex;gap:28px;margin-top:28px}
+.founder__stat-n{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.founder__stat-n span{color:var(--accent)}
+.founder__stat-l{font-size:.71rem;color:var(--muted);margin-top:3px;line-height:1.4}
+
+.myths{padding:96px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.myths__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.myth{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:28px 24px}
+.myth__label{display:inline-flex;align-items:center;gap:6px;font-size:.63rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:12px}
+.myth__label--m{background:rgba(220,38,38,.06);color:#dc2626;border:1px solid rgba(220,38,38,.13)}
+.myth__label--t{background:var(--green-dim);color:var(--green);border:1px solid var(--green-border)}
+.myth h3{font-size:.9rem;font-weight:700;margin-bottom:8px;line-height:1.4}
+.myth p{font-size:.82rem;color:var(--body);line-height:1.7}
+.myth__arrow{margin:14px 0;color:var(--muted);font-size:.8rem}
+
+.framework{padding:96px 0;background:var(--bg)}
+.framework__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+.fw-col{background:var(--bg);padding:40px 32px;transition:background .18s}
+.fw-col:hover{background:var(--surface)}
+.fw-col__num{font-size:2.8rem;font-weight:900;letter-spacing:-.05em;color:var(--surface-2);line-height:1;margin-bottom:14px}
+.fw-col h3{font-size:1.05rem;font-weight:700;margin-bottom:10px}
+.fw-col p{font-size:.87rem;color:var(--body);line-height:1.75;margin-bottom:20px}
+.fw-col__items{display:flex;flex-direction:column;gap:7px}
+.fw-col__items li{font-size:.81rem;color:var(--body);padding-left:16px;position:relative;line-height:1.45}
+.fw-col__items li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.74rem}
+
+.process{padding:96px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+.testimonials{padding:96px 0;background:var(--dark)}
+.testimonials h2{color:#fff}
+.testimonials .section-head--center p{color:rgba(255,255,255,.42)}
+
+.services-overview{padding:96px 0;background:var(--bg)}
+.svo__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svo-card{border:1px solid var(--border);border-radius:var(--r);padding:30px 24px;background:var(--bg);display:flex;flex-direction:column;transition:box-shadow .18s,border-color .18s,transform .18s}
+.svo-card:hover{box-shadow:var(--shadow);border-color:var(--border-2);transform:translateY(-2px)}
+.svo-card--featured{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent-mid)}
+.svo-card__icon{font-size:1.4rem;margin-bottom:14px}
+.svo-card h3{font-size:.97rem;font-weight:700;margin-bottom:7px}
+.svo-card__price{font-size:.8rem;color:var(--muted);margin-bottom:12px}
+.svo-card__price strong{font-size:.93rem;font-weight:700;color:var(--ink)}
+.svo-card p{font-size:.84rem;color:var(--body);line-height:1.7;flex:1;margin-bottom:18px}
+.svo-card__cta{font-size:.74rem;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:5px}
+
+.guarantee-band{padding:40px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+.faq-section{padding:96px 0;background:var(--bg)}
+.faq-section__inner{display:grid;grid-template-columns:280px 1fr;gap:64px}
+
+@media(max-width:1024px){
+  .hero__inner{grid-template-columns:1fr;gap:48px}
+  .hero__card{max-width:380px}
+  .founder__inner{grid-template-columns:1fr;gap:48px}
+  .founder__photo-wrap{max-width:420px}
+  .myths__grid{grid-template-columns:1fr}
+  .framework__grid{grid-template-columns:1fr}
+  .svo__grid{grid-template-columns:1fr}
+  .faq-section__inner{grid-template-columns:1fr;gap:36px}
+}
+@media(max-width:600px){
+  .hero{padding:72px 0 56px}
+  .hero__proof{flex-wrap:wrap}
+  .hero__stat{padding:0 0 16px;border-right:none;border-bottom:1px solid var(--border);width:50%}
+  .hero__stat:last-child{border-bottom:none;padding-left:0}
+  .hero__ctas{flex-direction:column;align-items:flex-start}
+  .founder__stats{gap:16px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap"><div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Crossfire Marketing home">
+      <img src="public/crossfire-logo.png" class="nav__logo-img" alt="Crossfire Marketing">
+    </a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Results</a></li>
+      <li><a href="audit.html">Audit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <div class="nav__spot"><span class="nav__spot-dot"></span>Accepting clients</div>
+      <a href="audit.html" class="btn btn--primary btn--sm">Free Audit →</a>
+      <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </div></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="wrap"><div class="hero__inner">
+    <div>
+      <div class="hero__eyebrow fade-up">
+        <div class="hero__eyebrow-line"></div>
+        <span class="eyebrow">Local SEO · Google Maps · Delhi NCR</span>
+      </div>
+      <h1 id="hero-h1" class="fade-up d1">Your Competitors<br>Are Getting Your<br><em>Customers Right Now.</em></h1>
+      <p class="hero__sub fade-up d2">Every day you're not in the top 3 on Google Maps, <strong>high-intent buyers are choosing someone else</strong>. We fix the visibility problem — then build the system that turns rankings into predictable revenue.</p>
+      <div class="hero__ctas fade-up d3">
+        <a href="audit.html" class="btn btn--primary btn--lg">Claim Free Audit →</a>
+        <a href="case-studies.html" class="btn btn--soft btn--lg">See Results</a>
+      </div>
+      <div class="hero__proof fade-up d4">
+        <div class="hero__stat"><div class="hero__stat-n">30<span>+</span></div><div class="hero__stat-l">Businesses<br>ranked top 3</div></div>
+        <div class="hero__stat"><div class="hero__stat-n">85<span>%</span></div><div class="hero__stat-l">Hit top 3 within<br>90 days</div></div>
+        <div class="hero__stat"><div class="hero__stat-n">4<span>×</span></div><div class="hero__stat-l">Average lead<br>growth</div></div>
+      </div>
+    </div>
+    <div class="hero__card fade-up d2">
+      <div class="hero__card-tag"><span class="hero__card-dot"></span>Live result</div>
+      <div class="hero__card-biz">Kumar HVAC Services</div>
+      <div class="hero__card-loc">South Delhi · 8 weeks after audit</div>
+      <div class="hero__card-divider"></div>
+      <div class="hero__metrics">
+        <div><div class="hm__val">#8</div><div class="hm__lbl">Maps rank before</div></div>
+        <div><div class="hm__val pos">#2</div><div class="hm__lbl">Maps rank after</div></div>
+        <div><div class="hm__val">5/mo</div><div class="hm__lbl">Leads before</div></div>
+        <div><div class="hm__val pos">22/mo</div><div class="hm__lbl">Leads after</div></div>
+      </div>
+      <div class="hero__bar-row">
+        <div class="hero__bar-lbl">Visibility score<span>+58%</span></div>
+        <div class="hero__bar"><div class="hero__bar-fill" style="width:80%"></div></div>
+      </div>
+      <div class="hero__bar-row">
+        <div class="hero__bar-lbl">Lead volume<span>+340%</span></div>
+        <div class="hero__bar"><div class="hero__bar-fill g" style="width:72%"></div></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="wrap"><div class="proof-bar__inner">
+    <span class="proof-bar__label">Trusted by businesses across</span>
+    <div class="proof-bar__divider"></div>
+    <div class="proof-bar__items">
+      <span class="proof-bar__item">Delhi</span>
+      <span class="proof-bar__item">Noida</span>
+      <span class="proof-bar__item">Gurgaon</span>
+      <span class="proof-bar__item">Faridabad</span>
+      <span class="proof-bar__item">Ghaziabad</span>
+    </div>
+  </div></div>
+</div>
+
+<!-- FOUNDER -->
+<section class="founder" aria-labelledby="founder-h2">
+  <div class="wrap"><div class="founder__inner">
+    <div class="founder__photo-wrap fade-up">
+      <img src="public/founder.jpeg" alt="Sumedha, Founder of Crossfire Marketing" class="founder__photo">
+      <div class="founder__photo-card">
+        <div class="founder__photo-card-stat">
+          <div class="founder__photo-card-n">30<span>+</span></div>
+          <div class="founder__photo-card-l">clients ranked<br>top 3</div>
+        </div>
+        <div class="founder__photo-card-div"></div>
+        <div class="founder__photo-card-stat">
+          <div class="founder__photo-card-n">85<span>%</span></div>
+          <div class="founder__photo-card-l">client renewal<br>rate</div>
+        </div>
+        <div class="founder__photo-card-div"></div>
+        <div class="founder__photo-card-stat">
+          <div class="founder__photo-card-n">3<span>yr</span></div>
+          <div class="founder__photo-card-l">local SEO<br>specialist</div>
+        </div>
+      </div>
+    </div>
+    <div class="founder__content fade-up d2">
+      <span class="eyebrow">Who's behind this</span>
+      <h2 id="founder-h2">Built by a practitioner,<br>not an agency factory.</h2>
+      <p>I'm Sumedha. I started Crossfire because I watched too many local businesses waste money on agencies that optimised for deliverables instead of outcomes. A 20-page SEO report nobody reads isn't a result. Leads are.</p>
+      <p>Every audit I do myself. Every strategy is mine. When you work with Crossfire, you're working directly with the person who built the system — not being handed off to a junior team.</p>
+      <div class="founder__quote">
+        <p>"The businesses I work with don't need more traffic reports. They need more customers. That's the only metric I care about."</p>
+      </div>
+      <p class="founder__sig">— Sumedha <span>Founder, Crossfire Marketing</span></p>
+      <div style="margin-top:28px"><a href="audit.html" class="btn btn--ghost btn--lg">Book a free audit with Sumedha →</a></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- MYTHS -->
+<section class="myths" aria-labelledby="myths-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">Common Misconceptions</span>
+      <h2 id="myths-h2">Why most local SEO fails</h2>
+      <p>Three things local businesses are told — and why each one is costing them leads.</p>
+    </div>
+    <div class="myths__grid">
+      <div class="myth fade-up">
+        <div class="myth__label myth__label--m">Myth</div>
+        <h3>"You need a great website to rank on Google Maps."</h3>
+        <div class="myth__arrow">↓</div>
+        <div class="myth__label myth__label--t">Reality</div>
+        <p>Google Maps ranking is driven by your Business Profile, citation consistency, and review signals — not website quality. Many top-ranked businesses have mediocre websites.</p>
+      </div>
+      <div class="myth fade-up d1">
+        <div class="myth__label myth__label--m">Myth</div>
+        <h3>"SEO takes 6–12 months to show any results."</h3>
+        <div class="myth__arrow">↓</div>
+        <div class="myth__label myth__label--t">Reality</div>
+        <p>Local Maps SEO moves much faster. Most clients see ranking movement within 4–8 weeks — because local competition is often less sophisticated than people assume.</p>
+      </div>
+      <div class="myth fade-up d2">
+        <div class="myth__label myth__label--m">Myth</div>
+        <h3>"More keywords = better results."</h3>
+        <div class="myth__arrow">↓</div>
+        <div class="myth__label myth__label--t">Reality</div>
+        <p>Ranking for 50 keywords nobody searches is worthless. We target the specific terms high-intent buyers use right before they call — then own those positions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORK -->
+<section class="framework" aria-labelledby="fw-h2">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">The Crossfire Method</span>
+      <h2 id="fw-h2">Three pillars. One system.<br>Predictable growth.</h2>
+    </div>
+    <div class="framework__grid fade-up d1">
+      <div class="fw-col">
+        <div class="vi-icon vi-icon--surface fw-col__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="fw-col__num">01</div>
+        <h3>Visibility</h3>
+        <p>Get your business in front of buyers at the exact moment they're searching. No wasted impressions.</p>
+        <ul class="fw-col__items">
+          <li>Google Business Profile optimisation</li>
+          <li>Maps ranking for buyer-intent keywords</li>
+          <li>Citation building & consistency</li>
+          <li>Local search position tracking</li>
+        </ul>
+      </div>
+      <div class="fw-col">
+        <div class="vi-icon vi-icon--surface fw-col__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="fw-col__num">02</div>
+        <h3>Trust</h3>
+        <p>Turn browsers into callers by building the credibility signals that convert — reviews, positioning, messaging.</p>
+        <ul class="fw-col__items">
+          <li>Review generation system</li>
+          <li>Competitor positioning analysis</li>
+          <li>Profile messaging & photography</li>
+          <li>Trust signal amplification</li>
+        </ul>
+      </div>
+      <div class="fw-col">
+        <div class="vi-icon vi-icon--surface fw-col__icon">
+          <svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="fw-col__num">03</div>
+        <h3>Conversion</h3>
+        <p>Make sure visibility and trust actually become enquiries, calls, and booked jobs — not just traffic numbers.</p>
+        <ul class="fw-col__items">
+          <li>Lead tracking & attribution</li>
+          <li>Enquiry response system</li>
+          <li>Conversion rate monitoring</li>
+          <li>Monthly growth reporting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" aria-labelledby="proc-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">How It Works</span>
+      <h2 id="proc-h2">From audit to results in four steps</h2>
+      <p>No long onboarding. No complicated contracts. A clear process from day one.</p>
+    </div>
+    <div class="process-steps fade-up d1">
+      <div class="process-step">
+        <div class="process-step__dot" style="color:var(--accent)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="process-step__n">Week 1</div>
+        <h3>Deep Audit</h3>
+        <p>We analyse your rankings, GBP, citations, reviews, and top competitors. The audit surfaces exactly where you're losing ground.</p>
+        <span class="process-step__time">Days 1–5</span>
+      </div>
+      <div class="process-step process-step--accent">
+        <div class="process-step__dot" style="color:#fff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" stroke="currentColor" stroke-width="2"/><rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="2"/><line x1="9" y1="12" x2="15" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="16" x2="13" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="process-step__n">Week 2</div>
+        <h3>Strategy</h3>
+        <p>A specific plan for your market: which keywords, which competitors, what to fix first for the fastest visible impact.</p>
+        <span class="process-step__time">Days 6–10</span>
+      </div>
+      <div class="process-step">
+        <div class="process-step__dot" style="color:var(--accent)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M2 12h2m16 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="process-step__n">Months 1–2</div>
+        <h3>Implementation</h3>
+        <p>We execute — GBP optimisation, citations, review system, content. You focus on running your business.</p>
+        <span class="process-step__time">Weeks 2–8</span>
+      </div>
+      <div class="process-step">
+        <div class="process-step__dot" style="color:var(--accent)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="process-step__n">Month 2–3+</div>
+        <h3>Growth</h3>
+        <p>Rankings climb. Calls increase. We refine, double down on what's working, and report results monthly.</p>
+        <span class="process-step__time">Ongoing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" aria-labelledby="testi-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up" style="margin-bottom:44px">
+      <span class="eyebrow eyebrow--white">Client Results</span>
+      <h2 id="testi-h2">What clients say</h2>
+      <p>From invisible on Google Maps to generating leads on autopilot.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi testi--dark fade-up">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text testi__text--dark">"Before Crossfire, we were getting maybe 4–5 calls a month from Google. Now we're getting 20+. The difference was shocking — and it happened faster than I expected."</div>
+        <div class="testi__meta testi__meta--dark">
+          <div class="testi__avatar">RK</div>
+          <div><div class="testi__name testi__name--dark">Rajesh Kumar</div><div class="testi__biz">Kumar HVAC · South Delhi</div></div>
+          <span class="testi__result">4× leads</span>
+        </div>
+      </div>
+      <div class="testi testi--dark fade-up d1">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text testi__text--dark">"I'd tried two other agencies before. Both gave me reports. Neither gave me results. With Sumedha, I ranked top 3 within 6 weeks and started getting new patient enquiries immediately."</div>
+        <div class="testi__meta testi__meta--dark">
+          <div class="testi__avatar">PA</div>
+          <div><div class="testi__name testi__name--dark">Dr. Priya A.</div><div class="testi__biz">Delhi Dental Care · Noida</div></div>
+          <span class="testi__result">#1 in 90 days</span>
+        </div>
+      </div>
+      <div class="testi testi--dark fade-up d2">
+        <div class="testi__stars">★★★★★</div>
+        <div class="testi__text testi__text--dark">"We wasted ₹1.2 lakh on another SEO company. Crossfire found the actual problem in the first audit call. 9 weeks later, we're ranking for every keyword that matters."</div>
+        <div class="testi__meta testi__meta--dark">
+          <div class="testi__avatar">MS</div>
+          <div><div class="testi__name testi__name--dark">Mohan Sharma</div><div class="testi__biz">Sharma Electricals · Gurgaon</div></div>
+          <span class="testi__result">3× enquiries</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="case-studies.html" class="btn btn--ghost btn--lg">View all case studies →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-overview" aria-labelledby="svo-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">What We Offer</span>
+      <h2 id="svo-h2">Three services. One goal: more customers.</h2>
+      <p>Every service is built around measurable outcomes — not deliverable lists.</p>
+    </div>
+    <div class="svo__grid">
+      <div class="svo-card fade-up">
+        <div class="vi-icon vi-icon--surface" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h3>Local SEO & Maps Ranking</h3>
+        <div class="svo-card__price">From <strong>₹18,000</strong>/month</div>
+        <p>GBP optimisation, citation building, review generation, and keyword ranking — everything to dominate the local pack.</p>
+        <a href="services.html" class="svo-card__cta">Learn more →</a>
+      </div>
+      <div class="svo-card svo-card--featured fade-up d1">
+        <div class="vi-icon vi-icon--accent" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="2 17 12 22 22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="2 12 12 17 22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Complete Acquisition System</h3>
+        <div class="svo-card__price">From <strong>₹30,000</strong>/month</div>
+        <p>Full-funnel: Maps SEO + Meta Ads + conversion optimisation. For businesses ready to build a predictable, scalable lead machine.</p>
+        <a href="services.html" class="svo-card__cta">Most popular →</a>
+      </div>
+      <div class="svo-card fade-up d2">
+        <div class="vi-icon vi-icon--surface" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg></div>
+        <h3>Meta Ads Management</h3>
+        <div class="svo-card__price">From <strong>₹15,000</strong>/month + ad spend</div>
+        <p>Hyper-local Facebook and Instagram campaigns targeting your exact service area — demand generation to complement organic rankings.</p>
+        <a href="services.html" class="svo-card__cta">Learn more →</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px" class="fade-up">
+      <a href="services.html" class="btn btn--outline btn--lg">View All Services & Pricing →</a>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<div class="guarantee-band">
+  <div class="wrap">
+    <div class="guarantee-block fade-up">
+      <div class="guarantee-block__icon">🛡️</div>
+      <div>
+        <h3>60-Day Progress Guarantee</h3>
+        <p>If we don't show measurable ranking movement within 60 days, you owe us nothing for the next month. We take responsibility for outcomes, not just activity.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="faq-h2">
+  <div class="wrap"><div class="faq-section__inner">
+    <div class="fade-up">
+      <span class="eyebrow">Questions</span>
+      <h2 id="faq-h2" style="font-size:clamp(1.5rem,2.5vw,2rem);margin-bottom:12px">Common questions answered</h2>
+      <p style="font-size:.9rem;color:var(--body);line-height:1.75;margin-bottom:24px">Anything else? Email <a href="mailto:sumedha@crossfiremarketing.in" style="color:var(--accent)">sumedha@crossfiremarketing.in</a></p>
+      <a href="audit.html" class="btn btn--primary">Start with a free audit →</a>
+    </div>
+    <div class="faq-list fade-up d1">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How long before I see results?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most clients see ranking movement within 4–8 weeks. Top 3 typically happens between weeks 6–12, depending on how competitive your market is. We give honest timeline estimates — not optimistic ones.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is the free audit actually free?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes. Completely free, no credit card, no obligation. We research your rankings, GBP, competitors, and citations before the call — and send written findings within 24 hours regardless of what you decide.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do you take on competitors in the same area?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No. We have a one-per-category-per-market rule. We won't rank two plumbers in the same area. This creates genuine exclusivity — once your category is taken, competitors can't access our system in your market.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What makes this different from other SEO agencies?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Three things: founder-led (Sumedha handles every account), local-specialist (we only do local SEO — not national, not e-commerce), and outcome-focused (our guarantee is based on ranking movement, not deliverables).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What's the minimum commitment?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>3 months. Local SEO compounds — month 1 builds the foundation, months 2–3 produce movement. Anyone promising significant results under 60 days is either being dishonest or optimising the wrong metrics.</p></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="cta-h2">
+  <div class="wrap"><div class="final-cta__inner">
+    <div class="badge badge--dark fade-up" style="margin-bottom:24px"><span class="badge__dot"></span>Limited availability this month</div>
+    <h2 id="cta-h2" class="fade-up d1">Every month you wait,<br>your competitors get <em>stronger</em>.</h2>
+    <p class="fade-up d2">The audit is free, takes 15 minutes, and leaves you with a written analysis of exactly what to fix — regardless of whether you work with us.</p>
+    <div class="final-cta__ctas fade-up d3">
+      <a href="audit.html" class="btn btn--primary btn--xl">Claim Free Audit →</a>
+      <a href="contact.html" class="btn btn--ghost btn--xl">Talk to Sumedha</a>
+    </div>
+    <div class="final-cta__trust fade-up d4">
+      <span class="final-cta__trust-item">Completely free</span>
+      <span class="final-cta__trust-item">No obligation</span>
+      <span class="final-cta__trust-item">Written findings in 24hrs</span>
+      <span class="final-cta__trust-item">Founder-led every time</span>
+      <span class="final-cta__trust-item">60-day guarantee</span>
+    </div>
+  </div></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap"><div class="site-footer__inner">
+    <div class="site-footer__logo">
+      <div class="site-footer__mark">CF</div>
+      <span class="site-footer__name">Crossfire Marketing</span>
+    </div>
+    <nav class="site-footer__links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Results</a>
+      <a href="audit.html">Free Audit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <span class="site-footer__copy">© 2024 Crossfire Marketing · Delhi, India</span>
+  </div></div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>
