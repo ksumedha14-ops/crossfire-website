@@ -1,0 +1,14 @@
+{
+  "name": "crossfire-website",
+  "version": "1.0.0",
+  "description": "Crossfire Marketing - Local SEO & Google Maps Rankings",
+  "private": true,
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.3.1"
+  },
+  "devDependencies": {}
+}
