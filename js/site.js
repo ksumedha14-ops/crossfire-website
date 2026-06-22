@@ -1,7 +1,8 @@
 /* ═══════════════════════════════════════════════════════════
    CROSSFIRE MARKETING — Shared Site JS
    Handles: nav active state, mobile menu, FAQ accordion,
-   scroll reveal, form validation, real email submission.
+   scroll reveal, form validation, real email submission,
+   Google Analytics 4 event tracking.
 ═══════════════════════════════════════════════════════════ */
 
 (function () {
@@ -13,6 +14,11 @@
      Free tier: 250 submissions/month, instant setup.
   ─────────────────────────────────────────────────────────── */
   var WEB3FORMS_KEY = 'af1edb38-7263-4dac-bc89-42485e7d3943';
+
+  /* ── ANALYTICS HELPER ─────────────────────────────────── */
+  function gaEvent(name, params) {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  }
 
   /* ── NAV: active link ─────────────────────────────────── */
   var page = location.pathname.split('/').pop() || 'index.html';
@@ -171,6 +177,17 @@
     .then(function (res) { return res.json(); })
     .then(function (json) {
       if (json.success) {
+        /* GA4: form submission event */
+        var formName = form.id === 'auditForm'   ? 'Audit Hero Form'
+                     : form.id === 'bookForm'    ? 'Audit Book Form'
+                     : form.id === 'contactForm' ? 'Contact Form'
+                     : form.id || 'Unknown Form';
+        gaEvent('form_submit', {
+          form_id:   form.id,
+          form_name: formName,
+          page:      page
+        });
+
         if (success) {
           form.style.display    = 'none';
           success.style.display = 'block';
@@ -203,5 +220,30 @@
       btn.style.background = '';
     }, 5000);
   }
+
+  /* ── GA4: AUDIT CTA CLICKS ────────────────────────────── */
+  document.querySelectorAll('a[href="audit.html"], a[href="#book"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      gaEvent('audit_cta_click', {
+        button_text: a.textContent.trim().replace(/\s+/g, ' '),
+        source_page: page
+      });
+    });
+  });
+
+  /* ── GA4: OUTBOUND & MAILTO LINKS ─────────────────────── */
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (!href) return;
+    if (href.indexOf('mailto:') === 0) {
+      a.addEventListener('click', function () {
+        gaEvent('outbound_link', { link_type: 'email', url: href });
+      });
+    } else if (href.indexOf('http') === 0 && href.indexOf(location.hostname) === -1) {
+      a.addEventListener('click', function () {
+        gaEvent('outbound_link', { link_type: 'external', url: href });
+      });
+    }
+  });
 
 })();
