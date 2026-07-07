@@ -231,6 +231,47 @@
     });
   });
 
+  /* ── SITEWIDE STYLES (WhatsApp + nav call) ───────────── */
+  var sitewideStyle = document.createElement('style');
+  sitewideStyle.textContent = [
+    '.nav__call{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:600;color:var(--ink);text-decoration:none;padding:5px 11px;border-radius:100px;border:1px solid var(--border);transition:border-color .15s,color .15s;white-space:nowrap}',
+    '.nav__call:hover{border-color:var(--accent);color:var(--accent)}',
+    '.nav__call svg{flex-shrink:0}',
+    '.nav__call-text{display:none}',
+    '@media(min-width:860px){.nav__call-text{display:inline}}',
+    '.wa-btn{position:fixed;bottom:24px;right:24px;z-index:9000;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.42);transition:transform .18s,box-shadow .18s;text-decoration:none}',
+    '.wa-btn:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(37,211,102,.55)}',
+    '@media(max-width:600px){.wa-btn{bottom:16px;right:16px;width:50px;height:50px}}'
+  ].join('');
+  document.head.appendChild(sitewideStyle);
+
+  /* ── NAV: click-to-call phone ─────────────────────────── */
+  var navRight = document.querySelector('.nav__right');
+  if (navRight) {
+    var callLink = document.createElement('a');
+    callLink.href = 'tel:+919315515312';
+    callLink.className = 'nav__call';
+    callLink.setAttribute('aria-label', 'Call +91 93155 15312');
+    callLink.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.76a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.61 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav__call-text">+91 93155 15312</span>';
+    navRight.insertBefore(callLink, navRight.firstChild);
+    callLink.addEventListener('click', function () {
+      gaEvent('phone_click', { source: 'nav', page: page });
+    });
+  }
+
+  /* ── WHATSAPP FLOATING BUTTON ─────────────────────────── */
+  var waBtn = document.createElement('a');
+  waBtn.href = 'https://wa.me/919315515312?text=Hi%20Sumedha%2C%20I%27d%20like%20to%20know%20more%20about%20your%20Local%20SEO%20services';
+  waBtn.target = '_blank';
+  waBtn.rel = 'noopener noreferrer';
+  waBtn.className = 'wa-btn';
+  waBtn.setAttribute('aria-label', 'Chat with Sumedha on WhatsApp');
+  waBtn.innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.118 1.529 5.85L0 24l6.335-1.505A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.902 0-3.68-.516-5.2-1.416l-.373-.219-3.763.894.951-3.669-.242-.381A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>';
+  document.body.appendChild(waBtn);
+  waBtn.addEventListener('click', function () {
+    gaEvent('whatsapp_click', { source: 'floating_button', page: page });
+  });
+
   /* ── GA4: OUTBOUND & MAILTO LINKS ─────────────────────── */
   document.querySelectorAll('a[href]').forEach(function (a) {
     var href = a.getAttribute('href');
