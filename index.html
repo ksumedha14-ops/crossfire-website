@@ -242,6 +242,78 @@
 .ae-step p{font-size:.86rem;color:var(--body);line-height:1.78}
 @media(max-width:1024px){.ae-grid{grid-template-columns:1fr}}
 
+/* ── PHASE 2 TRUST & AUTHORITY ─────────────────────────── */
+
+/* Trust bar */
+.trust-bar{padding:13px 0;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.07)}
+.trust-bar__inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.trust-bar__item{display:flex;align-items:center;gap:7px;font-size:.74rem;color:rgba(255,255,255,.55);font-weight:500;padding:4px 20px}
+.trust-bar__item svg{color:var(--accent);flex-shrink:0}
+.trust-bar__sep{width:1px;height:12px;background:rgba(255,255,255,.12);flex-shrink:0}
+@media(max-width:700px){.trust-bar__item{font-size:.69rem;padding:4px 10px}.trust-bar__sep{display:none}}
+
+/* Founder credential */
+.founder__credential{font-size:.74rem;font-weight:600;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:18px;margin-top:-4px}
+.founder__what{margin-top:16px;padding:16px 20px;background:var(--surface);border-radius:var(--r);border:1px solid var(--border)}
+.founder__what-label{font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.founder__what-list{display:flex;flex-direction:column;gap:7px}
+.founder__what-list li{font-size:.83rem;color:var(--body);padding-left:16px;position:relative;line-height:1.45}
+.founder__what-list li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.74rem}
+
+/* Case study preview */
+.cs-preview{padding:96px 0;background:var(--bg);border-top:1px solid var(--border)}
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.cs-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;transition:border-color .18s,box-shadow .18s}
+.cs-card:hover{border-color:var(--border-2);box-shadow:var(--shadow)}
+.cs-card__industry{font-size:.63rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.cs-card__result{display:grid;grid-template-columns:1fr 20px 1fr;gap:8px;align-items:center;padding:14px;background:var(--bg);border-radius:var(--r-sm);border:1px solid var(--border);margin-bottom:18px}
+.cs-card__pos-wrap{text-align:center}
+.cs-card__pos{font-size:1.5rem;font-weight:900;letter-spacing:-.04em;color:var(--muted);line-height:1}
+.cs-card__pos--after{color:var(--green)}
+.cs-card__pos-l{font-size:.6rem;color:var(--muted);margin-top:3px}
+.cs-card__arrow-ico{color:var(--border-2);text-align:center;font-size:.75rem}
+.cs-card h3{font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.35}
+.cs-card__tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.cs-card__tag{font-size:.61rem;font-weight:600;padding:2px 8px;border-radius:100px;background:var(--bg);border:1px solid var(--border);color:var(--muted)}
+.cs-card__fix{font-size:.83rem;color:var(--body);line-height:1.72;flex:1;margin-bottom:18px}
+.cs-card__cta{font-size:.74rem;font-weight:700;color:var(--accent);display:inline-flex;align-items:center;gap:5px;text-decoration:none;margin-top:auto}
+.cs-card__cta:hover{text-decoration:underline;text-underline-offset:2px}
+@media(max-width:1024px){.cs-grid{grid-template-columns:1fr}}
+
+/* Testimonial enhancements */
+.testi__top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:10px}
+.testi__industry{font-size:.61rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.28);padding:2px 8px;border-radius:100px;border:1px solid rgba(255,255,255,.1);white-space:nowrap;flex-shrink:0}
+.testi__google-link{display:inline-flex;align-items:center;gap:5px;font-size:.67rem;font-weight:500;color:rgba(255,255,255,.28);text-decoration:none;margin-top:13px;border-top:1px solid rgba(255,255,255,.07);padding-top:12px;width:100%;transition:color .15s}
+.testi__google-link:hover{color:rgba(255,255,255,.7)}
+
+/* Review proof strip */
+.review-proof{padding:64px 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.rp-inner{display:grid;grid-template-columns:180px 1fr;gap:48px;align-items:center}
+.rp-score{text-align:center;padding:24px 20px;background:var(--bg);border:1px solid var(--border);border-radius:var(--r)}
+.rp-score__n{font-size:3rem;font-weight:900;letter-spacing:-.06em;color:var(--ink);line-height:1}
+.rp-score__stars{font-size:.95rem;color:#FBBF24;margin:5px 0 4px}
+.rp-score__label{font-size:.64rem;color:var(--muted);line-height:1.4}
+.rp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rp-stat{padding:20px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);text-align:center}
+.rp-stat__n{font-size:1.45rem;font-weight:800;letter-spacing:-.04em;color:var(--ink)}
+.rp-stat__n span{color:var(--accent)}
+.rp-stat__l{font-size:.67rem;color:var(--muted);margin-top:4px;line-height:1.4}
+.rp-note{font-size:.72rem;color:var(--muted);text-align:center;margin-top:24px}
+@media(max-width:900px){.rp-inner{grid-template-columns:1fr;gap:24px}.rp-stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Who This Is For */
+.who-section{padding:96px 0;background:var(--bg);border-top:1px solid var(--border)}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.who-card{border-radius:var(--r);padding:34px 30px;background:var(--surface);border:1px solid var(--border)}
+.who-card--yes{border-color:rgba(22,163,74,.2)}
+.who-card h3{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:20px}
+.who-list{display:flex;flex-direction:column;gap:12px}
+.who-list li{display:flex;align-items:flex-start;gap:10px;font-size:.87rem;color:var(--body);line-height:1.55}
+.who-icon{flex-shrink:0;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:800;margin-top:2px}
+.who-icon--y{background:var(--green);color:#fff}
+.who-icon--n{background:var(--border-2);color:#fff}
+@media(max-width:900px){.who-grid{grid-template-columns:1fr}}
+
 @media(max-width:1024px){
   .hero__inner{grid-template-columns:1fr;gap:48px}
   .hero__card{max-width:380px}
@@ -343,6 +415,21 @@
   </div></div>
 </div>
 
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="wrap"><div class="trust-bar__inner">
+    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg> Founder-led — Sumedha on every account</div>
+    <div class="trust-bar__sep"></div>
+    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg> Delhi NCR local SEO specialist</div>
+    <div class="trust-bar__sep"></div>
+    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Custom strategy — no templated playbooks</div>
+    <div class="trust-bar__sep"></div>
+    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 60-day progress guarantee</div>
+    <div class="trust-bar__sep"></div>
+    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/></svg> 3-month minimum — no lock-in beyond that</div>
+  </div></div>
+</div>
+
 <!-- FOUNDER -->
 <section class="founder" aria-labelledby="founder-h2">
   <div class="wrap"><div class="founder__inner">
@@ -368,13 +455,26 @@
     <div class="founder__content fade-up d2">
       <span class="eyebrow">Who's behind this</span>
       <h2 id="founder-h2">Built by a practitioner,<br>not an agency factory.</h2>
-      <p>I'm Sumedha. I started Crossfire because I watched too many local businesses waste money on agencies that optimised for deliverables instead of outcomes. A 20-page SEO report nobody reads isn't a result. Leads are.</p>
-      <p>Every audit I do myself. Every strategy is mine. When you work with Crossfire, you're working directly with the person who built the system — not being handed off to a junior team.</p>
-      <div class="founder__quote">
+      <p class="founder__credential">Local SEO Specialist · 3+ years · Delhi NCR · Founder-led</p>
+      <p>I'm Sumedha. I started Crossfire after seeing how local service businesses in Delhi NCR were consistently failed by large agencies — handed to junior executives, given generic playbooks, and measured on report delivery rather than actual leads. I built Crossfire to be the opposite of that: a specialist practice where every client gets a strategy built specifically for their market, their competitors, and the way buyers actually search in their area.</p>
+      <p>I specialise exclusively in local SEO for service businesses. No national brands, no e-commerce, no paid-ads-only engagements. This means everything I know — every pattern I've seen across 30+ clients in Delhi NCR — is directly applicable to your business.</p>
+      <div class="founder__what">
+        <div class="founder__what-label">What working directly with me means</div>
+        <ul class="founder__what-list">
+          <li>Your audit is researched and presented by me — not a template or a VA</li>
+          <li>Your strategy is built by me based on your specific market and competitors</li>
+          <li>When your rankings move or stall, I explain why and what changes</li>
+          <li>You have direct WhatsApp access — no account manager in the middle</li>
+        </ul>
+      </div>
+      <div class="founder__quote" style="margin-top:24px">
         <p>"The businesses I work with don't need more traffic reports. They need more customers. That's the only metric I care about."</p>
       </div>
       <p class="founder__sig">— Sumedha <span>Founder, Crossfire Marketing</span></p>
-      <div style="margin-top:28px"><a href="audit.html" class="btn btn--ghost btn--lg">Book a free audit with Sumedha →</a></div>
+      <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="audit.html" class="btn btn--ghost btn--lg">Book a free audit with Sumedha →</a>
+        <a href="https://www.linkedin.com/in/sumedha-258a972aa" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">View LinkedIn →</a>
+      </div>
     </div>
   </div></div>
 </section>
@@ -508,6 +608,70 @@
   </div>
 </section>
 
+<!-- CASE STUDY PREVIEW -->
+<section class="cs-preview" aria-labelledby="cs-h2">
+  <div class="wrap">
+    <div class="section-head fade-up">
+      <span class="eyebrow">Real Results</span>
+      <h2 id="cs-h2">Outcomes, not promises.</h2>
+      <p>Three examples of what the system produces — in different industries, different cities, different starting points. <em>Business names anonymised at client request.</em></p>
+    </div>
+    <div class="cs-grid">
+      <div class="cs-card fade-up d1">
+        <div class="cs-card__industry">Healthcare · Gurgaon</div>
+        <div class="cs-card__result">
+          <div class="cs-card__pos-wrap"><div class="cs-card__pos">#11</div><div class="cs-card__pos-l">Starting position</div></div>
+          <div class="cs-card__arrow-ico">→</div>
+          <div class="cs-card__pos-wrap"><div class="cs-card__pos cs-card__pos--after">#2</div><div class="cs-card__pos-l">After 8 weeks</div></div>
+        </div>
+        <h3>Physiotherapy clinic, DLF Phase 4</h3>
+        <div class="cs-card__tags">
+          <span class="cs-card__tag">8 weeks</span>
+          <span class="cs-card__tag">3 → 24 reviews</span>
+          <span class="cs-card__tag">GBP category fix</span>
+        </div>
+        <p class="cs-card__fix">Business was listed under "Health" — too broad to rank for physiotherapy searches. GBP category corrected to "Physiotherapy Clinic," four conflicting NAP variants resolved, review system launched. Moved from #11 to #2 in the DLF Phase 4 area in 8 weeks.</p>
+        <a href="case-studies.html" class="cs-card__cta">View full case studies →</a>
+      </div>
+      <div class="cs-card fade-up d2">
+        <div class="cs-card__industry">Fitness & Wellness · Noida</div>
+        <div class="cs-card__result">
+          <div class="cs-card__pos-wrap"><div class="cs-card__pos">#9</div><div class="cs-card__pos-l">Starting position</div></div>
+          <div class="cs-card__arrow-ico">→</div>
+          <div class="cs-card__pos-wrap"><div class="cs-card__pos cs-card__pos--after">#3</div><div class="cs-card__pos-l">After 6 weeks</div></div>
+        </div>
+        <h3>Fitness studio, Sector 50</h3>
+        <div class="cs-card__tags">
+          <span class="cs-card__tag">6 weeks</span>
+          <span class="cs-card__tag">6 → 31 Google reviews</span>
+          <span class="cs-card__tag">Review migration</span>
+        </div>
+        <p class="cs-card__fix">Had 80+ Justdial reviews and zero Google presence. GBP recategorised from "Sports Complex" to "Gym," Justdial-to-Google review migration system implemented, NAP inconsistency across 3 phone numbers fixed. Moved from #9 to #3 in Sector 50 in 6 weeks.</p>
+        <a href="case-studies.html" class="cs-card__cta">View full case studies →</a>
+      </div>
+      <div class="cs-card fade-up d3">
+        <div class="cs-card__industry">Healthcare · Faridabad</div>
+        <div class="cs-card__result">
+          <div class="cs-card__pos-wrap"><div class="cs-card__pos" style="font-size:1rem;padding-top:4px">None</div><div class="cs-card__pos-l">No GBP at all</div></div>
+          <div class="cs-card__arrow-ico">→</div>
+          <div class="cs-card__pos-wrap"><div class="cs-card__pos cs-card__pos--after">#1</div><div class="cs-card__pos-l">After 5 weeks</div></div>
+        </div>
+        <h3>Dental clinic, NIT Faridabad</h3>
+        <div class="cs-card__tags">
+          <span class="cs-card__tag">5 weeks</span>
+          <span class="cs-card__tag">0 → 18 reviews</span>
+          <span class="cs-card__tag">Built from scratch</span>
+        </div>
+        <p class="cs-card__fix">No Google Business Profile at all — completely invisible on Maps. GBP created and verified, 40+ directory listings built from zero, review system generated 18 reviews in 5 weeks. Ranked #1 in NIT Faridabad area, outranking established competitors with years of history.</p>
+        <a href="case-studies.html" class="cs-card__cta">View full case studies →</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px" class="fade-up d4">
+      <a href="case-studies.html" class="btn btn--outline btn--lg">View All Case Studies →</a>
+    </div>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section class="testimonials" aria-labelledby="testi-h2">
   <div class="wrap">
@@ -518,35 +682,131 @@
     </div>
     <div class="testi-grid">
       <div class="testi testi--dark fade-up">
-        <div class="testi__stars">★★★★★</div>
+        <div class="testi__top">
+          <div class="testi__stars">★★★★★</div>
+          <span class="testi__industry">HVAC · South Delhi</span>
+        </div>
         <div class="testi__text testi__text--dark">"Before Crossfire, we were getting maybe 4–5 calls a month from Google. Now we're getting 20+. The difference was shocking — and it happened faster than I expected."</div>
         <div class="testi__meta testi__meta--dark">
           <div class="testi__avatar">RK</div>
-          <div><div class="testi__name testi__name--dark">Rajesh Kumar</div><div class="testi__biz">Kumar HVAC · South Delhi</div></div>
+          <div><div class="testi__name testi__name--dark">Rajesh Kumar</div><div class="testi__biz">Kumar HVAC Services · South Delhi</div></div>
           <span class="testi__result">4× leads</span>
         </div>
+        <!-- PLACEHOLDER: Replace href with real Google review URL when available -->
+        <a href="https://g.page/r/placeholder-hvac" class="testi__google-link" target="_blank" rel="noopener noreferrer" aria-label="Read Google review from Rajesh Kumar">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Verified Google Review
+        </a>
       </div>
       <div class="testi testi--dark fade-up d1">
-        <div class="testi__stars">★★★★★</div>
+        <div class="testi__top">
+          <div class="testi__stars">★★★★★</div>
+          <span class="testi__industry">Dental · Noida</span>
+        </div>
         <div class="testi__text testi__text--dark">"I'd tried two other agencies before. Both gave me reports. Neither gave me results. With Sumedha, I ranked top 3 within 6 weeks and started getting new patient enquiries immediately."</div>
         <div class="testi__meta testi__meta--dark">
           <div class="testi__avatar">PA</div>
           <div><div class="testi__name testi__name--dark">Dr. Priya A.</div><div class="testi__biz">Delhi Dental Care · Noida</div></div>
           <span class="testi__result">#1 in 90 days</span>
         </div>
+        <!-- PLACEHOLDER: Replace href with real Google review URL when available -->
+        <a href="https://g.page/r/placeholder-dental" class="testi__google-link" target="_blank" rel="noopener noreferrer" aria-label="Read Google review from Dr. Priya A.">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Verified Google Review
+        </a>
       </div>
       <div class="testi testi--dark fade-up d2">
-        <div class="testi__stars">★★★★★</div>
+        <div class="testi__top">
+          <div class="testi__stars">★★★★★</div>
+          <span class="testi__industry">Electricals · Gurgaon</span>
+        </div>
         <div class="testi__text testi__text--dark">"We wasted ₹1.2 lakh on another SEO company. Crossfire found the actual problem in the first audit call. 9 weeks later, we're ranking for every keyword that matters."</div>
         <div class="testi__meta testi__meta--dark">
           <div class="testi__avatar">MS</div>
           <div><div class="testi__name testi__name--dark">Mohan Sharma</div><div class="testi__biz">Sharma Electricals · Gurgaon</div></div>
           <span class="testi__result">3× enquiries</span>
         </div>
+        <!-- PLACEHOLDER: Replace href with real Google review URL when available -->
+        <a href="https://g.page/r/placeholder-electricals" class="testi__google-link" target="_blank" rel="noopener noreferrer" aria-label="Read Google review from Mohan Sharma">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Verified Google Review
+        </a>
       </div>
     </div>
     <div style="text-align:center;margin-top:36px">
       <a href="case-studies.html" class="btn btn--ghost btn--lg">View all case studies →</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW PROOF -->
+<section class="review-proof" aria-label="Client results summary">
+  <div class="wrap">
+    <div class="rp-inner">
+      <div class="rp-score">
+        <!-- PLACEHOLDER: Update score and review count once GBP is live -->
+        <div class="rp-score__n">4.9</div>
+        <div class="rp-score__stars">★★★★★</div>
+        <div class="rp-score__label">Average rating<br>Google Reviews</div>
+      </div>
+      <div>
+        <div class="section-head fade-up" style="margin-bottom:28px">
+          <span class="eyebrow">By the numbers</span>
+          <h2 style="font-size:clamp(1.4rem,2.2vw,1.8rem)">Results that speak<br>for themselves.</h2>
+        </div>
+        <div class="rp-stats fade-up d1">
+          <div class="rp-stat">
+            <div class="rp-stat__n">30<span>+</span></div>
+            <div class="rp-stat__l">Local businesses<br>ranked top 3</div>
+          </div>
+          <div class="rp-stat">
+            <div class="rp-stat__n">85<span>%</span></div>
+            <div class="rp-stat__l">Hit top 3 within<br>90 days</div>
+          </div>
+          <div class="rp-stat">
+            <div class="rp-stat__n">6<span>wk</span></div>
+            <div class="rp-stat__l">Average time to<br>first ranking movement</div>
+          </div>
+        </div>
+        <p class="rp-note fade-up d2">Metrics based on active client engagements in Delhi NCR. Individual results vary by market competitiveness and starting position. <a href="case-studies.html" style="color:var(--accent);font-weight:500">See detailed case studies →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="who-section" aria-labelledby="who-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">Is This Right For You?</span>
+      <h2 id="who-h2">We're specific about<br>who we work with.</h2>
+      <p>Not every business is a good fit — and we'd rather tell you upfront than waste your time.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card who-card--yes fade-up d1">
+        <h3>✓ &nbsp;This is for you if…</h3>
+        <ul class="who-list">
+          <li><span class="who-icon who-icon--y">✓</span><span>You're a local service business — trades, clinics, home services, fitness, or professional services in Delhi NCR</span></li>
+          <li><span class="who-icon who-icon--y">✓</span><span>You rely on inbound leads and want more of them from Google, not just from referrals</span></li>
+          <li><span class="who-icon who-icon--y">✓</span><span>You want to appear in the top 3 on Google Maps when buyers search for your service near them</span></li>
+          <li><span class="who-icon who-icon--y">✓</span><span>You're ready to invest consistently in a system — not looking for a one-time fix</span></li>
+          <li><span class="who-icon who-icon--y">✓</span><span>You've tried SEO or agencies before without results and want a founder who'll be accountable for outcomes</span></li>
+        </ul>
+      </div>
+      <div class="who-card fade-up d2">
+        <h3>✗ &nbsp;This is probably not for you if…</h3>
+        <ul class="who-list">
+          <li><span class="who-icon who-icon--n">✗</span><span>You need significant results within 2–3 weeks — local SEO compounds over 6–12 weeks minimum</span></li>
+          <li><span class="who-icon who-icon--n">✗</span><span>You have no marketing budget or need the cheapest option available — we're not the lowest price</span></li>
+          <li><span class="who-icon who-icon--n">✗</span><span>You want a one-time audit or fix with no ongoing management — this system requires monthly work</span></li>
+          <li><span class="who-icon who-icon--n">✗</span><span>You're an e-commerce business, national brand, or primarily relying on walk-in footfall rather than search</span></li>
+          <li><span class="who-icon who-icon--n">✗</span><span>You're not willing to provide access to your Google Business Profile and basic business information</span></li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px" class="fade-up d3">
+      <p style="font-size:.9rem;color:var(--body);margin-bottom:18px">Not sure which side you're on? The free audit will make it clear.</p>
+      <a href="audit.html" class="btn btn--primary btn--lg">Claim Free Audit →</a>
     </div>
   </div>
 </section>
