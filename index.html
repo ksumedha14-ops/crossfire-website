@@ -344,6 +344,16 @@
 .cl-item img{height:36px;width:auto;max-width:150px;object-fit:contain;display:block;filter:grayscale(1) opacity(.5);transition:filter .22s ease}
 .cl-item:hover img{filter:grayscale(0) opacity(1)}
 @media(max-width:600px){.cl-item{flex:1 0 calc(50% - 10px);max-width:calc(50% - 10px)}}
+.locations-section{padding:80px 0;background:var(--surface);border-top:1px solid var(--border)}
+.loc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.loc-card{display:flex;flex-direction:column;padding:28px 24px;background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);text-decoration:none;color:inherit;transition:border-color .18s,box-shadow .18s,transform .15s}
+.loc-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(196,85,42,.08);transform:translateY(-2px);text-decoration:none}
+.loc-card__city{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.loc-card__title{font-size:1rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:10px;letter-spacing:-.015em}
+.loc-card__desc{font-size:.83rem;color:var(--body);line-height:1.7;flex:1;margin-bottom:18px}
+.loc-card__cta{font-size:.82rem;font-weight:600;color:var(--accent);margin-top:auto}
+@media(max-width:900px){.loc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.loc-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -908,6 +918,43 @@ var CLIENTS = [
     </div>
     <div style="text-align:center;margin-top:36px" class="fade-up">
       <a href="services.html" class="btn btn--outline btn--lg">View All Services & Pricing →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS WE SERVE -->
+<section class="locations-section" aria-labelledby="loc-h2">
+  <div class="wrap">
+    <div class="section-head--center fade-up">
+      <span class="eyebrow">Service Areas</span>
+      <h2 id="loc-h2">Local SEO Services Across Delhi NCR</h2>
+      <p>Crossfire Marketing provides Local SEO and Google Business Profile optimisation for service businesses across Delhi NCR. Each market has its own competitive dynamics — we build location-specific strategies for each city we serve.</p>
+    </div>
+    <div class="loc-grid">
+      <a href="local-seo-gurgaon.html" class="loc-card fade-up d1">
+        <span class="loc-card__city">Gurgaon</span>
+        <h3 class="loc-card__title">Local SEO Services in Gurgaon</h3>
+        <p class="loc-card__desc">Google Maps ranking and GBP optimisation for service businesses competing in Gurugram's high-intent local market.</p>
+        <span class="loc-card__cta">Explore Gurgaon SEO →</span>
+      </a>
+      <a href="local-seo-noida.html" class="loc-card fade-up d2">
+        <span class="loc-card__city">Noida</span>
+        <h3 class="loc-card__title">Local SEO Services in Noida</h3>
+        <p class="loc-card__desc">Citation building, review strategy, and Maps ranking for local businesses in Noida and Greater Noida.</p>
+        <span class="loc-card__cta">Explore Noida SEO →</span>
+      </a>
+      <a href="local-seo-faridabad.html" class="loc-card fade-up d3">
+        <span class="loc-card__city">Faridabad</span>
+        <h3 class="loc-card__title">Local SEO Services in Faridabad</h3>
+        <p class="loc-card__desc">Helping Faridabad service businesses capture more Google Maps leads in a market where most competitors are underoptimised.</p>
+        <span class="loc-card__cta">Explore Faridabad SEO →</span>
+      </a>
+      <a href="local-seo-ghaziabad.html" class="loc-card fade-up d4">
+        <span class="loc-card__city">Ghaziabad</span>
+        <h3 class="loc-card__title">Local SEO Services in Ghaziabad</h3>
+        <p class="loc-card__desc">End-to-end Local SEO for Ghaziabad businesses — from GBP audits to top-3 Maps rankings that generate consistent inbound leads.</p>
+        <span class="loc-card__cta">Explore Ghaziabad SEO →</span>
+      </a>
     </div>
   </div>
 </section>
