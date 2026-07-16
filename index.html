@@ -144,21 +144,19 @@
 .hero__stat-n{font-size:1.4rem;font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1}
 .hero__stat-n span{color:var(--accent)}
 .hero__stat-l{font-size:.72rem;color:var(--muted);margin-top:4px;line-height:1.4}
-.hero__card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg)}
-.hero__card-tag{display:inline-flex;align-items:center;gap:7px;padding:4px 11px;border-radius:100px;background:var(--green-dim);border:1px solid var(--green-border);font-size:.64rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
-.hero__card-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:cf-pulse 2s ease-in-out infinite}
-.hero__card-biz{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:2px}
-.hero__card-loc{font-size:.73rem;color:var(--muted);margin-bottom:16px}
-.hero__card-divider{height:1px;background:var(--border);margin-bottom:16px}
-.hero__metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
-.hm__val{font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}.hm__val.pos{color:var(--green)}
-.hm__lbl{font-size:.65rem;color:var(--muted);margin-top:3px}
-.hero__bar-row{margin-bottom:8px}
-.hero__bar-lbl{display:flex;justify-content:space-between;font-size:.64rem;color:var(--muted);margin-bottom:4px}
-.hero__bar-lbl span{font-weight:700;color:var(--accent)}
-.hero__bar{height:4px;background:var(--surface-2);border-radius:2px;overflow:hidden}
-.hero__bar-fill{height:100%;border-radius:2px;background:var(--accent)}
-.hero__bar-fill.g{background:var(--green)}
+.hero__founder-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;box-shadow:var(--shadow-lg)}
+.hero__founder-card__header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.hero__founder-card__photo{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid var(--border);flex-shrink:0}
+.hero__founder-card__name{font-size:1rem;font-weight:700;color:var(--ink)}
+.hero__founder-card__title{font-size:.72rem;color:var(--muted);margin-top:3px;line-height:1.4}
+.hero__founder-card__divider{height:1px;background:var(--border);margin:16px 0}
+.hero__founder-card__facts{display:flex;flex-direction:column;gap:9px}
+.hero__founder-card__facts li{font-size:.83rem;color:var(--body);padding-left:16px;position:relative;line-height:1.5}
+.hero__founder-card__facts li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.74rem}
+.hero__founder-card__stats{display:flex;gap:28px}
+.hero__founder-card__stat-n{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1}
+.hero__founder-card__stat-n span{color:var(--accent)}
+.hero__founder-card__stat-l{font-size:.67rem;color:var(--muted);margin-top:3px;line-height:1.4}
 
 .proof-bar{padding:18px 0;background:var(--surface);border-bottom:1px solid var(--border)}
 .proof-bar__inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
@@ -385,10 +383,10 @@
     <div>
       <div class="hero__eyebrow fade-up">
         <div class="hero__eyebrow-line"></div>
-        <span class="eyebrow">Local SEO · Google Maps · Delhi NCR</span>
+        <span class="eyebrow">Local SEO Specialist · Google Maps · Delhi NCR</span>
       </div>
-      <h1 id="hero-h1" class="fade-up d1">Your Delhi NCR Competitors<br>Are Getting Your<br><em>Customers Right Now.</em></h1>
-      <p class="hero__sub fade-up d2">Every day you're not in the top 3 on Google Maps, <strong>high-intent buyers are choosing someone else</strong>. We fix the visibility problem — then build the system that turns rankings into predictable revenue.</p>
+      <h1 id="hero-h1" class="fade-up d1">Delhi NCR's Specialist<br>for Local SEO &amp;<br><em>Google Maps Rankings.</em></h1>
+      <p class="hero__sub fade-up d2">I specialise exclusively in getting local service businesses into the top 3 on Google Maps — and keeping them there. <strong>No juniors. No handoffs. No generic playbooks.</strong> Every client works directly with me, Sumedha, from audit to results.</p>
       <div class="hero__ctas fade-up d3">
         <a href="audit.html" class="btn btn--primary btn--lg">Claim Free Audit →</a>
         <a href="case-studies.html" class="btn btn--soft btn--lg">See Results</a>
@@ -399,24 +397,35 @@
         <div class="hero__stat"><div class="hero__stat-n">4<span>×</span></div><div class="hero__stat-l">Average lead<br>growth</div></div>
       </div>
     </div>
-    <div class="hero__card fade-up d2">
-      <div class="hero__card-tag"><span class="hero__card-dot"></span>Live result</div>
-      <div class="hero__card-biz">Kumar HVAC Services</div>
-      <div class="hero__card-loc">South Delhi · 8 weeks after audit</div>
-      <div class="hero__card-divider"></div>
-      <div class="hero__metrics">
-        <div><div class="hm__val">#8</div><div class="hm__lbl">Maps rank before</div></div>
-        <div><div class="hm__val pos">#2</div><div class="hm__lbl">Maps rank after</div></div>
-        <div><div class="hm__val">5/mo</div><div class="hm__lbl">Leads before</div></div>
-        <div><div class="hm__val pos">22/mo</div><div class="hm__lbl">Leads after</div></div>
+    <div class="hero__founder-card fade-up d2">
+      <div class="hero__founder-card__header">
+        <img src="public/founder.jpeg" alt="Sumedha, Local SEO Specialist" class="hero__founder-card__photo">
+        <div>
+          <div class="hero__founder-card__name">Sumedha</div>
+          <div class="hero__founder-card__title">Founder · Local SEO Specialist<br>Crossfire Marketing</div>
+        </div>
       </div>
-      <div class="hero__bar-row">
-        <div class="hero__bar-lbl">Visibility score<span>+58%</span></div>
-        <div class="hero__bar"><div class="hero__bar-fill" style="width:80%"></div></div>
-      </div>
-      <div class="hero__bar-row">
-        <div class="hero__bar-lbl">Lead volume<span>+340%</span></div>
-        <div class="hero__bar"><div class="hero__bar-fill g" style="width:72%"></div></div>
+      <div class="hero__founder-card__divider"></div>
+      <ul class="hero__founder-card__facts">
+        <li>Founder-led — every account handled personally by me</li>
+        <li>Specialist in local SEO only — no national brands, no e-commerce</li>
+        <li>One client per category per market — your competitors can't join</li>
+        <li>60-day progress guarantee on every engagement</li>
+      </ul>
+      <div class="hero__founder-card__divider"></div>
+      <div class="hero__founder-card__stats">
+        <div>
+          <div class="hero__founder-card__stat-n">30<span>+</span></div>
+          <div class="hero__founder-card__stat-l">Clients ranked<br>top 3</div>
+        </div>
+        <div>
+          <div class="hero__founder-card__stat-n">85<span>%</span></div>
+          <div class="hero__founder-card__stat-l">Hit top 3 within<br>90 days</div>
+        </div>
+        <div>
+          <div class="hero__founder-card__stat-n">4<span>×</span></div>
+          <div class="hero__founder-card__stat-l">Average lead<br>growth</div>
+        </div>
       </div>
     </div>
   </div></div>
@@ -440,15 +449,11 @@
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="wrap"><div class="trust-bar__inner">
-    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg> Founder-led — Sumedha on every account</div>
+    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg> Founder-led — Sumedha on every account, directly</div>
     <div class="trust-bar__sep"></div>
-    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg> Delhi NCR local SEO specialist</div>
+    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg> Local SEO specialist — only service businesses in Delhi NCR</div>
     <div class="trust-bar__sep"></div>
-    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Custom strategy — no templated playbooks</div>
-    <div class="trust-bar__sep"></div>
-    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 60-day progress guarantee</div>
-    <div class="trust-bar__sep"></div>
-    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/></svg> 3-month minimum — no lock-in beyond that</div>
+    <div class="trust-bar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 60-day progress guarantee — ranking movement or next month free</div>
   </div></div>
 </div>
 
@@ -500,6 +505,19 @@
     </div>
   </div></div>
 </section>
+
+<!-- GUARANTEE -->
+<div class="guarantee-band">
+  <div class="wrap">
+    <div class="guarantee-block fade-up">
+      <div class="guarantee-block__icon">🛡️</div>
+      <div>
+        <h3>60-Day Progress Guarantee</h3>
+        <p>If we don't show measurable ranking movement within 60 days, you owe us nothing for the next month. We take responsibility for outcomes, not just activity.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- MYTHS -->
 <section class="myths" aria-labelledby="myths-h2">
@@ -634,9 +652,9 @@
 <section class="cs-preview" aria-labelledby="cs-h2">
   <div class="wrap">
     <div class="section-head fade-up">
-      <span class="eyebrow">Real Results</span>
-      <h2 id="cs-h2">Outcomes, not promises.</h2>
-      <p>Three examples of what the system produces — in different industries, different cities, different starting points. <em>Business names anonymised at client request.</em></p>
+      <span class="eyebrow">The Method In Practice</span>
+      <h2 id="cs-h2">How the system works<br>in the real world.</h2>
+      <p>Three examples from different industries and cities — showing the specific diagnosis and fix behind each result. <em>Business names anonymised at client request.</em></p>
     </div>
     <div class="cs-grid">
       <div class="cs-card fade-up d1">
@@ -765,41 +783,17 @@ var CLIENTS = [
 <section class="testimonials" aria-labelledby="testi-h2">
   <div class="wrap">
     <div class="section-head--center fade-up" style="margin-bottom:44px">
-      <span class="eyebrow eyebrow--white">Client Results</span>
-      <h2 id="testi-h2">What clients say</h2>
-      <p>From invisible on Google Maps to generating leads on autopilot. <a href="case-studies.html" style="color:var(--accent);font-weight:500">Case studies: real client results →</a></p>
+      <span class="eyebrow eyebrow--white">In Their Words</span>
+      <h2 id="testi-h2">Why clients switch to Sumedha</h2>
+      <p>The pattern we hear most: a previous agency delivered reports. We delivered results.</p>
     </div>
-    <div class="testi-grid">
+    <div style="max-width:640px;margin:0 auto">
       <div class="testi testi--dark fade-up">
-        <div class="testi__top">
-          <div class="testi__stars">★★★★★</div>
-          <span class="testi__industry">HVAC · South Delhi</span>
-        </div>
-        <div class="testi__text testi__text--dark">"Before Crossfire, we were getting maybe 4–5 calls a month from Google. Now we're getting 20+. The difference was shocking — and it happened faster than I expected."</div>
-        <div class="testi__meta testi__meta--dark">
-          <div class="testi__avatar">RK</div>
-          <div><div class="testi__name testi__name--dark">Rajesh Kumar</div><div class="testi__biz">Kumar HVAC Services · South Delhi</div></div>
-          <span class="testi__result">4× leads</span>
-        </div>
-      </div>
-      <div class="testi testi--dark fade-up d1">
-        <div class="testi__top">
-          <div class="testi__stars">★★★★★</div>
-          <span class="testi__industry">Dental · Noida</span>
-        </div>
-        <div class="testi__text testi__text--dark">"I'd tried two other agencies before. Both gave me reports. Neither gave me results. With Sumedha, I ranked top 3 within 6 weeks and started getting new patient enquiries immediately."</div>
-        <div class="testi__meta testi__meta--dark">
-          <div class="testi__avatar">PA</div>
-          <div><div class="testi__name testi__name--dark">Dr. Priya A.</div><div class="testi__biz">Delhi Dental Care · Noida</div></div>
-          <span class="testi__result">#1 in 90 days</span>
-        </div>
-      </div>
-      <div class="testi testi--dark fade-up d2">
         <div class="testi__top">
           <div class="testi__stars">★★★★★</div>
           <span class="testi__industry">Electricals · Gurgaon</span>
         </div>
-        <div class="testi__text testi__text--dark">"We wasted ₹1.2 lakh on another SEO company. Crossfire found the actual problem in the first audit call. 9 weeks later, we're ranking for every keyword that matters."</div>
+        <div class="testi__text testi__text--dark">"We wasted ₹1.2 lakh on another SEO company. Crossfire found the actual problem in the first audit call. 9 weeks later, we're ranking for every keyword that matters. Wish I'd found this sooner."</div>
         <div class="testi__meta testi__meta--dark">
           <div class="testi__avatar">MS</div>
           <div><div class="testi__name testi__name--dark">Mohan Sharma</div><div class="testi__biz">Sharma Electricals · Gurgaon</div></div>
@@ -808,42 +802,7 @@ var CLIENTS = [
       </div>
     </div>
     <div style="text-align:center;margin-top:36px">
-      <a href="case-studies.html" class="btn btn--ghost btn--lg">View all case studies →</a>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEW PROOF -->
-<section class="review-proof" aria-label="Client results summary">
-  <div class="wrap">
-    <div class="rp-inner">
-      <div class="rp-score">
-        <!-- PLACEHOLDER: Update score and review count once GBP is live -->
-        <div class="rp-score__n">4.9</div>
-        <div class="rp-score__stars">★★★★★</div>
-        <div class="rp-score__label">Average rating<br>Google Reviews</div>
-      </div>
-      <div>
-        <div class="section-head fade-up" style="margin-bottom:28px">
-          <span class="eyebrow">By the numbers</span>
-          <h2 style="font-size:clamp(1.4rem,2.2vw,1.8rem)">Results that speak<br>for themselves.</h2>
-        </div>
-        <div class="rp-stats fade-up d1">
-          <div class="rp-stat">
-            <div class="rp-stat__n">30<span>+</span></div>
-            <div class="rp-stat__l">Local businesses<br>ranked top 3</div>
-          </div>
-          <div class="rp-stat">
-            <div class="rp-stat__n">85<span>%</span></div>
-            <div class="rp-stat__l">Hit top 3 within<br>90 days</div>
-          </div>
-          <div class="rp-stat">
-            <div class="rp-stat__n">6<span>wk</span></div>
-            <div class="rp-stat__l">Average time to<br>first ranking movement</div>
-          </div>
-        </div>
-        <p class="rp-note fade-up d2">Metrics based on active client engagements in Delhi NCR. Individual results vary by market competitiveness and starting position. <a href="case-studies.html" style="color:var(--accent);font-weight:500">See detailed case studies →</a></p>
-      </div>
+      <a href="case-studies.html" class="btn btn--ghost btn--lg">View full case studies →</a>
     </div>
   </div>
 </section>
@@ -959,19 +918,6 @@ var CLIENTS = [
   </div>
 </section>
 
-<!-- GUARANTEE -->
-<div class="guarantee-band">
-  <div class="wrap">
-    <div class="guarantee-block fade-up">
-      <div class="guarantee-block__icon">🛡️</div>
-      <div>
-        <h3>60-Day Progress Guarantee</h3>
-        <p>If we don't show measurable ranking movement within 60 days, you owe us nothing for the next month. We take responsibility for outcomes, not just activity.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- AUDIT EXPECTATION -->
 <section class="audit-expect" aria-labelledby="ae-h2">
   <div class="wrap">
@@ -1067,7 +1013,7 @@ var CLIENTS = [
     <p style="color:var(--body);line-height:1.85;margin-bottom:14px">Our <a href="services.html" style="color:var(--accent);font-weight:500">Google Business Profile Optimization Services</a> cover every ranking factor: category selection, service area setup, photo strategy, review velocity, and citation consistency across 40+ directories. Most clients see ranking movement within 4–8 weeks.</p>
     <p style="color:var(--body);line-height:1.85;margin-bottom:14px">To see specific numbers, visit our <a href="case-studies.html" style="color:var(--accent);font-weight:500">Case Studies: Real Client Results</a> — including businesses in HVAC, dental, and home services that moved from unranked to top 3 on Google Maps. Have a specific question? <a href="contact.html" style="color:var(--accent);font-weight:500">Talk to Sumedha directly</a>.</p>
     <p style="color:var(--body);line-height:1.85;margin-bottom:14px">We serve businesses across Delhi NCR including dedicated <a href="local-seo-gurgaon.html" style="color:var(--accent);font-weight:500">Local SEO Services in Gurgaon</a>, <a href="local-seo-noida.html" style="color:var(--accent);font-weight:500">Local SEO Services in Noida</a>, <a href="local-seo-faridabad.html" style="color:var(--accent);font-weight:500">Local SEO for Faridabad businesses</a>, and <a href="local-seo-ghaziabad.html" style="color:var(--accent);font-weight:500">Local SEO for Ghaziabad businesses</a>.</p>
-    <p style="color:var(--body);line-height:1.85">We specialise in <a href="local-seo-home-services-delhi-ncr.html" style="color:var(--accent);font-weight:500">Local SEO for HVAC, Plumbing &amp; Home Services in Delhi NCR</a> — including the trade-specific GBP configuration, service-area setup, and citation cleanup that emergency-intent searches demand. Kumar HVAC went from #8 to #2 on Google Maps in 8 weeks and now generates 22 leads per month from Google alone.</p>
+    <p style="color:var(--body);line-height:1.85">We specialise in <a href="local-seo-home-services-delhi-ncr.html" style="color:var(--accent);font-weight:500">Local SEO for HVAC, Plumbing &amp; Home Services in Delhi NCR</a> — including the trade-specific GBP configuration, service-area setup, and citation cleanup that emergency-intent searches demand. One South Delhi HVAC contractor went from #8 to #2 on Google Maps in 8 weeks and now generates 22 leads per month from Google alone.</p>
   </div>
 </section>
 
