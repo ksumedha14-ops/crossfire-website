@@ -64,6 +64,10 @@ A recurring, deliberate pattern in the history: **build page → launch under-li
 - Added `multi-location-local-seo-delhi-ncr.html` — not in the original roadmap list, added after research found genuine pre-existing FAQ-content precedent (multi-branch GBP questions already live on 2 pages) rather than manufacturing a new topic.
 - Local Link Building and standalone On-Page/Content SEO pages (implied by general "service pages" scoping) were evaluated and explicitly not built — see project-decisions.md.
 
+### Removed: HVAC/Plumbing/Electrical vertical, sitewide (Sep 17, 2026)
+- The home-services (HVAC/plumbing/electrical) vertical — page, case studies, testimonials, cross-links, and every smaller mention — was deliberately removed from the entire site per founder instruction. See `docs/operations/project-decisions.md` for the full record. The historical entries below (Wave 2, "Completed" items referencing the HVAC hub) describe work that was later undone — kept as history, not current state.
+- Practical effect on this roadmap: the "geo × vertical matrix" concept below now applies only to the verticals still served (dental, legal, salons/fitness) — do not propose HVAC/plumbing/electrical pages going forward.
+
 ### Local Authority: Areas We Serve hub + Greater Noida (Sep 17, 2026)
 - Built `areas-we-serve.html` — closes the gap flagged below (no dedicated geographic hub existed; locations were only a homepage section + non-indexed chip lists).
 - Added `local-seo-greater-noida.html`, the 6th geo page, after research confirmed genuine market distinctness (separate postal codes, different commercial character) rather than treating it as a neighborhood subdivision.
@@ -72,8 +76,8 @@ A recurring, deliberate pattern in the history: **build page → launch under-li
 
 ## Known gaps
 
-- **No geo × vertical intersection pages** — e.g. no "HVAC SEO Gurgaon." City pages are industry-agnostic; the hub page is city-agnostic. This is the biggest structural hole given the matrix is already half-built.
-- **Only one vertical covered** (home services), despite case-study data existing for other verticals (salon, construction/renovation, physiotherapy — cut from `case-studies.html` in `214743a` as "weakest/redundant" cards, but the underlying case data may still be usable for dedicated vertical pages).
+- **No geo × vertical intersection pages** — e.g. no "Dental SEO Gurgaon." City pages are industry-agnostic; vertical pages are city-agnostic. This is the biggest structural hole given the matrix is already partially built. (HVAC/plumbing/electrical is no longer a candidate vertical — removed sitewide Sep 17, 2026.)
+- **Only three verticals covered** (dental, legal, and — as of the trades removal — none for home services), despite case-study data existing for other verticals (salon, construction/renovation, physiotherapy — cut from `case-studies.html` in `214743a` as "weakest/redundant" cards, but the underlying case data may still be usable for dedicated vertical pages).
 - ~~**No sub-locality pages**~~ — evaluated 2026-09-17 with real competitor/search research. Deliberately NOT building DLF City, Cyber City, Sector 62, or Indirapuram as standalone pages: Crossfire's own Gurgaon/Noida/Ghaziabad pages already cover these zones in body copy, so separate pages would cannibalize rather than add coverage. Greater Noida was the one exception with independent evidence — see the Local Authority entry above and `docs/operations/project-decisions.md`. This is a considered decision, not an unaddressed gap.
 - **No Delhi (the city itself) page** — Gurgaon, Noida, Faridabad, Ghaziabad are covered; Delhi proper (South Delhi, Dwarka, Rohini) is not, despite being the largest market in "Delhi NCR."
 - **Blog content doesn't target SEO/GBP keywords** — the 3 published articles are generic marketing advice, disconnected from the local-SEO keyword strategy the rest of the site pursues.
@@ -83,10 +87,10 @@ A recurring, deliberate pattern in the history: **build page → launch under-li
 ## Next priorities
 
 ### Phase 1 — Fill the geo × vertical matrix
-Reuses the existing city-page/hub-page template; primarily new copy + case data.
-1. HVAC & Plumbing SEO — Gurgaon
-2. HVAC & Plumbing SEO — Noida
-3. Electrician SEO — Delhi NCR (split out from the home-services hub as its own head term)
+Reuses the existing city-page/hub-page template; primarily new copy + case data. Items 1-3 (HVAC/Plumbing/Electrical) removed 2026-09-17 — the trades vertical was deliberately taken off the site entirely, so no further building in this category. See `docs/operations/project-decisions.md`.
+1. ~~HVAC & Plumbing SEO — Gurgaon~~ — removed, not building
+2. ~~HVAC & Plumbing SEO — Noida~~ — removed, not building
+3. ~~Electrician SEO — Delhi NCR~~ — removed, not building
 4. Salon & Spa Local SEO — Delhi NCR
 5. Home Renovation / Contractor Local SEO — Delhi NCR
 6. Physiotherapy / Clinic Local SEO — Delhi NCR

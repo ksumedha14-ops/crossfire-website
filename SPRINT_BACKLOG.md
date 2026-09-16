@@ -56,6 +56,21 @@ Updated after every completed phase, per the standing process: verify functional
 
 ---
 
+## Vertical removal: HVAC/Plumbing/Electrical, sitewide (2026-09-17)
+
+Founder-directed full removal of the trades vertical after an initial narrower edit (removing 3 words from one FAQ list) was flagged as creating a live contradiction with the still-published vertical page, case studies, and cross-links. See `docs/operations/project-decisions.md` for full reasoning.
+
+| # | Task | Status | Notes |
+|---|---|:---:|---|
+| 1 | Delete `local-seo-home-services-delhi-ncr.html` + sitemap entry | ✅ Done | |
+| 2 | Remove Kumar HVAC "Featured" + Sharma Electricals case studies | ✅ Done | Homepage testimonial slot backfilled with real Arora Law quote, not invented |
+| 3 | Remove HVAC/Home Services chip from ~13 pages | ✅ Done | |
+| 4 | Remove Kumar HVAC proof-cards from 4 service pages | ✅ Done | |
+| 5 | Fix ~20 smaller illustrative mentions sitewide | ✅ Done | Form fields, neighborhood descriptions, comparison examples |
+| 6 | Rewrite blog-spray-and-pray-marketing.html's HVAC worked example | ✅ Done | Swapped to a law firm example |
+| 7 | Update docs (ideal-clients, positioning, ROADMAP) | ✅ Done | |
+| 8 | Full sitewide grep verification | ✅ Done | Zero remaining mentions confirmed |
+
 ## Pre-release code review, round 2 (2026-09-17)
 
 Second code-review pass on the full accumulated release diff, run as the "final code review" step of the Release sequence. 7 findings, all fixed — see `CHANGELOG.md` for detail. Also closed a process gap: commit `1d5382e`'s own 4 earlier code-review fixes had never been logged in `CHANGELOG.md`/`RELEASE_CHECKLIST.md`/this file, despite the standing rule requiring it — logged retroactively.

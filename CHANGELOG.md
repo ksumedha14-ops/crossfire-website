@@ -4,6 +4,22 @@ All notable changes to the Crossfire Marketing website, grouped by release cycle
 
 ## [Unreleased]
 
+### Fixed — Pre-release code review, round 4 (2026-09-17)
+A code-review pass on the HVAC/Plumbing/Electrical removal diff (the release sequence's final-code-review step) found the sweep had missed several instances and left 2 CSS-grid regressions:
+- 5 residual mentions the earlier grep sweep missed: an ICP list on `index.html`, the original industries FAQ on `services.html` (both still said "home services"), an "AC repair" example each on `blog-spray-and-pray-marketing.html` and `local-seo-faridabad.html`, and a second FAQ + body paragraph on `local-seo-gurgaon.html` still describing "home services" as served.
+- `CLAUDE.md`'s own page-structure section still listed the deleted page and was missing the vertical/service/area-hub page families entirely — brought fully current rather than patched minimally.
+- 2 CSS-grid regressions from deleting testimonial/case-study cards without adjusting their grids: the shared `.testi-grid` class (main.css, used by `case-studies.html` and `audit.html`) was a fixed 3-column grid now showing 1 and 2 cards respectively with visible empty columns on desktop; `case-studies.html`'s own `.cs-grid` had the same issue with 2 remaining cards. Both switched to `auto-fit`/`minmax` so they reflow correctly regardless of card count, and the now-redundant fixed-column breakpoints were removed.
+- One reported finding (merged cross-link chips across ~12 files) was investigated and found to be a false positive — the flagged lines were the site's pre-existing, intentional single-line footer-nav format, not a defect introduced by this diff.
+
+### Removed — HVAC/Plumbing/Electrical vertical, sitewide (2026-09-17)
+Founder instruction, executed as a full removal after an initial narrower edit was flagged as creating a contradiction ("one page says we don't work in this industry, another says we do"):
+- Deleted `local-seo-home-services-delhi-ncr.html` and its `sitemap.xml` entry.
+- Removed the Kumar HVAC & Plumbing "Featured" case study (full narrative, client quote, results dashboard) and the Sharma & Sons Electricals card from `case-studies.html`, plus both businesses' testimonials there and on `index.html`. The homepage's now-empty sole testimonial slot was filled with the real, already-verified Arora Law testimonial — not left empty, not backfilled with an invented quote.
+- Removed Kumar HVAC proof-cards from 4 service pages and the "HVAC & Home Services SEO" cross-link chip from every page that carried it (~13 pages).
+- Fixed roughly 20 smaller illustrative mentions sitewide (form dropdowns, placeholders, neighborhood descriptions, comparison examples) by swapping to verticals still genuinely served (dental, legal, salons) rather than leaving broken links or residual claims.
+- Updated `docs/business/ideal-clients.md`, `docs/business/positioning.md`, and `ROADMAP.md` to reflect the current served-vertical list and removed now-obsolete "build more HVAC pages" roadmap items.
+- Full sitewide grep confirms zero remaining mentions of HVAC/plumbing/electrical across all live pages.
+
 ### Changed — Content edit + pre-release code review, round 3 (2026-09-17)
 - Removed "plumbers, electricians, HVAC" from the "What industries do you work with?" FAQ on `services.html`, per explicit founder instruction. The dedicated `local-seo-home-services-delhi-ncr.html` vertical page and its real case studies (Kumar HVAC & Plumbing, Sharma & Sons Electricals) were left untouched — the request was scoped to the industries list, not the page or case data.
 - Fixed 3 issues found in the final-code-review step of this release: `local-seo-greater-noida.html`'s cross-link row was missing reciprocal links to 6 sibling pages that already linked to it (now symmetric); the hero's sitewide "30+ businesses ranked top 3" stat sat directly above a section honestly disclosing "we don't have a named Greater Noida case yet" — a real self-contradiction, removed rather than reworded; an unescaped `&` in "Alpha, Beta, Gamma & Delta Sectors" fixed to `&amp;`.

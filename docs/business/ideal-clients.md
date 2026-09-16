@@ -4,7 +4,7 @@ Reconstructed directly from explicit yes/no criteria published on both `index.ht
 
 ## Good fit ("yes" criteria)
 
-- Local service business — trades, clinics, home services, fitness, or professional services in Delhi NCR
+- Local service business — clinics, salons/fitness, legal/professional services in Delhi NCR (trades/home services no longer served — see below)
 - 5–50 staff (per contact.html sizing)
 - Established: 2+ years operating, with existing customers and word-of-mouth — "ready to systematise online growth," not validate a new offer
 - Relies on inbound leads and wants more of them from Google search, not just referrals
@@ -29,7 +29,7 @@ The site states outright: "If the call makes it clear we're not a match — wron
 
 ## Named verticals actually served
 
-Explicitly named across site copy and case studies: plumbing, electrical, HVAC, salons, clinics, legal. The only vertical with a dedicated landing page today is home services (HVAC/plumbing/electrical) — see [[topical-authority-plan]] for the gap between named-served verticals and built landing pages.
+As of 2026-09-17: salons, clinics/dental, legal. The HVAC/plumbing/electrical (home services) vertical was explicitly removed from the site — the dedicated landing page, its case studies (Kumar HVAC & Plumbing, Sharma & Sons Electricals), and every mention of these trades sitewide were taken down per founder instruction. See [[../operations/project-decisions.md|project-decisions]] for the full removal record and [[topical-authority-plan]] for how this affects the vertical-page matrix.
 
 ## Assumptions
 

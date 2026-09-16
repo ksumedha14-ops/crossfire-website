@@ -370,7 +370,7 @@ p { color: var(--body); }
 .card--dark:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); }
 
 /* ── TESTIMONIALS ────────────────────────────────────────── */
-.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 20px; }
 .testi {
   background: var(--bg);
   border: 1px solid var(--border);
@@ -655,7 +655,6 @@ p { color: var(--body); }
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .testi-grid { grid-template-columns: repeat(2,1fr); }
   .stat-grid--4 { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 768px) {
@@ -672,7 +671,6 @@ p { color: var(--body); }
   .nav__links.open a  { display: block; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.05); font-size: .9rem; }
   .nav__right .btn--primary { display: none; }
   .nav__spot               { display: none; }
-  .testi-grid              { grid-template-columns: 1fr; }
   .form-row                { grid-template-columns: 1fr; }
   .process-steps           { grid-template-columns: repeat(2,1fr); gap: 28px; }
   .process-steps::before   { display: none; }

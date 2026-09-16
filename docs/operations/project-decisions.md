@@ -2,6 +2,18 @@
 
 A record of explicit strategic/editorial calls found in commit messages — the *why* behind changes, not just the *what*. Reconstructed retroactively from git history on 2026-07-22; append new decisions here going forward as they're made (see the Documentation Rules section of `CLAUDE.md`).
 
+## 2026-09-17 — Removed the HVAC/plumbing/electrical vertical sitewide, for consistency
+
+Founder instruction, in two steps: first, remove "plumbers, electricians, HVAC" from the industries list in `services.html`'s FAQ. Then, on review, the founder flagged that this created an inconsistency — that FAQ line now said the business doesn't serve this industry, while a dedicated vertical page, its case studies, testimonials, and dozens of smaller mentions across the site still said it did. Instruction: "remove the pages/words/statement correlating to it... i dont want one page to show that we dont work in this industry and a whole other page that says that we do. be consistent with the changes on all pages and areas."
+
+Executed as a full sitewide removal, not just a link fix:
+- **Deleted** `local-seo-home-services-delhi-ncr.html` entirely (the dedicated HVAC/Plumbing/Electrical vertical page) and its `sitemap.xml` entry.
+- **Removed real case-study content**: the Kumar HVAC & Plumbing "Featured" case study on `case-studies.html` (the page's top-billed result, including its full narrative, client quote, and results dashboard) and the Sharma & Sons Electricals card. Both businesses' testimonials were also removed from `case-studies.html` and `index.html`; the homepage's sole testimonial slot was filled with the real Arora Law testimonial (already verified elsewhere on the site) rather than left empty or backfilled with an invented quote.
+- **Removed proof-card references** to the Kumar HVAC case from 4 service pages (GBP hub, Citation Building, Review Management, the flagship Local SEO page) and the "HVAC & Home Services SEO" cross-link chip from every page that had it (~13 pages).
+- **Fixed ~20 smaller illustrative mentions** sitewide — form dropdown options, placeholder text, "areas we serve" neighborhood descriptions, and comparison examples (e.g. "a plumber in Sector 56," "a plumber listed as 'Contractor'") — swapping each to a vertical the business still genuinely serves (dental, legal, salons) rather than leaving a residual reference or a broken link.
+- **Left untouched**: the real underlying methodology and process descriptions (GBP optimisation, citation building, review generation) — nothing about *how* Crossfire works was changed, only *which industries* it claims to serve.
+- **Why it matters**: this is a direct instance of the site's established "prefer removing unverified/no-longer-true claims over leaving them live" pattern (see the 2026-07-16 entry below), extended from *unverifiable* claims to a *no-longer-accurate* one. The lesson for future edits: a scoped instruction to remove something from one list should prompt a sitewide consistency check before considering the change complete, not just the single requested edit.
+
 ## 2026-09-17 — Local authority phase: 1 new area page, not 5, because that's what the evidence supported
 
 Ran real web research (not assumption) before selecting any locations: fetched actual search results for 5 sub-locality terms (DLF Gurgaon, Cyber City Gurgaon, Greater Noida, Indirapuram Ghaziabad, Sector 62 Noida) and checked whether NCR-adjacent towns (Manesar, Sonipat, Bahadurgarh) have real ICP fit.

@@ -28,7 +28,10 @@ Each top-level `.html` file is a full, independent page (nav + content + footer 
 
 Pages fall into a few families:
 - **Core pages**: `index.html`, `services.html`, `audit.html`, `contact.html`, `case-studies.html`, `blogs.html`
-- **Local-SEO city landing pages**: `local-seo-{gurgaon,noida,faridabad,ghaziabad}.html` and `local-seo-home-services-delhi-ncr.html` — near-identical structure targeting different city/niche keywords for SEO
+- **Areas We Serve hub**: `areas-we-serve.html` — geographic hub page linking to every city landing page
+- **Local-SEO city landing pages**: `local-seo-{gurgaon,noida,faridabad,ghaziabad,delhi,greater-noida}.html` — near-identical structure targeting different city keywords for SEO
+- **Vertical/industry landing pages**: `local-seo-dental-clinics-delhi-ncr.html`, `local-seo-legal-delhi-ncr.html` — industry-specific rather than city-specific. (The HVAC/Plumbing/Electrical vertical page and its case studies were removed sitewide 2026-09-17 — see `docs/operations/project-decisions.md`; do not recreate without explicit instruction.)
+- **Service deep-dive pages**: `gbp-optimization-delhi-ncr.html`, `local-seo-google-maps-ranking-delhi-ncr.html`, `citation-building-nap-consistency-delhi-ncr.html`, `google-review-management-delhi-ncr.html`, `multi-location-local-seo-delhi-ncr.html` — one page per deliverable, cross-linked with the geo/vertical pages above
 - **Blog posts**: `blog-*.html` — standalone long-form articles, linked from `blogs.html`
 
 Each page also carries its own `<style>` block in `<head>` for page-specific CSS on top of the shared `css/main.css` (every page has exactly one inline `<style>` block).

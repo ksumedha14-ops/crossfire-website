@@ -4,6 +4,18 @@ A dated record of work sessions on this repository — what was done, and why. B
 
 ---
 
+## 2026-09-17 — Removed the HVAC/Plumbing/Electrical vertical sitewide
+
+Founder asked to remove "plumbers, electricians, HVAC" from the industries list in `services.html`'s FAQ. That edit was made, then the founder flagged a real inconsistency it created: a dedicated vertical page (`local-seo-home-services-delhi-ncr.html`), its case studies, testimonials, and dozens of smaller mentions across the site still claimed the business served this industry, directly contradicting the newly-edited list. Instruction: be consistent across every page.
+
+Treated this as a full removal, not a link cleanup. Deleted the dedicated vertical page and its sitemap entry. On `case-studies.html`, removed the Kumar HVAC & Plumbing "Featured" case study — the page's top-billed result, including its full narrative, client quote, and results dashboard — and the Sharma & Sons Electricals card, along with both businesses' testimonials there and on `index.html`. Rather than leave the homepage's now-empty sole testimonial slot blank or invent a replacement quote, reused the real Arora Law testimonial that was already verified and live elsewhere on the site.
+
+Removed the Kumar HVAC proof-card from 4 service pages (GBP hub, Citation Building, Review Management, the flagship Local SEO page) and the "HVAC & Home Services SEO" cross-link chip from roughly 13 pages that carried it. Found and fixed around 20 smaller illustrative mentions sitewide via a full-site grep sweep — form dropdown options, input placeholders, "areas we serve" neighborhood descriptions, and comparison examples like "a plumber in Sector 56" or "a plumber listed as 'Contractor'" — swapping each to a vertical the business still genuinely serves (dental, legal, salons) so no broken links or residual claims remained. One blog post (`blog-spray-and-pray-marketing.html`) had an extended worked example built around an HVAC business; rewrote it around a law firm example instead, including the matching excerpt on `blogs.html`.
+
+Updated `docs/business/ideal-clients.md` and `docs/business/positioning.md` to reflect the current served-vertical list, and `ROADMAP.md` to strike now-obsolete "build more HVAC pages" items and flag the historical entries describing the now-removed hub as history, not current state. Logged the full decision and reasoning in `docs/operations/project-decisions.md`.
+
+Verified after implementation: a full sitewide case-insensitive grep for "hvac", "plumb", and "electric" returns zero matches across every HTML page. `CHANGELOG.md`, `SPRINT_BACKLOG.md`, and `RELEASE_CHECKLIST.md` updated. Per the standing release-cycle rule, nothing pushed or deployed as part of this specific edit until the founder says "Release" again.
+
 ## 2026-09-17 — Local Authority: Areas We Serve hub + Greater Noida (research-first, 1 new area)
 
 Built genuine geographic/local authority following the same research-first process as the prior service-topical-authority phase. Audited the existing site first: confirmed no dedicated "Areas We Serve" hub or nav link existed (locations lived only in a homepage section and non-indexed neighborhood chip lists on each city page), and confirmed sitewide — via grep across every JSON-LD `PostalAddress` block — that the site has never disclosed a specific base city or street address, only "Delhi NCR, India" at the region level. This directly shaped the build: neither new page claims a physical office anywhere.

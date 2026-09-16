@@ -2,6 +2,10 @@
 
 Reconstructed from page titles, H1/H2 structure, internal linking, and the commit history of page additions.
 
+## Update (2026-09-17): HVAC/Plumbing/Electrical vertical removed sitewide
+
+The Home Services (HVAC/plumbing/electrical) vertical referenced throughout this document as one of the 3 built verticals was deliberately removed sitewide the same day, per founder instruction — see `docs/operations/project-decisions.md`. References to it below (and in `docs/SEO_TOPOICAL_AUTHORITY_ROADMAP.md`, `docs/seo/keyword-opportunities.md`, `docs/seo/internal-linking-strategy.md`, `docs/content/blog-ideas.md`) describe history, not current state. The vertical axis is now: Dental Clinics, Legal/Law Firms (2 built), with home services/trades off the table for future vertical-page proposals.
+
 ## Update (2026-09-17): local/geographic authority phase — hub page + Greater Noida
 
 Built `areas-we-serve.html` as a genuine geographic hub (explanatory content + links, not a directory list) and added `local-seo-greater-noida.html` as a 6th geo page — the only new individual area page approved after research.

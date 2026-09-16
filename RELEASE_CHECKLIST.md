@@ -18,6 +18,25 @@ Until then: implement → verify → document → hold.
 
 ## Completed this cycle
 
+### Pre-release code review, round 4 — complete (2026-09-17)
+- [x] Fixed 5 residual HVAC/plumbing/electrical mentions missed by the initial sweep (index.html, services.html, blog-spray-and-pray-marketing.html, local-seo-faridabad.html, local-seo-gurgaon.html)
+- [x] Brought CLAUDE.md's page-structure section fully current (was missing vertical/service/area-hub families, still listed the deleted page)
+- [x] Fixed 2 CSS-grid regressions from card removal (shared `.testi-grid`, case-studies.html's `.cs-grid`) via auto-fit
+- [x] Investigated and ruled out a false-positive finding (merged footer chips — pre-existing convention, not a defect)
+- [x] Re-verified: zero HVAC/plumbing/electrical mentions, zero broken links, valid JSON-LD, live-render check passed
+
+### Vertical removal: HVAC/Plumbing/Electrical, sitewide — complete (2026-09-17)
+- [x] Deleted the dedicated vertical page and its sitemap entry
+- [x] Removed Kumar HVAC "Featured" case study and Sharma Electricals card from case-studies.html
+- [x] Removed both businesses' testimonials; replaced homepage's sole testimonial with the real Arora Law quote
+- [x] Removed Kumar HVAC proof-cards from 4 service pages
+- [x] Removed "HVAC & Home Services SEO" chip from ~13 pages
+- [x] Fixed ~20 smaller illustrative mentions sitewide (forms, neighborhood descriptions, comparisons)
+- [x] Rewrote blog-spray-and-pray-marketing.html's HVAC example (law firm) and matching blogs.html excerpt
+- [x] Updated docs/business/ideal-clients.md, positioning.md, ROADMAP.md
+- [x] Logged full decision record in docs/operations/project-decisions.md
+- [x] Full sitewide grep confirms zero remaining HVAC/plumbing/electrical mentions
+
 ### Content edit + pre-release code review, round 3 — complete (2026-09-17)
 - [x] Removed plumbers/electricians/HVAC from services.html's industries FAQ (founder instruction)
 - [x] Fixed asymmetric cross-linking on Greater Noida page (6 reciprocal links added)

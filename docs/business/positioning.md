@@ -19,7 +19,7 @@ Sourced from FAQ schema and homepage copy:
 1. **Founder-led** — accountability tied to one named person, not a rotating team.
 2. **Local specialist** — "we only do local SEO — not national campaigns, not e-commerce" (explicitly rules out categories of client, see [[ideal-clients]]).
 3. **Outcome-focused guarantee** — "60-day guarantee is based on ranking movement, not deliverables."
-4. **Category exclusivity** — "one-per-category-per-market rule... we won't rank two plumbers in the same area" (index.html FAQ). Once a category is taken in a market, competitors can't access the system in that area — a scarcity/exclusivity mechanic baked into the offer itself.
+4. **Category exclusivity** — "one-per-category-per-market rule... we won't rank two dentists in the same area" (index.html FAQ, wording updated 2026-09-17 after the HVAC/plumbing/electrical vertical was removed — see [[../operations/project-decisions.md|project-decisions]]). Once a category is taken in a market, competitors can't access the system in that area — a scarcity/exclusivity mechanic baked into the offer itself.
 5. **Justdial/Sulekha displacement** — a recurring FAQ theme positions Google Maps as the higher-value channel versus India-specific directories (Justdial, Sulekha) that many prospective clients already use. See [[keyword-opportunities]].
 
 ## Commitment model
