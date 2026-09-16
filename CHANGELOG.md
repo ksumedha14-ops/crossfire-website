@@ -4,6 +4,16 @@ All notable changes to the Crossfire Marketing website, grouped by release cycle
 
 ## [Unreleased]
 
+### Added — Internal linking audit and implementation (2026-09-17)
+Full audit before any edits: scripted an inbound-link classifier (contextual in-prose vs. chip/directory vs. card links) across all 23 pages, confirming a precise, verified gap rather than assuming one — every one of the 6 geo pages' contextual links pointed only to the generic `services.html`, and every one of the 5 service pages' contextual links never named a specific area. SERVICE↔LOCATION connection existed only via directory-style chip rows, never in prose.
+- Built a Service × Area relevance matrix from each page's *existing* content (not invented relationships) and added 1-3 contextual in-prose links per page in both directions, several by redirecting an already-existing generic `services.html` link to the more specific, more useful service page (e.g. Ghaziabad's "Google Business Profile" mention now points to the GBP page, not the pricing page).
+- Added a genuine "Areas We Serve" section to `contact.html`, which previously had zero area links of any kind.
+- Connected all 3 blog posts to relevant service/area pages (previously fully disconnected from both).
+- Added the missing Review Management card to the Areas We Serve hub's services grid.
+- Fixed one incidental residual reference to the removed home-services vertical found during the audit (`local-seo-delhi.html`'s "Dwarka's home services businesses" → "Dwarka's retail businesses").
+- One forced edit was caught and reverted during implementation (see `docs/operations/project-decisions.md`) rather than shipped.
+- Verified after implementation: 0 broken links, valid JSON-LD, balanced HTML tags, live-render check passed on all 18 touched pages. Pre-existing FAQ schema/visible-text drift on pages this task didn't touch was re-confirmed unchanged, not newly introduced.
+
 ### Fixed — Pre-release code review, round 4 (2026-09-17)
 A code-review pass on the HVAC/Plumbing/Electrical removal diff (the release sequence's final-code-review step) found the sweep had missed several instances and left 2 CSS-grid regressions:
 - 5 residual mentions the earlier grep sweep missed: an ICP list on `index.html`, the original industries FAQ on `services.html` (both still said "home services"), an "AC repair" example each on `blog-spray-and-pray-marketing.html` and `local-seo-faridabad.html`, and a second FAQ + body paragraph on `local-seo-gurgaon.html` still describing "home services" as served.

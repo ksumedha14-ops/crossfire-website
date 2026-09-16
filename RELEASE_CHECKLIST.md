@@ -18,6 +18,26 @@ Until then: implement → verify → document → hold.
 
 ## Completed this cycle
 
+### Pre-release code review, round 5 — complete (2026-09-17)
+- [x] Restored "every industry and" in gbp-optimization-delhi-ncr.html's claim, dropped by an earlier link insertion
+- [x] Reverted a meaning-distorting edit in local-seo-ghaziabad.html ("listing data" had been changed to "directory and citation data" to force a Citation Building link)
+- [x] Reverted a meaning-distorting edit in local-seo-greater-noida.html ("the method" had been changed to "the underlying ranking factors" to force a link, swapping the subject from Crossfire's methodology to Google's algorithm)
+- [x] Closed the real Review Management area-link gap honestly: linked the page's existing real "Noida Sector 18" client reference instead of forcing a new sentence; corrected SPRINT_BACKLOG.md's task status to reflect 4/5 pages rather than overclaiming 5/5
+- [x] Corrected SESSION_LOG.md's overstated claim that all 3 blog posts were "fully disconnected" — 2 of 3 already had a genuine link from earlier work; only 1 was
+- [x] Re-verified: 0 broken links, valid JSON-LD, balanced HTML tags after all 6 fixes
+
+### Internal Linking Audit and Implementation — complete (2026-09-17)
+- [x] Full audit before edits: scripted contextual vs. directory link classification across all 23 pages
+- [x] Service × Area matrix built from existing page content, no invented relationships
+- [x] Contextual service links added to all 6 geo pages
+- [x] Contextual area links added to all 5 service pages
+- [x] Review Management link added to Dental and Legal vertical pages
+- [x] Areas We Serve section added to contact.html
+- [x] All 3 blog posts connected to relevant service/area pages
+- [x] Areas We Serve hub's missing Review Management card added
+- [x] One forced/meaning-distorting edit caught and reverted before shipping
+- [x] Final validation: 0 broken links, valid JSON-LD, balanced HTML tags, live-render check passed on 18 pages
+
 ### Pre-release code review, round 4 — complete (2026-09-17)
 - [x] Fixed 5 residual HVAC/plumbing/electrical mentions missed by the initial sweep (index.html, services.html, blog-spray-and-pray-marketing.html, local-seo-faridabad.html, local-seo-gurgaon.html)
 - [x] Brought CLAUDE.md's page-structure section fully current (was missing vertical/service/area-hub families, still listed the deleted page)

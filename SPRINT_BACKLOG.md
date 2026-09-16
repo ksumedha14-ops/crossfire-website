@@ -1,5 +1,21 @@
 # SPRINT_BACKLOG.md
 
+## Internal Linking Audit (2026-09-17)
+
+Full audit + implementation connecting SERVICE and AREA pages contextually, not just via directory-style chip rows. See `docs/operations/project-decisions.md` and `SESSION_LOG.md` for full detail.
+
+| # | Task | Status | Notes |
+|---|---|:---:|---|
+| 1 | Audit: classify contextual vs. directory links across all 23 pages | ✅ Done | Scripted, not eyeballed |
+| 2 | Build Service × Area matrix from existing page content | ✅ Done | No invented relationships |
+| 3 | Add contextual service links to 6 geo pages | ✅ Done | Several redirect existing generic services.html links to specific pages |
+| 4 | Add contextual area links to 5 service pages | ⚠️ 4/5 | Review Management's real content ties to industry verticals (dental/legal), not a specific city — no natural in-prose area link existed; linked its real "Noida Sector 18" client reference instead of forcing one |
+| 5 | Add Review Management link to Dental/Legal vertical pages | ✅ Done | |
+| 6 | Add Areas We Serve section to contact.html | ✅ Done | Previously had zero area links |
+| 7 | Connect 3 blog posts to service/area pages | ✅ Done | 2 of 3 already had a genuine link from earlier work; connected the 1 that was fully disconnected (`blog-fastest-way-to-sell.html`) |
+| 8 | Add missing Review Management card to Areas We Serve hub | ✅ Done | |
+| 9 | Final link/JSON-LD/render validation | ✅ Done | 0 broken links, 0 regressions |
+
 Working backlog for the current release cycle, spanning two approved initiatives: **Lead Acquisition** (source: `lead-acquisition-gap-analysis.md`, validated against `lead-acquisition-audit.md`) and **Topical Authority** (source: `docs/SEO_TOPOICAL_AUTHORITY_ROADMAP.md`, re-scoped to a 4-page minimum build). Nothing here is deployed — see `RELEASE_CHECKLIST.md` for what's required before that happens, and `CLAUDE.md` for the standing rule: no push, no Vercel deploy, no Search Console indexing until the founder explicitly says "Release."
 
 Status legend: ✅ Done · 🔄 In progress · ⛔ Blocked · ⏳ Not started

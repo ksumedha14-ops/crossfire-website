@@ -2,6 +2,24 @@
 
 A record of explicit strategic/editorial calls found in commit messages — the *why* behind changes, not just the *what*. Reconstructed retroactively from git history on 2026-07-22; append new decisions here going forward as they're made (see the Documentation Rules section of `CLAUDE.md`).
 
+## 2026-09-17 — Internal linking audit: automated code review caught 3 more forced/distorting edits I'd missed
+
+The self-QA during implementation caught and reverted one forced edit (see the entry directly below). The subsequent "Release" code-review step found three more meaning-distorting edits that self-QA had missed, plus two documentation overclaims:
+
+1. `gbp-optimization-delhi-ncr.html` — inserting an `areas-we-serve.html` link had silently dropped "every industry and" from the sentence, narrowing "across every industry and every city we work in" to just "every city we work in." Restored the full claim; kept the link.
+2. `local-seo-ghaziabad.html` — "the listing data is incoherent" had been changed to "the underlying directory and citation data is incoherent" to hold a Citation Building link. This asserts a different, unverified causal mechanism (external directory data) in place of the original, accurate one (the GBP listing's own data). Reverted to "listing data"; dropped the link rather than force a replacement — the page already links to Citation Building via its chip row.
+3. `local-seo-greater-noida.html` — "The method doesn't change between zones" had been changed to "The underlying ranking factors don't change between zones" to hold a link to the flagship Local SEO page, which swapped the sentence's subject from Crossfire's own methodology to Google's ranking algorithm. Reverted to "the method"; dropped the link (already present via chip row).
+4. `SESSION_LOG.md` overstated that all 3 blog posts were "fully disconnected" from service/area pages pre-audit; 2 of 3 already had a genuine contextual link from earlier work (the spray-and-pray and why-nobody-reads posts). Corrected to name the one post that actually was disconnected (`blog-fastest-way-to-sell.html`).
+5. `SPRINT_BACKLOG.md` marked "Add contextual area links to 5 service pages" as fully Done; `google-review-management-delhi-ncr.html` had no natural in-prose area link (its real content ties to industry verticals — dental, legal — not a city). Rather than force one, linked the page's existing real "Noida Sector 18" client reference and corrected the backlog status to 4/5 with the reason noted.
+
+- **Why it matters**: the same failure mode (distorting a sentence's meaning to attach a link) recurred 3 times in one task despite being explicitly named and caught once already — self-QA is not sufficient on its own for this class of error; the code-review step is load-bearing, not a formality. Going forward, any edit that changes an existing clause's wording (not just inserts a link into unchanged text) needs a specific "did the meaning change?" check, not just a "does the link make sense?" check.
+
+## 2026-09-17 — Internal linking audit: caught and reverted one forced edit mid-implementation
+
+While adding a contextual citation-building link to `local-seo-delhi.html`, changed the phrase "different pricing tolerance" to "different directory and citation coverage" to create an anchor. On review, this changed the sentence's actual meaning (from a demand-side/economic point to an unrelated technical-SEO point) rather than just adding a link to an existing claim — exactly the "sentence that exists only to place a keyword" the task's own rules prohibited. Reverted immediately rather than shipped; Delhi's page kept its other, genuinely natural new link (to the flagship Local SEO page, where the anchor phrase "zone-specific Local SEO strategy" already existed word-for-word in the sentence) instead.
+
+- **Why it matters**: a real-time example of the difference between "add a link to what a sentence already says" (correct) and "change what a sentence says so it can hold a link" (the failure mode every step of this task explicitly warned against). Not every page needs the same link count — 1 honest link beat 2 where the 2nd required distorting a claim.
+
 ## 2026-09-17 — Removed the HVAC/plumbing/electrical vertical sitewide, for consistency
 
 Founder instruction, in two steps: first, remove "plumbers, electricians, HVAC" from the industries list in `services.html`'s FAQ. Then, on review, the founder flagged that this created an inconsistency — that FAQ line now said the business doesn't serve this industry, while a dedicated vertical page, its case studies, testimonials, and dozens of smaller mentions across the site still said it did. Instruction: "remove the pages/words/statement correlating to it... i dont want one page to show that we dont work in this industry and a whole other page that says that we do. be consistent with the changes on all pages and areas."
