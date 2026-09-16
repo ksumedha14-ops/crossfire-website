@@ -1,0 +1,85 @@
+# SESSION_LOG.md
+
+A dated record of work sessions on this repository — what was done, and why. Backfilled from git history on 2026-07-22 (one entry per commit cluster/day), then maintained going forward per commit and per Claude Code session. Append new entries at the top (most recent first).
+
+---
+
+## 2026-08-07 — Topical Authority Phase 2 & 3: built the 4-page minimum set with full linking architecture
+
+Built the 4 approved pages (GBP Optimization hub, Dental, Legal, Delhi) following the confirmed internal-linking architecture, then retrofitted 10 existing pages so none of them launched isolated — the founder's explicit condition for approval.
+
+Followed the founder's authenticity-over-symmetry instruction precisely: Dental and Legal each got full "Recent Result" sections because real, previously-unused case data already existed for both (Delhi Dental Care and Arora Law Associates, both sitting unlinked on `case-studies.html`). Delhi did not get a fabricated second case — instead its result section honestly reuses Arora Law's real numbers (with a note explaining why, and a link to the full Legal page story), since Arora Law is genuinely located in Connaught Place, Delhi. No placeholder metrics or invented "recent result" cards were created anywhere.
+
+Two genuine content connections were found and linked during the build that weren't explicitly in the original architecture doc: `blog-why-nobody-reads.html` already contained a real, unlinked Arora Law testimonial ("Nothing seemed to happen for the first six weeks...") — now links to the Legal page. `blog-spray-and-pray-marketing.html` already used "South Delhi" homeowners as a targeting example — now links to the Delhi page in addition to its existing home-services hub link.
+
+Retrofits applied: `index.html` gained a new "Industries We Specialize In" section (previously only 1 of 3 verticals had any homepage link) and a 5th "Locations We Serve" card for Delhi (closing the gap where the homepage's own trust bar named Delhi as served but linked nowhere); `case-studies.html`'s Dental and Legal vertical tags became links, closing the "inverse-orphan" gap flagged in the earlier audit; all 4 existing city pages and the home-services hub got 4 new cross-link chips each (GBP, Dental, Legal, Delhi). `sitemap.xml` updated with all 4 new URLs.
+
+Verified after implementation: 18 pages total, 0 broken internal links, 0 broken anchor links, 0 duplicate/missing titles, 0 H1 count issues, 36 JSON-LD blocks all valid, 0 pages with zero schema, 0 mojibake or curly-quote regressions on any touched file. Live-rendered all 4 new pages plus the retrofitted `index.html` — zero console errors, all content and cross-links confirmed rendering correctly. `CHANGELOG.md`, `SPRINT_BACKLOG.md`, and `RELEASE_CHECKLIST.md` updated. Nothing pushed or deployed, per the standing release-cycle rule.
+
+## 2026-08-04 — Topical Authority Phase 1: JSON-LD added to the 5 schema-less pages
+
+Following the re-scoped topical authority plan (4-page minimum build instead of the original 10-page list — see `SPRINT_BACKLOG.md`'s Topical Authority section), implemented the approved Phase 1: added JSON-LD structured data to `audit.html`, `contact.html`, `services.html`, `case-studies.html`, and `blogs.html` — the 5 pages flagged with zero schema in the earlier content-architecture audit. Followed the existing pattern already proven on `index.html` and the 4 city pages (LocalBusiness/ProfessionalService with founder Person, ContactPoint, areaServed) and added page-appropriate markup on top: FAQPage on audit.html and contact.html using the real FAQ content already published on each page; an Offer catalog on services.html using the actual current pricing (₹39,700/₹59,700/₹25,000); an Article block on case-studies.html with no fabricated ratings or review counts; a Blog listing on blogs.html referencing the 3 real published posts by their actual titles and descriptions. No invented facts, dates, or figures anywhere — every value was pulled from content already live on the page it was added to.
+
+Verified: all 25 JSON-LD blocks sitewide (14 pages) parse as valid JSON; H1 and title uniqueness re-checked clean; live-rendered `services.html` and `audit.html` in-browser with zero console errors. `CHANGELOG.md`, `SPRINT_BACKLOG.md`, and `RELEASE_CHECKLIST.md` updated. Phases 2 (build the 4-page minimum set: GBP Optimization hub, Dental, Legal, Delhi city) and 3 (consolidation/linking) remain unbuilt, awaiting approval. Per the standing release-cycle rule, nothing was pushed, deployed, or submitted for indexing.
+
+## 2026-08-04 — Foundation Stabilisation: fixed all 3 release blockers (pricing, encoding, metadata)
+
+Resolved the 3 high-severity issues found in the Phase 1 verification pass, in the founder's specified priority order, treating them as release blockers before any further feature work.
+
+**Pricing inconsistency** — before touching anything, traced the root cause through git history rather than guessing which figure was correct. Found an explicit repricing commit (`3df2a05`, "feat(services): reprice and reposition all three packages," 2026-07-06) that raised Local SEO ₹18,000→₹39,700/mo, Complete Growth ₹30,000→₹59,700/mo, and Ads ₹15,000→₹25,000/mo — but it only updated `services.html`. The 4 city pages and one `contact.html` FAQ answer were never brought in line and still carried the pre-reprice figures. Presented these findings to the founder before making changes; confirmed ₹39,700/59,700/25,000 as current and canonical. Propagated to all 4 city pages (6 instances) and `contact.html` (3 figures in one answer). Verified no stale pricing remains anywhere sitewide.
+
+**Character-encoding corruption** — root-caused to commit `6ba0649` (2026-07-07), which introduced a UTF-8/Windows-1252 double-encoding bug on the same day it added CRO/trust-bar content to the 4 city pages; a later encoding fix (2026-07-16) evidently didn't reach this body copy. Repaired via a targeted regex + cp1252-round-trip fix (not a blind whole-file transform, which would have collided with the separate curly-quote issue below) — 200 corrupted instances across 4 files, including one not previously flagged: the JSON-LD `priceRange` field. Verified zero remaining, JSON-LD still valid, and live-rendered in-browser to confirm dashes/checkmarks/₹ display correctly.
+
+**Malformed og:title/twitter:title metadata** — separate root cause from the encoding bug: curly quotes used as literal HTML attribute delimiters instead of straight quotes. Fixed on all 4 city pages (8 instances), plus one additional instance found mid-fix (an inline `style` attribute with the same defect). Verified valid HTML syntax and clean live render.
+
+All three fixes verified independently (JSON-LD validity, H1/title-uniqueness re-checks, live browser render with console-error checks) before being marked complete. `CHANGELOG.md`, `SPRINT_BACKLOG.md`, and `RELEASE_CHECKLIST.md` updated. Per the founder's standing release-cycle rule, nothing was pushed, deployed, or submitted for indexing — these fixes remain local, pending "Release."
+
+## 2026-08-04 — Phase 1 verification pass; release-cycle process established
+
+Ran a full technical QA sweep across all 14 pages (broken links, HTML validity, schema/JSON-LD validity, sitemap accuracy, robots.txt, canonical tags, accessibility, duplicate headings/titles, image alt text, and a live-rendered mobile/desktop check) to verify the Phase 1 CTA change and catch anything else. Confirmed the CTA edit itself is clean (renders correctly, no console errors), but found several pre-existing issues unrelated to Phase 1: a pricing contradiction (city pages state ₹18,000/month, `services.html`/`index.html` state ₹39,700/month for the same package), live character-encoding corruption on all 4 city pages (em dashes, checkmarks, the ₹ symbol, and arrows render as mojibake — confirmed in-browser, not just in source), malformed `og:title`/`twitter:title` tags on the same 4 pages (curly quotes used as HTML attribute delimiters), a 732KB unoptimized logo image loaded on every page, and an inconclusive mobile hamburger-menu test flagged for recheck. Also verified the CTA rewrite shipped narrower than planned — only the homepage hero, not the ~29 other CTA instances the original backlog described as "sitewide."
+
+Founder then established a standing release-cycle process (now documented in `CLAUDE.md`): batch all approved phases into one release instead of deploying after each; after every phase, verify + update `CHANGELOG.md`/`SESSION_LOG.md`/`SPRINT_BACKLOG.md`; never push/deploy/request-indexing mid-cycle; only run the full commit→push→deploy→index sequence when the founder explicitly says "Release." Created `CHANGELOG.md`, `SPRINT_BACKLOG.md`, and `RELEASE_CHECKLIST.md` to support this.
+
+## 2026-08-04 — Lead Acquisition Audit validated against the repo; Phase 1 CTA fix implemented
+
+Reviewed the approved `lead-acquisition-audit.md` (a 12-part outbound/positioning/website teardown) part-by-part against live site content, `docs/`, and history, rather than treating it as ground truth. Found and documented 4 factual inaccuracies in the audit's website claims — most notably, its Part 10 case studies (Physiotherapy DLF Phase 4, Fitness studio Sector 50, Dental clinic NIT Faridabad) don't match the actual `case-studies.html` content (Kumar HVAC, Delhi Dental Care, Sharma & Sons Electricals, Arora Law Associates) at all. Confirmed the audit's outreach-specific sections (prospect list, email templates, funnel stats) describe a system entirely outside this repo. Produced a corrected gap analysis and phased backlog (`lead-acquisition-gap-analysis.md`), explicitly recommending the audit's own "test one vertical for 30 days" step be moved earlier, before any positioning/pricing rebuild around the unvalidated premium-vertical pivot. Implemented the one fully-executable Phase-1 item: rewrote the homepage hero CTA from "Get 3 Free Ranking Tips →" to "Get My Free Local SEO Audit →" so it matches what `audit.html` actually delivers. Two other Phase-1 items (case-study revenue/ROI figures, ICP-based prospect re-screening) were left undone pending real data from Sumedha and confirmation of CRM access — not filled in with invented numbers. See `docs/operations/project-decisions.md` for full reasoning.
+
+## 2026-07-22 — Documentation system created
+
+Built a full documentation system to move strategic knowledge out of chat history and into versioned files: `docs/business/`, `docs/seo/`, `docs/content/`, `docs/lead-generation/`, `docs/operations/`, plus `SESSION_LOG.md` (this file) and a Documentation Rules section added to `CLAUDE.md`. Content was reconstructed by analyzing all page HTML, JSON-LD schema, `js/site.js`, and the full commit history; uncertain claims were placed in explicit "Assumptions" sections in each file rather than invented. `ROADMAP.md` was also revised earlier the same day and cross-linked to the new `docs/` structure.
+
+## 2026-07-22 — CLAUDE.md and ROADMAP.md created
+
+Added `CLAUDE.md` (architecture + business context for future Claude Code sessions) and an initial `ROADMAP.md` reconstructing SEO strategy, completed work, known gaps, and a 20-page prioritized build plan from commit history and page analysis.
+
+## 2026-07-18 — Blog content launch + internal-linking audit
+
+Published 3 blog articles (`blog-spray-and-pray-marketing.html`, `blog-fastest-way-to-sell.html`, `blog-why-nobody-reads.html`) sourced from newsletter content, updated `blogs.html` from an empty placeholder state to 3 article cards, and added all 3 URLs to `sitemap.xml`. Followed immediately by a dedicated internal-linking/PageRank audit: found the home-services hub page under-linked (2 inbound links), added an "HVAC & Home Services SEO" chip to all 4 city pages, added a contextual hub link from the HVAC blog post, and added a "From the Blog" section to the homepage so articles aren't solely dependent on `blogs.html` for inbound links. Audit also confirmed no sitemap gaps, no canonical issues, and no missing metadata across all 14 pages.
+
+## 2026-07-17 — Title/hero copy refinement
+
+Updated homepage title to a "Best + Category + City + Brand + Service" framework (`Best Local SEO Agency Delhi NCR | Google Maps SEO | Crossfire Marketing`) and repositioned the homepage hero to a visitor-centric question format ("Is your business invisible to buyers searching in Delhi NCR?"), reframing the primary CTA as value-first ("Get 3 Free Ranking Tips").
+
+## 2026-07-16 — SEO audit implementation + founder-first repositioning + new hub page
+
+Three related efforts on the same day:
+1. **SEO audit fixes**: UTF-8 double-encoding corruption fixed in NAP/footer text across 6 pages; title tags and H1s/H2s rewritten for keyword-first framing across 11 pages (audit, contact, index, services, case-studies, blogs, all 4 city pages, hub page). Google Maps embed explicitly deferred pending a live, verified GBP.
+2. **Founder-first repositioning**: homepage hero swapped a client-result card for a Sumedha founder-credential card; trust bar trimmed from 5 items to 3; guarantee band moved earlier in page flow; case-study section reframed around "the method" rather than "the results"; testimonials reduced from 3 to 1; a fabricated review-proof stats block (4.9★, 30+/85%/6wk) was removed as placeholder data with no real GBP backing it yet. Case-studies page also had 3 weaker/redundant client cards and an unverifiable "Industries" stats grid removed.
+3. **New hub page**: built `local-seo-home-services-delhi-ncr.html` targeting HVAC/plumbing/electrical keywords, with FAQPage + LocalBusiness + BreadcrumbList schema, and wired it into `index.html`, `case-studies.html`, and `sitemap.xml`.
+
+## 2026-07-14 — Homepage locations section + title/H1 optimization
+
+Added a "Locations We Serve" section to the homepage (4 cards linking to the Gurgaon/Noida/Faridabad/Ghaziabad city pages) — the first PageRank flow from the homepage down to the geo-spoke pages. Also ran a title-tag and H1 optimization pass across 7 pages (bringing titles within ~70 chars) and fixed remaining `â€"` em-dash encoding corruption on 5 pages.
+
+## 2026-07-07 — Trust/conversion foundation (Phase 1 + Phase 2)
+
+The largest single day of changes, in two phases:
+- **Phase 1 (CRO)**: fixed a FAQ schema price mismatch, synced service card pricing/names across pages, added a 3-step "How the Audit Works" section, added the sitewide floating WhatsApp button and click-to-call nav link with GA4 event tracking, updated copyright year sitewide.
+- **Phase 2 (trust/authority)**: added a 5-item trust bar, expanded founder authority section with a "What Working With Me Means" list and LinkedIn link, added 3 case-study preview cards to the homepage, added industry tags + placeholder Google review links to testimonials, added a Google review proof strip (later removed — see 2026-07-16), added a "Who This Is For" yes/no qualifier section.
+
+Follow-up cleanup the same day: removed dead placeholder Google review links, reconciled conflicting "Most Popular"/"Recommended" pricing labels, removed a stale "2024" reference from audit-page proof stats, removed developer-facing placeholder disclaimer text from all 4 city pages, added (then hid, pending real logos/permissions) a client logo strip, and fixed two rounds of founder image filename bugs.
+
+## Assumptions
+
+- Entries above 2026-07-07 are not present in the git history available at the time this log was created — the repository's history may begin at that date, or earlier history may not have been retained.
+- This log was reconstructed retroactively from commit messages; any decisions or context not captured in a commit message (verbal discussion, chat-only reasoning) could not be recovered and is not represented here.

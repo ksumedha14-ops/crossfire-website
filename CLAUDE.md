@@ -48,3 +48,33 @@ All forms submit client-side to Web3Forms (`WEB3FORMS_KEY` in `js/site.js`) via 
 
 ### Assets
 `public/` holds images referenced by pages (logo, founder photo, case study graphics, audit dashboard screenshot). `public/clients/` is currently an empty placeholder directory (`.gitkeep` only).
+
+## Documentation system
+
+This repo maintains strategic knowledge in files, not in chat history, so it survives across sessions. The structure:
+
+- `ROADMAP.md` — forward-looking priorities and phased build plan. Update whenever priorities change, a phase completes, or a new gap is identified.
+- `SESSION_LOG.md` — dated log of work sessions, most recent first. Append an entry after any significant work session (new pages, strategic repositioning, audits, restructuring) summarizing what changed and why.
+- `docs/business/` — positioning, service tiers/pricing, ideal client profile.
+- `docs/seo/` — topical authority plan, internal linking strategy, keyword targeting.
+- `docs/content/` — content calendar, blog/page idea backlog.
+- `docs/lead-generation/` — lead capture and outreach mechanics.
+- `docs/operations/` — a decisions log capturing the *why* behind notable changes (not just the diff).
+
+### Documentation Rules
+
+- **Update documentation whenever a major decision is made** — a reposition, a removed/added trust signal, a pricing change, a new page-template decision, etc. Add it to the relevant `docs/` file and to `docs/operations/project-decisions.md` with the reasoning, not just the outcome.
+- **Maintain `SESSION_LOG.md` after important work sessions.** Append (don't rewrite history), most recent entry first, dated, summarizing what was done and why.
+- **Store strategic knowledge in files, not chat.** If you reconstruct or discuss strategy (positioning, keyword targeting, linking strategy, client criteria) in conversation, write the durable parts into the appropriate `docs/` file rather than leaving it only in the conversation transcript.
+- **Keep `ROADMAP.md` current.** When a roadmap item ships, move it out of "Next priorities" and into "Completed." When new gaps or priorities surface, add them rather than letting the roadmap drift out of sync with reality.
+- **Distinguish evidence from assumption.** When documenting anything not directly verifiable from the repo (code, commit history, on-page copy), put it under an explicit "Assumptions" section in that file rather than stating it as fact.
+
+## Release cycle (standing rule, set 2026-08-04)
+
+Multi-phase work is batched into a single release cycle instead of deploying after each phase:
+
+- Implement each approved phase sequentially, keeping the repo in a deployable state throughout.
+- After every completed phase: verify functionality, then update `CHANGELOG.md`, `SESSION_LOG.md`, and `SPRINT_BACKLOG.md`. Log completed tasks in `RELEASE_CHECKLIST.md`.
+- **Never**, during a release cycle: `git push`, deploy to Vercel, or request Google Search Console indexing — regardless of how confident a phase's changes are.
+- Only when the founder explicitly says **"Release"**, run the full sequence in order: full repository audit → technical SEO audit → QA → final code review → git commit → git push → Vercel deployment → Search Console indexing.
+- `RELEASE_CHECKLIST.md` accumulates across the whole cycle — items are checked off, never deleted or reset between phases.
