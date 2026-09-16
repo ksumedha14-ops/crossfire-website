@@ -2,6 +2,22 @@
 
 A record of explicit strategic/editorial calls found in commit messages — the *why* behind changes, not just the *what*. Reconstructed retroactively from git history on 2026-07-22; append new decisions here going forward as they're made (see the Documentation Rules section of `CLAUDE.md`).
 
+## 2026-09-17 — Local authority phase: 1 new area page, not 5, because that's what the evidence supported
+
+Ran real web research (not assumption) before selecting any locations: fetched actual search results for 5 sub-locality terms (DLF Gurgaon, Cyber City Gurgaon, Greater Noida, Indirapuram Ghaziabad, Sector 62 Noida) and checked whether NCR-adjacent towns (Manesar, Sonipat, Bahadurgarh) have real ICP fit.
+
+**Built**: `areas-we-serve.html` (a genuine geographic hub, not a directory list) and `local-seo-greater-noida.html` — the single new area page the research actually justified. Greater Noida has independently verifiable distinctness (a separate postal code range from Noida, and a genuinely different commercial character — an emerging university/institutional belt vs. Noida's established IT/retail corridor), and competitors treat it as a fully separate market. Crossfire's own Noida page already had an unlinked FAQ acknowledging this distinction before today.
+
+**Explicitly not built**, with reasoning:
+- **DLF, Cyber City (Gurgaon), Sector 62 (Noida), Indirapuram (Ghaziabad)** — real competitor pages exist for these terms, but Crossfire's own Gurgaon, Noida, and Ghaziabad pages already substantively cover these exact zones in body copy (e.g. the Gurgaon page already states "DLF Phase 1–5, Golf Course Road, New Gurgaon, and Sohna Road each behave as distinct local search markets" as a selling point). Building separate pages here would cannibalize ranking content that already exists, not add new coverage. This confirms rather than overturns the project's prior documented caution against sub-locality fragmentation (see the "Held" section of `SPRINT_BACKLOG.md`'s Topical Authority notes).
+- **Manesar** — geographically NCR with real commercial density, but it's an industrial township (factories, MNC offices) — a fundamentally different buyer profile than Crossfire's stated ICP (small local service businesses, 5–50 staff, consumer near-me search). Rejected on ICP mismatch, not on geography.
+- **Sonipat, Bahadurgarh** — commonly named by competitors in generic "we serve all NCR" copy, but no evidence found on actual local service-business density or fit. Not enough to build on; flagged as needing a dedicated research pass if revisited.
+- **Remaining chip-list neighborhoods** (Sohna Road, Palam Vihar, Udyog Vihar, New Gurgaon, South City, Vaishali, Kaushambi) — not tested in this research pass, no evidence either way. Left as non-indexed chips rather than assumed into pages.
+
+**NAP integrity maintained**: the hub page and Greater Noida page both avoid claiming a physical office — the site has never disclosed a specific base city or street address anywhere, only "Delhi NCR, India" at the region level (verified via a sitewide grep of every JSON-LD PostalAddress block before writing either page). The hub's FAQ states this directly ("Does Crossfire Marketing have a physical office in every city it serves? No.") rather than leaving it ambiguous or implying local branches that don't exist.
+
+- **Why it matters**: this is the second time in this project a research-first process concluded fewer pages were justified than the brief's suggested default (5 areas) — the same pattern as the Service Topical Authority build, where 4 pages were built and 3 candidate topics were explicitly rejected. Treat "aim for N" instructions as a ceiling informed by real evidence, not a target to hit regardless of what the research shows.
+
 ## 2026-09-16 — Service topical authority: research-gated scope, two topics deliberately skipped
 
 Before building any new page, ran real web research (not assumption) — fetched a direct Delhi NCR competitor's full service-page structure and cross-referenced 8 search queries across BrightLocal, 1Digital, and several other local-SEO providers.

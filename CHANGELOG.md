@@ -4,6 +4,19 @@ All notable changes to the Crossfire Marketing website, grouped by release cycle
 
 ## [Unreleased]
 
+### Changed — Content edit + pre-release code review, round 3 (2026-09-17)
+- Removed "plumbers, electricians, HVAC" from the "What industries do you work with?" FAQ on `services.html`, per explicit founder instruction. The dedicated `local-seo-home-services-delhi-ncr.html` vertical page and its real case studies (Kumar HVAC & Plumbing, Sharma & Sons Electricals) were left untouched — the request was scoped to the industries list, not the page or case data.
+- Fixed 3 issues found in the final-code-review step of this release: `local-seo-greater-noida.html`'s cross-link row was missing reciprocal links to 6 sibling pages that already linked to it (now symmetric); the hero's sitewide "30+ businesses ranked top 3" stat sat directly above a section honestly disclosing "we don't have a named Greater Noida case yet" — a real self-contradiction, removed rather than reworded; an unescaped `&` in "Alpha, Beta, Gamma & Delta Sectors" fixed to `&amp;`.
+
+### Added — Local Authority: Areas We Serve hub + Greater Noida (2026-09-17)
+- **`areas-we-serve.html`** — a genuine geographic hub page (explanatory content, one card per market, a "how we work across Delhi NCR" section, FAQ) rather than a directory list. Closes the gap where the only geographic hub was a homepage section with no dedicated, indexable, linkable page.
+- **`local-seo-greater-noida.html`** — the 6th geo page, and the only new area page a research pass actually justified. Differentiated from Noida via real geographic facts (Knowledge Park, Pari Chowk, Greater Noida West/Noida Extension, Yamuna Expressway corridor) and independently verifiable market distinctness (separate postal codes, different commercial character). Honestly discloses reusing the broader Noida-market case (Delhi Dental Care) rather than fabricating a Greater Noida-specific result — no invented local proof.
+- **Research-gated scope**: real competitor/search research found precedent for DLF/Cyber City (Gurgaon), Sector 62 (Noida), and Indirapuram (Ghaziabad) as sub-locality pages elsewhere, but Crossfire's own city pages already cover these zones in body copy — building separate pages would cannibalize existing content. Manesar rejected on ICP mismatch (industrial/corporate); Sonipat/Bahadurgarh rejected for lack of evidence. See `docs/operations/project-decisions.md`.
+- **"Areas We Serve" added to primary nav and footer across all 24 pages.**
+- **Homepage location grid redesigned** from 5 to 6 cards, switched to a 3×2 layout (avoiding a repeat of the prior 5-card stranded-card bug, since 6 divides evenly by 3/2/1 where 5 does not).
+- Converted 2 previously-unlinked "Greater Noida" mentions on the Noida page (a chip, an in-body reference) into real links. Added Greater Noida + the hub page to the cross-link row on all 12 other geo/vertical/service pages, and to `areaServed` JSON-LD on 8 hub-like pages.
+- `sitemap.xml` updated with both new URLs.
+
 ### Fixed — Pre-release code review, round 2 (2026-09-17)
 Findings from a second code-review pass on the accumulated release diff, run as part of the "Release" sequence's final-code-review step:
 - Fixed a broken case-study link: the Arora Law "Read the full week-by-week story" link on `local-seo-legal-delhi-ncr.html` pointed to an unrelated blog post (`blog-why-nobody-reads.html`) instead of `case-studies.html`.

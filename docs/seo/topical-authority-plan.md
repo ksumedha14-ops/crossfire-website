@@ -2,6 +2,14 @@
 
 Reconstructed from page titles, H1/H2 structure, internal linking, and the commit history of page additions.
 
+## Update (2026-09-17): local/geographic authority phase — hub page + Greater Noida
+
+Built `areas-we-serve.html` as a genuine geographic hub (explanatory content + links, not a directory list) and added `local-seo-greater-noida.html` as a 6th geo page — the only new individual area page approved after research.
+
+**Revisits and confirms** the earlier documented caution against sub-locality fragmentation (see "Held — not part of the current build" below and `SPRINT_BACKLOG.md`'s prior "Sub-locality pages" entry). Fresh competitor/search research (2026-09-17) found real evidence for a handful of neighborhood terms (DLF/Cyber City Gurgaon, Sector 62 Noida, Indirapuram Ghaziabad) showing dedicated competitor pages — but this project's own Gurgaon, Noida, and Ghaziabad pages already substantively cover those exact zones in body copy, so building separate pages for them would cannibalize existing ranking content rather than add new coverage. The caution holds; only Greater Noida cleared the bar, because it has independent, verifiable distinctness (separate postal code range, genuinely different commercial character — see `docs/operations/project-decisions.md`) rather than being a neighborhood-level subdivision of an existing page.
+
+**NAP consistency maintained**: neither the hub page nor Greater Noida claims a physical office — the site has never disclosed a specific base city or street address anywhere (verified sitewide), only "Delhi NCR, India" at the region level. The hub page's FAQ explicitly addresses this rather than leaving it ambiguous.
+
 ## Update (2026-09-16): a third axis added — service/deliverable
 
 As of this date the site targets "Local SEO / Google Maps ranking for service businesses in Delhi NCR" via **three** independent axes, not two:

@@ -18,6 +18,26 @@ Until then: implement → verify → document → hold.
 
 ## Completed this cycle
 
+### Content edit + pre-release code review, round 3 — complete (2026-09-17)
+- [x] Removed plumbers/electricians/HVAC from services.html's industries FAQ (founder instruction)
+- [x] Fixed asymmetric cross-linking on Greater Noida page (6 reciprocal links added)
+- [x] Fixed hero-stat/honesty-disclosure contradiction on Greater Noida page
+- [x] Fixed unescaped ampersand in Greater Noida area chips
+- [x] Re-verified: JSON-LD valid, 0 broken links sitewide, FAQ schema matches visible text
+
+### Local Authority: Areas We Serve hub + Greater Noida — complete (2026-09-17)
+- [x] Repository audit completed first: confirmed no dedicated hub/nav link existed, confirmed sitewide no address/base-city is ever disclosed (grep across every JSON-LD PostalAddress block)
+- [x] Competitor/search research completed before selecting locations (5 sub-locality terms + 3 NCR-adjacent towns checked)
+- [x] Built `areas-we-serve.html` (genuine hub, not a directory)
+- [x] Built `local-seo-greater-noida.html` (only new area with independent evidence)
+- [x] Explicitly did not build DLF/Cyber City/Sector 62/Indirapuram (cannibalization risk against existing content), Manesar (ICP mismatch), or Sonipat/Bahadurgarh (no evidence)
+- [x] "Areas We Serve" added to nav + footer on all 24 pages
+- [x] Homepage location grid redesigned 5→6 cards, 3×2 layout
+- [x] Cross-linked Greater Noida + hub across 12 other pages; converted 2 unlinked Noida-page mentions to real links
+- [x] `areaServed` schema updated on 8 hub-like pages
+- [x] `sitemap.xml` updated with both new URLs
+- [x] `ROADMAP.md`, `SESSION_LOG.md`, `SPRINT_BACKLOG.md`, `CHANGELOG.md`, and 2 `docs/` files updated
+
 ### Pre-release code review, round 2 — complete (2026-09-17)
 - [x] Fixed broken Arora Law case-study link (pointed to an unrelated blog post)
 - [x] Fixed FAQ schema/visible-text mismatches across all 5 GBP/service pages (29 entries), including 2 pre-existing question-name mismatches on the GBP hub not introduced this cycle

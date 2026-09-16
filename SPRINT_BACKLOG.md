@@ -60,6 +60,22 @@ Updated after every completed phase, per the standing process: verify functional
 
 Second code-review pass on the full accumulated release diff, run as the "final code review" step of the Release sequence. 7 findings, all fixed — see `CHANGELOG.md` for detail. Also closed a process gap: commit `1d5382e`'s own 4 earlier code-review fixes had never been logged in `CHANGELOG.md`/`RELEASE_CHECKLIST.md`/this file, despite the standing rule requiring it — logged retroactively.
 
+## Local Authority initiative (2026-09-17)
+
+Third geo page-type: a proper "Areas We Serve" hub, plus research-gated expansion of the geo axis. See `docs/operations/project-decisions.md` for full reasoning on what was built vs. skipped.
+
+| # | Task | Status | Notes |
+|---|---|:---:|---|
+| 1 | `areas-we-serve.html` (hub page) | ✅ Done | Genuine explanatory hub, not a directory list |
+| 2 | `local-seo-greater-noida.html` | ✅ Done | Only new area page with independent evidence (postal codes, commercial character) |
+| 3 | DLF / Cyber City (Gurgaon) pages | ⏳ Skipped | Already covered in Gurgaon page's body copy; would cannibalize |
+| 4 | Sector 62 (Noida) page | ⏳ Skipped | Already covered in Noida page's body copy; would cannibalize |
+| 5 | Indirapuram (Ghaziabad) page | ⏳ Skipped | Already covered in Ghaziabad page's body copy; would cannibalize |
+| 6 | Manesar page | ⏳ Skipped | Industrial/corporate ICP mismatch |
+| 7 | Sonipat / Bahadurgarh pages | ⏳ Skipped | No evidence found either way |
+| 8 | Nav + footer "Areas We Serve" link | ✅ Done | Added across all 24 pages |
+| 9 | Homepage location grid redesign | ✅ Done | 5→6 cards, switched to 3×2 layout to avoid the prior stranded-card bug |
+
 ## Service Topical Authority initiative (2026-09-16)
 
 Third axis added alongside the existing geo × vertical matrix, gated on real competitor/search research rather than assumption. See `docs/operations/project-decisions.md` for full reasoning on what was built vs. skipped.
