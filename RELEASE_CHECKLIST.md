@@ -18,6 +18,35 @@ Until then: implement → verify → document → hold.
 
 ## Completed this cycle
 
+### Pre-release code review, round 2 — complete (2026-09-17)
+- [x] Fixed broken Arora Law case-study link (pointed to an unrelated blog post)
+- [x] Fixed FAQ schema/visible-text mismatches across all 5 GBP/service pages (29 entries), including 2 pre-existing question-name mismatches on the GBP hub not introduced this cycle
+- [x] Completed the cross-link mesh between the 3 new non-flagship service pages
+- [x] Fixed Ghaziabad locations-card stagger-animation class bug on index.html
+- [x] Deduplicated `.related-card` CSS across 5 pages to reuse `css/main.css` utilities
+- [x] Escaped unescaped ampersands across 6 files (HTML text only; JSON-LD left correctly unescaped)
+- [x] Retroactively logged commit `1d5382e`'s 4 code-review fixes in `CHANGELOG.md` and here — they were fixed but never recorded at the time
+
+### Retroactive log — commit `1d5382e` fixes (originally made 2026-09-16, logged 2026-09-17)
+- [x] Fixed homepage `.loc-grid` CSS regression (5th location card stranding + lost mobile breakpoints)
+- [x] Deduplicated `.ind-card`/`.loc-card` CSS
+- [x] Linked the previously-unlinked Electrical/Trades case-study tag to its hub page
+- [x] Removed an unverifiable "85%" stat from `audit.html`'s new FAQ schema (and matching visible copy)
+
+### Service Topical Authority — complete (2026-09-16)
+- [x] Repository inspection completed first: all `docs/seo/`, `docs/business/` files, `services.html`, `sitemap.xml`, `robots.txt` reviewed before proposing any new page
+- [x] Competitor/search research completed before building: 1 competitor fully fetched, 8 search queries cross-referenced
+- [x] Topical map presented to founder; 2 scope decisions confirmed directly (multi-location page written generically with no fabricated claims; GBP suspension recovery declined)
+- [x] Built `local-seo-google-maps-ranking-delhi-ncr.html` (flagship service)
+- [x] Built `citation-building-nap-consistency-delhi-ncr.html`
+- [x] Built `google-review-management-delhi-ncr.html`
+- [x] Built `multi-location-local-seo-delhi-ncr.html` (generic, no fabricated claims)
+- [x] Trimmed `gbp-optimization-delhi-ncr.html`'s review section and NAP FAQ to pointers, avoiding cannibalization — no existing FAQ schema question removed or reworded
+- [x] Internal linking: 12–14 inbound links per new page across 8 geo/vertical pages, `services.html`, `index.html`, and a new GBP-hub related-services grid
+- [x] `sitemap.xml` updated with all 4 new URLs
+- [x] Full verification: all JSON-LD valid, all FAQ schema questions matched verbatim to visible copy, 0 broken internal links, exactly 1 H1 per page, 0 noindex tags, all pages live-rendered 200 OK
+- [x] `CHANGELOG.md`, `ROADMAP.md`, `SESSION_LOG.md`, `SPRINT_BACKLOG.md`, and 4 `docs/` files updated
+
 ### Phase 1 — in progress
 - [x] Homepage hero CTA rewritten (`index.html`) — verified live (mobile + desktop render, no console errors, href intact)
 - [x] Phase 1 verification pass completed — full technical QA sweep (links, HTML, schema, sitemap, robots.txt, canonicals, accessibility, headings, alt text) across all 14 pages

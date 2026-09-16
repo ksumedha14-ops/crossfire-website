@@ -4,6 +4,27 @@ All notable changes to the Crossfire Marketing website, grouped by release cycle
 
 ## [Unreleased]
 
+### Fixed — Pre-release code review, round 2 (2026-09-17)
+Findings from a second code-review pass on the accumulated release diff, run as part of the "Release" sequence's final-code-review step:
+- Fixed a broken case-study link: the Arora Law "Read the full week-by-week story" link on `local-seo-legal-delhi-ncr.html` pointed to an unrelated blog post (`blog-why-nobody-reads.html`) instead of `case-studies.html`.
+- Fixed FAQ schema/visible-text mismatches across **all 5** GBP/service pages (29 FAQ entries total) — JSON-LD answer text had drifted from the shorter visible-copy versions during editing, and 2 question names on the GBP hub didn't match their visible `<h3>` text at all (a pre-existing issue, not introduced this cycle). Rewrote every JSON-LD FAQ entry to match its visible H3/paragraph exactly, verified programmatically.
+- Completed the internal-link mesh between the 3 new non-flagship service pages (citation, review, multi-location) — each was missing one cross-link to a sibling, contradicting `docs/seo/internal-linking-strategy.md`'s claim that all 4 new pages fully cross-link.
+- Fixed a stagger-animation class bug on `index.html`'s homepage locations grid — the 5th (Ghaziabad) card reused the 1st (Delhi) card's `d1` delay class instead of the unused `d5`, a leftover from the grid's 4→5 card extension.
+- Deduplicated `.related-card` CSS across 5 pages by composing `css/main.css`'s existing `.card`/`.card--lift`/`.card--surface` utilities instead of redefining the same box/hover styles per file; this also fixes an unintended background-color inconsistency on the GBP hub's copy.
+- Escaped unescaped `&` characters in "Local SEO & Google Maps Ranking" across 6 files' `<title>`, meta tags, H1, and related-service card text (JSON-LD string values were correctly left unescaped, since HTML-entity escaping doesn't apply inside JSON).
+- **Logged retroactively**: commit `1d5382e`'s own 4 code-review fixes (homepage `.loc-grid` CSS regression from the Delhi card addition, duplicated `.ind-card`/`.loc-card` CSS, an unlinked Electrical/Trades case-study tag, and an unverifiable "85%" stat newly encoded into `audit.html`'s FAQ schema) were never recorded here, `RELEASE_CHECKLIST.md`, or `SPRINT_BACKLOG.md` at the time — a process gap this entry closes per the standing rule to log every completed phase.
+
+### Added — Service Topical Authority Build (2026-09-16)
+- **4 new service deep-dive pages**, closing the site's largest remaining topical gap — no page previously explained any individual service deliverable in depth; `services.html` only listed features as pricing-tier bullets.
+  - `local-seo-google-maps-ranking-delhi-ncr.html` — the flagship service, previously undocumented as its own topic. Explains the three actual Google Maps ranking factors (relevance, distance, prominence), the organic-vs-map-pack distinction, process, and realistic timelines.
+  - `citation-building-nap-consistency-delhi-ncr.html` — what a citation is, India-specific directories (Justdial, Sulekha, IndiaMART), common NAP failure modes, process.
+  - `google-review-management-delhi-ncr.html` — policy-compliant review generation, negative review response, review velocity as a ranking signal. Expands (without duplicating) the GBP hub's existing review section.
+  - `multi-location-local-seo-delhi-ncr.html` — written generically per explicit instruction, with **no fabricated past-client claims** — considerations, structural checklist, and FAQs only, since no verified multi-location case data exists in this repo.
+- **Competitor/search research preceded the build**: fetched a direct Delhi NCR competitor in full and cross-referenced 8 search queries before deciding scope. Two candidate pages were explicitly **not** built after research showed weak justification: standalone Local Link Building (no Delhi competitor treats it as a dedicated page) and standalone On-Page/Hyperlocal Content SEO (the site's own geo pages already demonstrate this; a separate page would restate rather than add). A third candidate, "GBP suspension recovery" (a named sub-service some competitors sell), was found but deliberately **not** added anywhere — not a confirmed Crossfire capability.
+- **Cannibalization avoided, not created**: `gbp-optimization-delhi-ncr.html`'s review-management section was trimmed to a summary + link to the new Review Management page; its NAP FAQ answer got a pointer to the new Citation page. No existing FAQ schema question was removed or reworded — only pointer sentences added.
+- **Internal linking**: each new page carries 12–14 inbound links (via the existing "Also serving Delhi NCR" chip pattern on all 8 geo/vertical pages, plus `services.html`, `index.html`, and the GBP hub's new "Go Deeper" related-services grid) and links out to the other 3 new pages plus real, existing case-study pages — no fabricated proof, no invented statistics.
+- `sitemap.xml` updated with all 4 new URLs.
+
 ### Added — Topical Authority Phase 2 & 3 (2026-08-07)
 - **4 new pages built**, per the approved internal-linking architecture:
   - `gbp-optimization-delhi-ncr.html` — the consolidation hub for GBP content previously duplicated across 6 pages, including the Justdial-vs-GBP comparison, reviews management, and ranking-timeline FAQ folded in as sections (not separate pages, per the approved plan).

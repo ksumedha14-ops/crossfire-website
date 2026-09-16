@@ -2,7 +2,17 @@
 
 Reconstructed from page titles, H1/H2 structure, internal linking, and the commit history of page additions.
 
-## The model: geo × vertical matrix
+## Update (2026-09-16): a third axis added — service/deliverable
+
+As of this date the site targets "Local SEO / Google Maps ranking for service businesses in Delhi NCR" via **three** independent axes, not two:
+
+- **Geography** — city-level pages: Gurgaon, Noida, Faridabad, Ghaziabad, Delhi (5)
+- **Vertical** — industry-level pages: Home Services (HVAC/plumbing/electrical), Dental Clinics, Legal/Law Firms (3)
+- **Service** — deliverable-level pages: Google Business Profile Optimization, Local SEO & Google Maps Ranking, Citation Building & NAP Consistency, Google Review Management & Generation, Multi-Location Local SEO (5)
+
+The service axis was added after real competitor/search research (not assumption) confirmed GBP Optimization, Citation Building, and Review Management are treated as dedicated pages across essentially every local-SEO competitor examined, while the site's own flagship service — Local SEO & Google Maps Ranking itself — had zero standalone content page despite being the entire premise of the business. `services.html` remains a pricing/comparison hub; the service pages carry topical depth (ranking factors, process, FAQs) that pricing pages don't. See `docs/operations/project-decisions.md` for the full reasoning, including what was deliberately *not* built (Local Link Building, standalone On-Page SEO, a second audit-intent page) and why.
+
+## The original model: geo × vertical matrix (superseded by the above, kept for history)
 
 The site targets "Local SEO / Google Maps ranking for service businesses in Delhi NCR" via two independent axes:
 

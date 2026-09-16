@@ -56,6 +56,25 @@ Updated after every completed phase, per the standing process: verify functional
 
 ---
 
+## Pre-release code review, round 2 (2026-09-17)
+
+Second code-review pass on the full accumulated release diff, run as the "final code review" step of the Release sequence. 7 findings, all fixed — see `CHANGELOG.md` for detail. Also closed a process gap: commit `1d5382e`'s own 4 earlier code-review fixes had never been logged in `CHANGELOG.md`/`RELEASE_CHECKLIST.md`/this file, despite the standing rule requiring it — logged retroactively.
+
+## Service Topical Authority initiative (2026-09-16)
+
+Third axis added alongside the existing geo × vertical matrix, gated on real competitor/search research rather than assumption. See `docs/operations/project-decisions.md` for full reasoning on what was built vs. skipped.
+
+| # | Task | Status | Notes |
+|---|---|:---:|---|
+| 1 | `local-seo-google-maps-ranking-delhi-ncr.html` (flagship) | ✅ Done | Not originally scoped — found to be the single largest topical gap once services.html was audited |
+| 2 | `citation-building-nap-consistency-delhi-ncr.html` | ✅ Done | Validated by competitor research |
+| 3 | `google-review-management-delhi-ncr.html` | ✅ Done | GBP hub's overlapping section trimmed to avoid cannibalization |
+| 4 | `multi-location-local-seo-delhi-ncr.html` | ✅ Done | Written generically per founder instruction — no fabricated client claims |
+| 5 | Local Link Building page | ⏳ Skipped | Weak Delhi-specific evidence; no competitor treats as standalone |
+| 6 | Standalone On-Page/Content SEO page | ⏳ Skipped | Site's own geo pages already demonstrate this |
+| 7 | Second "Local SEO Audit" content page | ⏳ Skipped | `audit.html` already owns this intent |
+| 8 | "GBP suspension recovery" mention | ⏳ Declined | Not a confirmed Crossfire capability |
+
 ## Topical Authority initiative
 
 Re-scored the original 10-page publishing roadmap against topical completeness, commercial intent, internal linking, ranking potential, and business impact — not page count. Result: 4 pages to build, 3 folded into one of those pages instead of shipped separately, 3 held.

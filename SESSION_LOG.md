@@ -4,6 +4,22 @@ A dated record of work sessions on this repository — what was done, and why. B
 
 ---
 
+## 2026-09-16 — Service Topical Authority: the third axis (research-first, 4 new pages)
+
+Built genuine topical authority around the services Crossfire actually offers, following an explicit research-first process rather than writing pages from assumption. Inspected the full existing SEO setup first (all `docs/seo/` and `docs/business/` files, `services.html`, `sitemap.xml`, `robots.txt`) to confirm the real gap: the site had a geo axis (5 cities) and a vertical axis (3 industries) fully built, but no dedicated content page for any individual service deliverable — `services.html` was a pricing/comparison page only, and the flagship service ("Local SEO & Google Maps Ranking") had zero standalone page anywhere despite being the entire premise of the business.
+
+Ran real competitor/search research before building anything: fetched a Delhi NCR competitor's full service-page structure and cross-referenced 8 search queries. This confirmed GBP Optimization, Citation Building, and Review Management recur as dedicated pages across nearly every competitor examined — validating them as legitimate topics, not manufactured ones — while flagging Local Link Building and standalone On-Page/Content SEO as too thin to justify their own pages (see `docs/operations/project-decisions.md` for the full reasoning on what was skipped and why).
+
+Presented the resulting topical map to the founder before writing any content, per the requested process. Two decisions required founder input rather than being inferable from the repo: whether the new Multi-Location page could reference real past client work (answer: no — write it generically, no fabricated claims) and whether to add a competitor-observed "GBP suspension recovery" sub-service (answer: no — not a confirmed capability).
+
+Built 4 new pages: `local-seo-google-maps-ranking-delhi-ncr.html` (flagship — ranking factors, process, organic-vs-map-pack distinction), `citation-building-nap-consistency-delhi-ncr.html`, `google-review-management-delhi-ncr.html`, `multi-location-local-seo-delhi-ncr.html` (written generically, no invented case data, per the founder's explicit instruction). Each page: FAQPage + Service + BreadcrumbList JSON-LD, 900–1450 words of original body content (no padding), FAQ schema verified to match visible copy verbatim.
+
+Resolved a cannibalization risk rather than creating one: `gbp-optimization-delhi-ncr.html` already had a review-management section and a NAP FAQ line with overlapping intent to the two new pages. Trimmed both to summaries with links to the new pages as canonical resources, without removing or rewording any existing FAQ schema question.
+
+Linked every new page from 12–14 existing files before considering it complete (the "Also serving Delhi NCR" chip row on all 8 geo/vertical pages, `services.html`, `index.html`, and a new "Go Deeper" related-services grid added to the GBP hub) — a deliberate departure from the site's usual "build → launch under-linked → audit → patch" pattern. `sitemap.xml` updated with all 4 new URLs.
+
+Verified after implementation: all JSON-LD across the 4 new pages plus the modified GBP hub parses valid; every FAQ schema question confirmed present verbatim in visible HTML; 0 broken internal links across all touched files; exactly one H1 per page; no `noindex` tags; all pages live-rendered 200 OK via local server. `CHANGELOG.md`, `ROADMAP.md`, `docs/seo/topical-authority-plan.md`, `docs/seo/keyword-opportunities.md`, `docs/seo/internal-linking-strategy.md`, and `docs/operations/project-decisions.md` all updated. Per the standing release-cycle rule, nothing pushed, deployed, or submitted for indexing.
+
 ## 2026-08-07 — Topical Authority Phase 2 & 3: built the 4-page minimum set with full linking architecture
 
 Built the 4 approved pages (GBP Optimization hub, Dental, Legal, Delhi) following the confirmed internal-linking architecture, then retrofitted 10 existing pages so none of them launched isolated — the founder's explicit condition for approval.

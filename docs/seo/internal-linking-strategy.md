@@ -33,6 +33,12 @@ The same audit explicitly checked and ruled out other issues: no sitemap gaps (a
 - **Contextual in-body links** — anchors placed inside relevant prose (e.g., a case-study mention linking to the hub page) rather than only in chip/nav rows.
 - **Homepage "From the Blog" section** — surfaces individual articles directly from the root page rather than relying solely on `blogs.html` as an intermediary.
 
+## Update (2026-09-16): 4 new service pages, linked before launch
+
+Unlike the earlier "build → launch under-linked → audit → patch" pattern documented above, the 4 new service pages (`local-seo-google-maps-ranking-delhi-ncr.html`, `citation-building-nap-consistency-delhi-ncr.html`, `google-review-management-delhi-ncr.html`, `multi-location-local-seo-delhi-ncr.html`) were linked from 12–14 files each *before* being considered complete, not patched in afterward — added to the "Also serving Delhi NCR" chip row on all 8 existing geo/vertical pages, `services.html`'s Service 1 section, `index.html`'s Core Services section, and a new "Go Deeper" related-services grid added to the GBP hub. Each new page also links out to the other 3 and to real, existing case-study pages.
+
+The GBP hub's existing review-management section and NAP FAQ answer were trimmed to summaries with links to the new dedicated pages, avoiding content duplication rather than creating two pages that both fully explain the same thing.
+
 ## Checklist for adding a new page
 
 Based on the pattern above, apply this whenever a new page is created:

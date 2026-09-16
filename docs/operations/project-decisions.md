@@ -2,6 +2,24 @@
 
 A record of explicit strategic/editorial calls found in commit messages — the *why* behind changes, not just the *what*. Reconstructed retroactively from git history on 2026-07-22; append new decisions here going forward as they're made (see the Documentation Rules section of `CLAUDE.md`).
 
+## 2026-09-16 — Service topical authority: research-gated scope, two topics deliberately skipped
+
+Before building any new page, ran real web research (not assumption) — fetched a direct Delhi NCR competitor's full service-page structure and cross-referenced 8 search queries across BrightLocal, 1Digital, and several other local-SEO providers.
+
+**Built** (validated by research as legitimate, non-overlapping topics): `local-seo-google-maps-ranking-delhi-ncr.html` (the flagship service — found to have zero standalone content page despite being the entire premise of the business), `citation-building-nap-consistency-delhi-ncr.html`, `google-review-management-delhi-ncr.html` (all three recur as dedicated pages across essentially every competitor examined).
+
+**Explicitly not built**, with reasoning:
+- **Local Link Building** — recurs in US-agency results but no Delhi NCR competitor treats it as a standalone page; the closest local comp folds it into a broader "authority building" section. Building a dedicated page here would have been keyword-driven, not intent-driven.
+- **Standalone On-Page/Hyperlocal Content SEO** — the site's own geo/vertical pages already *demonstrate* this rather than needing a page that *explains* it; a separate page risked restating existing work rather than adding new topical depth.
+- **A second "Local SEO Audit" page** — `audit.html` already fully owns this search intent as a human-delivered lead magnet; the competitive pattern for audit-content is automated instant-audit tools, not pages, so there was no real gap to fill.
+- **"GBP suspension recovery"** — found as a named sub-service some competitors sell. Not added anywhere (no page, no FAQ) because it's not a confirmed Crossfire capability — flagged to the founder and explicitly declined rather than assumed.
+
+**Built with a scope constraint**: `multi-location-local-seo-delhi-ncr.html` was approved for creation (real pre-existing FAQ-content precedent: multi-branch GBP questions already live on the Gurgaon page and home-services hub), but the founder explicitly directed it be written **generically, with no fabricated past-client claims** — no invented multi-location case study, no specific-sounding results. The page contains a structural checklist and FAQs instead of a "proof" section.
+
+**Cannibalization resolved, not created**: the new Review Management page overlaps in topic with `gbp-optimization-delhi-ncr.html`'s existing review section. Rather than leaving two pages both fully explaining review generation (duplicate intent, no clear canonical page for Google to prefer), the GBP hub's section was trimmed to a summary + link to the new page as the canonical deep resource. Same treatment for the NAP/citation FAQ line. No FAQ schema question was removed on the GBP hub — only pointer sentences added — so its existing schema value is preserved.
+
+- **Why it matters**: this is the template for evaluating future topical-authority candidates — a keyword existing, or a competitor having a page, is not sufficient justification on its own; the test is genuine non-overlapping search intent plus real, non-fabricated content to fill it.
+
 ## 2026-07-07 — Remove fabricated/placeholder trust signals rather than fake them
 - Removed 3 "Verified Google Review" links that pointed to dead placeholder URLs (`g.page/r/placeholder-*`) rather than leave broken links live (`6ec39cf`).
 - Kept the associated CSS rule in place for when real review URLs exist — a deliberate "ready to re-enable" stance, not a full rip-out.

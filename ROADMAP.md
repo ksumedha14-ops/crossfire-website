@@ -55,6 +55,15 @@ A recurring, deliberate pattern in the history: **build page → launch under-li
 - `CLAUDE.md` added covering architecture and business context
 - Full documentation system added under `docs/` (business, SEO, content, lead-generation, operations) plus `SESSION_LOG.md` and Documentation Rules in `CLAUDE.md` — see the links at the top of this file
 
+### Topical Authority Phase 1–3: GBP hub + 4-page geo/vertical build (Aug 4–7, 2026)
+- JSON-LD added to the 5 schema-less pages; `gbp-optimization-delhi-ncr.html` hub built; `local-seo-dental-clinics-delhi-ncr.html`, `local-seo-legal-delhi-ncr.html`, `local-seo-delhi.html` built with real case data; 10 existing pages retrofitted with cross-links. See `docs/seo/topical-authority-plan.md`.
+
+### Service Topical Authority: the third axis (Sep 16, 2026)
+- Preceded by real competitor/search research (not assumption alone) — see `docs/operations/project-decisions.md` for what was built vs. deliberately skipped.
+- Closes ROADMAP Phase 3 (items 13–15 below, superseded): `local-seo-google-maps-ranking-delhi-ncr.html` (flagship, not originally scoped but the single largest gap found), `citation-building-nap-consistency-delhi-ncr.html`, `google-review-management-delhi-ncr.html`. GBP Optimization (item 13) was already built in the prior wave.
+- Added `multi-location-local-seo-delhi-ncr.html` — not in the original roadmap list, added after research found genuine pre-existing FAQ-content precedent (multi-branch GBP questions already live on 2 pages) rather than manufacturing a new topic.
+- Local Link Building and standalone On-Page/Content SEO pages (implied by general "service pages" scoping) were evaluated and explicitly not built — see project-decisions.md.
+
 ## Known gaps
 
 - **No geo × vertical intersection pages** — e.g. no "HVAC SEO Gurgaon." City pages are industry-agnostic; the hub page is city-agnostic. This is the biggest structural hole given the matrix is already half-built.
@@ -62,7 +71,7 @@ A recurring, deliberate pattern in the history: **build page → launch under-li
 - **No sub-locality pages** — DLF City, Cyber City, Indirapuram, Sector 62, etc. exist only as chip text/anchors, not indexable pages, despite being exactly the long-tail terms Google Maps localizes around.
 - **No Delhi (the city itself) page** — Gurgaon, Noida, Faridabad, Ghaziabad are covered; Delhi proper (South Delhi, Dwarka, Rohini) is not, despite being the largest market in "Delhi NCR."
 - **Blog content doesn't target SEO/GBP keywords** — the 3 published articles are generic marketing advice, disconnected from the local-SEO keyword strategy the rest of the site pursues.
-- **No standalone GBP optimization page** — GBP troubleshooting is discussed heavily inside FAQ schema (duplicate listings, multi-branch profiles, category selection) but has no dedicated service/landing page.
+- ~~**No standalone GBP optimization page**~~ — built (`gbp-optimization-delhi-ncr.html`), and as of Sep 16, 2026, joined by 4 sibling service pages (flagship Local SEO, Citation Building, Review Management, Multi-Location). See Service Topical Authority wave above.
 - **Review proof, client logos, and Google Maps embed are stubbed out**, deferred until a real, verified Google Business Profile is live (per `10b95cf` and `141b4d2`) — blocks the local trust-signal layer.
 
 ## Next priorities
@@ -84,10 +93,11 @@ Reuses the existing city-page/hub-page template; primarily new copy + case data.
 11. Local SEO Services — Delhi (South Delhi/Dwarka/Rohini)
 12. Local SEO Services — Sohna / New Gurgaon
 
-### Phase 3 — GBP service pages
-13. Google Business Profile Optimization — Delhi NCR (standalone service page)
-14. Google Reviews Management for Local Businesses — Delhi NCR
-15. Google Maps Citation Building — Delhi NCR
+### Phase 3 — GBP service pages — ✅ done, Sep 16, 2026 (superseded)
+13. ~~Google Business Profile Optimization — Delhi NCR~~ — built Aug 7, 2026
+14. ~~Google Reviews Management for Local Businesses — Delhi NCR~~ — built Sep 16, 2026 as `google-review-management-delhi-ncr.html`
+15. ~~Google Maps Citation Building — Delhi NCR~~ — built Sep 16, 2026 as `citation-building-nap-consistency-delhi-ncr.html`
+- Also built, not originally scoped: `local-seo-google-maps-ranking-delhi-ncr.html` (flagship service — the single largest gap found once services.html was audited against real competitor structure) and `multi-location-local-seo-delhi-ncr.html` (real FAQ-content precedent existed; written without fabricated client claims).
 
 ### Phase 4 — Comparison content (supports the existing Justdial/Sulekha-displacement FAQ angle)
 16. Justdial vs Google Business Profile for Local Businesses

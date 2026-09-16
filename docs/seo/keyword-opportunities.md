@@ -47,10 +47,20 @@ These exist only as anchor text in "Areas we serve" chip rows, not as their own 
 
 ## Untargeted keyword categories (gaps)
 
-- No page targets "Delhi" as its own city (South Delhi, Dwarka, Rohini) despite being the largest market in "Delhi NCR."
-- No standalone "Google Business Profile Optimization Delhi NCR" service keyword, despite GBP being the single most-discussed topic in FAQ content across the site.
-- No comparison-intent keywords ("Local SEO vs Google Ads", "Justdial vs Google Business Profile") despite the underlying objection-handling content already existing in FAQ form.
-- Blog content targets generic marketing/sales keywords, not local-SEO or GBP search terms — a disconnect between the content-marketing track and the SEO-landing-page track.
+- ~~No page targets "Delhi" as its own city~~ — built Aug 7, 2026 (`local-seo-delhi.html`).
+- ~~No standalone "Google Business Profile Optimization Delhi NCR" service keyword~~ — built Aug 7, 2026 (`gbp-optimization-delhi-ncr.html`).
+- No comparison-intent keywords ("Local SEO vs Google Ads", "Justdial vs Google Business Profile") despite the underlying objection-handling content already existing in FAQ form. Still open.
+- Blog content targets generic marketing/sales keywords, not local-SEO or GBP search terms — a disconnect between the content-marketing track and the SEO-landing-page track. Still open.
+
+## Service-topic keywords (added 2026-09-16, validated against live search results)
+
+Following real competitor/search research (8 queries, a full competitor page fetch, several search-snippet-level checks), 4 new pages now target:
+- "local seo services delhi ncr" (informational/process angle — how ranking works, distinct from `services.html`'s pricing-intent targeting of the same head term), "google maps ranking factors", "local seo vs seo"
+- "citation building service", "nap consistency", "how many citations do I need"
+- "google review management service", "how to respond to negative google review", "how many google reviews to rank"
+- "multi location local seo", "multi location google business profile"
+
+Deliberately not targeted despite recurring in competitor research: "local link building" (weak Delhi-specific demand signal — no Delhi competitor treats it as a standalone page) and a second "local seo audit" content page (the competitive pattern here is automated instant-audit tools, not content pages — `audit.html` already outperforms that pattern as a human-delivered lead magnet). See `docs/operations/project-decisions.md`.
 
 See [[../../ROADMAP.md|ROADMAP]] for the prioritized page-build plan addressing these gaps, and [[../content/blog-ideas.md|blog-ideas]] for content-specific recommendations.
 
